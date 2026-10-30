@@ -4,38 +4,240 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>The Vermilion Times | News for Vermilion Parish, Louisiana</title>
-<meta name="description" content="The Vermilion Times: news for Vermilion Parish, Louisiana — Abbeville, Kaplan, Erath, Gueydan, Delcambre, Maurice and the coast. Launching soon.">
+<meta name="description" content="The Vermilion Times: an independent local newspaper for Vermilion Parish, Louisiana, covering Abbeville, Kaplan, Erath, Gueydan, Delcambre and the coast.">
 <link rel="canonical" href="https://thevermiliontimes.com/">
-<meta name="theme-color" content="#f6f1e7">
+<meta name="theme-color" content="#eee6d5">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Vermilion Times">
+<meta property="og:title" content="The Vermilion Times | News for Vermilion Parish, Louisiana">
+<meta property="og:description" content="The Vermilion Times: an independent local newspaper for Vermilion Parish, Louisiana, covering Abbeville, Kaplan, Erath, Gueydan, Delcambre and the coast.">
+<meta property="og:url" content="https://thevermiliontimes.com/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23f3e9d4'/%3E%3Ctext x='32' y='47' font-family='UnifrakturMaguntia,serif' font-size='44' text-anchor='middle' fill='%237c1f1a'%3EV%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap">
-<style>
-  :root{--paper:#f6f1e7;--ink:#1b1a17;--rule:#1b1a17;--muted:#5d574c;--red:#8f1d1d}
-  @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#15140f;--ink:#efe9dc;--rule:#efe9dc;--muted:#a69d8b;--red:#d56a5c}}
-  *{box-sizing:border-box}
-  html,body{margin:0;background:var(--paper);color:var(--ink)}
-  body{font:1.05rem/1.6 "Libre Caslon Text",Georgia,"Times New Roman",serif;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:2rem 16px}
-  .sheet{width:100%;max-width:880px;text-align:center}
-  .meta{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);border-top:3px double var(--rule);border-bottom:1px solid var(--rule);padding:.5rem 0}
-  h1{font-family:"UnifrakturMaguntia","Old English Text MT",serif;font-weight:400;font-size:clamp(2.6rem,10vw,6rem);line-height:1;margin:1.4rem 0 1rem}
-  .motto{font-style:italic;color:var(--muted);margin:0 0 1.4rem}
-  .rule{border:0;border-top:1px solid var(--rule);border-bottom:3px double var(--rule);height:5px;margin:0 0 2.2rem}
-  .soon{font-size:clamp(1.3rem,3vw,1.8rem);font-weight:700;margin:0 0 .6rem}
-  .soon span{color:var(--red)}
-  p.lede{max-width:56ch;margin:0 auto;color:var(--ink)}
-  .towns{margin-top:2.2rem;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
-</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Grenze+Gotisch:wght@700&family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=IM+Fell+English+SC&display=swap">
+<link rel="stylesheet" href="/assets/times.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "NewsMediaOrganization",
+ "name": "The Vermilion Times",
+ "url": "https://thevermiliontimes.com/",
+ "email": "news@thevermiliontimes.com",
+ "foundingDate": "2026",
+ "areaServed": {
+  "@type": "AdministrativeArea",
+  "name": "Vermilion Parish, Louisiana"
+ },
+ "publishingPrinciples": "https://thevermiliontimes.com/about/",
+ "correctionsPolicy": "https://thevermiliontimes.com/about/",
+ "ethicsPolicy": "https://thevermiliontimes.com/about/"
+}
+</script>
 </head>
 <body>
-  <main class="sheet">
-    <div class="meta"><span>Vermilion Parish, Louisiana</span><span>Est. 2026</span></div>
-    <h1>The Vermilion Times</h1>
-    <p class="motto">News from the most Cajun place on earth</p>
-    <hr class="rule">
-    <p class="soon">First edition <span>coming soon</span></p>
-    <p class="lede">Local news, business, schools, sports and the stories of the people who make Vermilion Parish home &mdash; from Abbeville to the coast.</p>
-    <p class="towns">Abbeville &middot; Kaplan &middot; Erath &middot; Gueydan &middot; Delcambre &middot; Maurice &middot; Pecan Island</p>
-  </main>
+<a class="skip" href="#main">Skip to the news</a>
+<header class="wrap">
+  <div class="topbar">
+    <div class="editions"><span><b>Vermilion Parish Edition</b></span><span>Abbeville</span><span>Kaplan</span><span>Erath</span><span>Gueydan</span><span>The Coast</span></div>
+    <a class="btn" href="/send-news/">Send a Tip</a>
+  </div>
+  <div class="masthead">
+    <div class="mh-side"><b id="today">Vermilion Parish, Louisiana</b><span class="small">Today&rsquo;s Paper</span></div>
+    <h1 class="nameplate">The Vermilion Times</h1>
+    <div class="mh-side mh-right"><b>Vol. I &middot; No. 1</b><span class="small">Established MMXXVI</span></div>
+  </div>
+  <p class="motto">&ldquo;All the news of Vermilion Parish, from the prairie to the coast.&rdquo;</p>
+  <nav class="secnav" aria-label="Sections"><ul><li><a href="/#local">Local</a></li><li><a href="/#government">Parish Government</a></li><li><a href="/#schools">Schools</a></li><li><a href="/#sports">Sports</a></li><li><a href="/#business">Business</a></li><li><a href="/#starbase">Starbase Louisiana</a></li><li><a href="/#land-water">Land &amp; Water</a></li><li><a href="/#faith">Faith &amp; Family</a></li><li><a href="/#opinion">Opinion</a></li><li><a href="/#obituaries">Obituaries</a></li></ul></nav>
+</header>
+<main id="main" class="wrap">
+<p class="ribbon"><span class="tag">From the Publisher</span><span>The Vermilion Times is getting ready for its first edition. <a href="/send-news/">Send us the news from your town &rarr;</a></span></p>
+
+<div class="front">
+  <div class="well">
+    <div class="story lead">
+      <article>
+        <p class="kicker">A Letter From the Publisher</p>
+        <h2 class="h-lead"><a href="#letter">A Newspaper for Vermilion Parish Starts Here</a></h2>
+        <p class="summary">An independent paper, written for the people who live here and about the things that matter to them.</p>
+        <ul class="bullets">
+          <li>Police Jury, councils and the school board, covered meeting by meeting.</li>
+          <li>Scores, honor rolls, festivals and the people of every town.</li>
+          <li>The Starbase Louisiana launch site at Pecan Island, reported plainly.</li>
+        </ul>
+        <p class="meta">3 min read</p>
+      </article>
+      <figure>
+        <div class="cut"><img src="/img/vermilion-oak.svg" width="640" height="400" alt="Engraving of a live oak hung with moss beside the river at sunrise, a man poling a pirogue across the water"></div>
+        <figcaption>Sunrise on the water. Illustration for The Vermilion Times.</figcaption>
+      </figure>
+    </div>
+
+    <div class="story split">
+      <article id="letter">
+        <p class="kicker">From the Publisher</p>
+        <h2 class="h-1">Every Parish Deserves a Paper That Shows Up</h2>
+        <p class="byline">By the Publisher &middot; Vermilion Parish, La.</p>
+        <p class="dropcap">One that sits through the Police Jury meeting, knows the score of Friday night&rsquo;s game, prints the honor roll, and tells you which new business just opened its doors on Main Street.</p>
+        <p>That is what The Vermilion Times sets out to be. We will cover Abbeville and Kaplan, Erath and Gueydan, Delcambre, Maurice and the coast: the councils and the courthouse, the schools and the ball fields, the churches and the festivals, the harvest and the water, and the people who keep it all going.</p>
+      </article>
+      <article>
+        <p class="kicker">The Road Ahead</p>
+        <h2 class="h-1">Big Changes Are Coming. We Will Report Them Fairly.</h2>
+        <p class="summary">From the announced Starbase Louisiana launch site at Pecan Island to the growth it may bring, the parish has a lot to weigh. We intend to lay out the facts so the people who live here can make up their own minds.</p>
+        <p>Our first edition is coming soon. Until then, we want to hear from you: the news, the milestones, the questions nobody is answering. This paper belongs to the parish. Help us fill it.</p>
+        <p class="byline">&mdash; The Publisher</p>
+      </article>
+    </div>
+
+    <div class="story split">
+      <article>
+        <p class="kicker">Correspondents Wanted</p>
+        <h2 class="h-1"><a href="/send-news/#write">A Correspondent in Every Town</a></h2>
+        <p class="summary">We are looking for people who go to the meetings, know the coaches and can write a clean, fair paragraph. Students and retirees welcome.</p>
+        <p class="meta">Tell us your town</p>
+      </article>
+      <article>
+        <p class="kicker">Your News</p>
+        <h2 class="h-1"><a href="/send-news/">How to Get Your News in the Times</a></h2>
+        <ul class="bullets">
+          <li>Meetings, decisions and public notices</li>
+          <li>Scores, honor rolls and graduations</li>
+          <li>Births, weddings and obituaries</li>
+          <li>Church, club and festival news</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+
+  <aside class="rail" id="opinion" aria-label="Opinion">
+    <h2 class="rail-head">Opinion</h2>
+    <div class="op">
+      <span class="who">The Editorial Board</span>
+      <h3 class="h-op"><a href="/about/#standards">What This Paper Promises Its Readers</a></h3>
+      <p>Accuracy first. News kept apart from opinion. Conflicts disclosed. Advertising never buys coverage.</p>
+    </div>
+    <div class="op">
+      <span class="who">Letters to the Editor</span>
+      <h3 class="h-op"><a href="/send-news/#letters">The First Letters Page Is Yours to Fill</a></h3>
+      <p>Agree with us, argue with us, tell the parish what is on your mind. Sign your name and your town.</p>
+    </div>
+    <div class="op">
+      <span class="who">Guest Columns</span>
+      <h3 class="h-op"><a href="/send-news/#letters">Have Something to Say About Vermilion?</a></h3>
+      <p>Farmers, teachers, pastors, business owners: pitch us a column about the parish you know.</p>
+    </div>
+    <div class="box">
+      <h3 class="h-2">Got a Tip?</h3>
+      <p>Know something the parish should know? Tell us. We read everything, and we will ask before we name you.</p>
+      <a class="btn" href="mailto:news@thevermiliontimes.com?subject=News%20tip">Send a Tip</a>
+    </div>
+    <div class="box">
+      <h3 class="h-2">Advertise in the First Edition</h3>
+      <p>Charter advertisers who sign on before the first edition get first pick of placement.</p>
+      <a class="link" href="/send-news/#advertise">Ask about advertising &rarr;</a>
+    </div>
+    <div class="op" id="obituaries">
+      <span class="who">Obituaries</span>
+      <h3 class="h-op"><a href="/send-news/#announcements">Remembering Our Neighbors</a></h3>
+      <p>Obituaries are printed as sent by the family or the funeral home, with service details.</p>
+    </div>
+  </aside>
+</div>
+
+<section class="band" aria-labelledby="sections-h">
+  <div class="band-head"><h2 id="sections-h">In These Pages</h2><span>Sections of the Times</span></div>
+  <div class="grid4">
+    <article id="local">
+      <p class="kicker">Local</p>
+      <h3 class="h-2">Abbeville to the Gulf</h3>
+      <p>The towns, the roads, the new businesses and the people of every community in the parish.</p>
+      <span class="status">Coming in the First Edition</span>
+    </article><article id="government">
+      <p class="kicker">Parish Government</p>
+      <h3 class="h-2">Police Jury &amp; Courthouse</h3>
+      <p>Police Jury, city councils and the school board: what was decided, what it costs and who voted how.</p>
+      <span class="status">Coming in the First Edition</span>
+    </article><article id="schools">
+      <p class="kicker">Schools</p>
+      <h3 class="h-2">Honor Rolls &amp; Graduations</h3>
+      <p>Classrooms, teachers, awards and every honor roll the schools send us.</p>
+      <span class="status">Coming in the First Edition</span>
+    </article><article id="sports">
+      <p class="kicker">Sports</p>
+      <h3 class="h-2">Friday Nights &amp; Beyond</h3>
+      <p>Scores, standings and the athletes from Kaplan, Abbeville, Erath, Gueydan and North Vermilion.</p>
+      <span class="status">Coming in the First Edition</span>
+    </article><article id="business">
+      <p class="kicker">Business</p>
+      <h3 class="h-2">Open for Business</h3>
+      <p>Openings, closings, hiring and the people building things here.</p>
+      <span class="status">Coming in the First Edition</span>
+    </article><article id="starbase">
+      <p class="kicker">Starbase Louisiana</p>
+      <h3 class="h-2">The Launch Site at Pecan Island</h3>
+      <p>What the announced launch site means for jobs, roads, housing and the coast, reported plainly so readers can decide for themselves.</p>
+      <p class="disclose">Disclosure: the publisher of the Times also owns Rocket Farm, an RV park in Kaplan. Any story that touches it will say so.</p>
+      <span class="status">Coming in the First Edition</span>
+    </article><article id="land-water">
+      <p class="kicker">Land &amp; Water</p>
+      <h3 class="h-2">Rice, Crawfish &amp; Cattle</h3>
+      <p>Harvests and prices, the marsh and the coast, hunting and fishing seasons, and the weather that rules all of it.</p>
+      <span class="status">Coming in the First Edition</span>
+    </article><article id="faith">
+      <p class="kicker">Faith &amp; Family</p>
+      <h3 class="h-2">Churches, Festivals &amp; Fish Fries</h3>
+      <p>Church news, festivals, club meetings, births, weddings and anniversaries.</p>
+      <span class="status">Coming in the First Edition</span>
+    </article>
+  </div>
+</section>
+
+<section class="band" aria-labelledby="join-h">
+  <div class="band-head"><h2 id="join-h">Be Part of the Paper</h2><span>The Times belongs to the parish</span></div>
+  <div class="grid3">
+    <article>
+      <p class="kicker">Announcements</p>
+      <h3 class="h-2">Births, Weddings &amp; Milestones</h3>
+      <p>Send names, dates, towns and a photo if you have one. Anniversaries and birthdays welcome.</p>
+      <p><a href="/send-news/#announcements">Send an announcement &rarr;</a></p>
+    </article>
+    <article>
+      <p class="kicker">Schools &amp; Coaches</p>
+      <h3 class="h-2">Send Us Your Scores</h3>
+      <p>Coaches and athletic directors: send results after every game, with the standouts and the stats.</p>
+      <p><a href="/send-news/#news">Send scores &rarr;</a></p>
+    </article>
+    <article>
+      <p class="kicker">Local Business</p>
+      <h3 class="h-2">Reach Your Neighbors</h3>
+      <p>Display ads, classifieds and announcements for businesses across the parish.</p>
+      <p><a href="/send-news/#advertise">Advertise with us &rarr;</a></p>
+    </article>
+  </div>
+</section>
+
+<p class="towns">Abbeville <span class="fleur" aria-hidden="true">&#x269C;</span> Kaplan <span class="fleur" aria-hidden="true">&#x269C;</span> Erath <span class="fleur" aria-hidden="true">&#x269C;</span> Gueydan <span class="fleur" aria-hidden="true">&#x269C;</span> Delcambre <span class="fleur" aria-hidden="true">&#x269C;</span> Maurice <span class="fleur" aria-hidden="true">&#x269C;</span> Perry <span class="fleur" aria-hidden="true">&#x269C;</span> Meaux <span class="fleur" aria-hidden="true">&#x269C;</span> Henry <span class="fleur" aria-hidden="true">&#x269C;</span> Forked Island <span class="fleur" aria-hidden="true">&#x269C;</span> Pecan Island <span class="fleur" aria-hidden="true">&#x269C;</span> Intracoastal City</p>
+</main>
+<footer class="wrap siteindex">
+  <div class="si-top">
+    <p class="si-plate"><a href="/">The Vermilion Times</a></p>
+    <a class="btn ghost" href="/send-news/">Send Us News</a>
+  </div>
+  <h2 class="si-label">Site Index</h2>
+  <div class="si-cols">
+    <nav aria-label="News sections"><h3>News</h3><ul><li><a href="/#local">Local</a></li><li><a href="/#government">Parish Government</a></li><li><a href="/#schools">Schools</a></li><li><a href="/#sports">Sports</a></li><li><a href="/#business">Business</a></li><li><a href="/#starbase">Starbase Louisiana</a></li></ul></nav>
+    <nav aria-label="Life sections"><h3>Life &amp; Opinion</h3><ul><li><a href="/#land-water">Land &amp; Water</a></li><li><a href="/#faith">Faith &amp; Family</a></li><li><a href="/#opinion">Opinion</a></li><li><a href="/#obituaries">Obituaries</a></li></ul></nav>
+    <nav aria-label="Contribute"><h3>Contribute</h3><ul><li><a href="/send-news/">Send a Tip</a></li><li><a href="/send-news/#announcements">Announcements</a></li><li><a href="/send-news/#letters">Letters to the Editor</a></li><li><a href="/send-news/#write">Write for the Times</a></li></ul></nav>
+    <nav aria-label="Business"><h3>Business</h3><ul><li><a href="/send-news/#advertise">Advertise</a></li><li><a href="/send-news/#advertise">Classifieds</a></li><li><a href="/send-news/#advertise">Public Notices</a></li></ul></nav>
+    <nav aria-label="About"><h3>The Times</h3><ul><li><a href="/about/">About the Times</a></li><li><a href="/about/#standards">Our Standards</a></li><li><a href="/about/#corrections">Corrections</a></li><li><a href="/about/#contact">Contact</a></li></ul></nav>
+  </div>
+  <div class="si-legal">
+    <span>&copy; <span id="year">2026</span> The Vermilion Times</span>
+    <span>Published in Vermilion Parish, Louisiana</span>
+    <a href="mailto:news@thevermiliontimes.com">news@thevermiliontimes.com</a>
+  </div>
+</footer>
+<script src="/assets/times.js" defer></script>
 </body>
 </html>
