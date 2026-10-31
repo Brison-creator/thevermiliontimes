@@ -5,6 +5,11 @@ section: starbase
 date: 2026-10-31
 time: 08:30
 featured: yes
+image: /img/photos/starbase-texas-tower.jpg
+image_alt: SpaceX's Starbase launch site in Boca Chica, Texas: storage tanks and a tall launch tower under construction beside coastal wetlands.
+image_caption: File photo: SpaceX's existing Starbase launch site in Boca Chica, Texas.
+image_credit: Alexander Hatley / Wikimedia Commons, CC BY 2.0
+image_source: https://commons.wikimedia.org/wiki/File:USA_-_Texas_-_Boca_Chica_-_Starbase_(51286772204).jpg
 disclosure: Disclosure: Brison McPhail, publisher of The Vermilion Times, also owns Rocket Farm, an RV park in development in Kaplan that expects to house workers in the area. The Times will say so in every story about Starbase Louisiana.
 sources:
 - The Center Square, "Former chief of staff for Landry registers as SpaceX lobbyist," Oct. 28, 2026 | https://www.thecentersquare.com/louisiana/article_0944c3b3-ea0c-4204-ab51-ccd7e633d2fb.html
