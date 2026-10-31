@@ -23,6 +23,7 @@ A running record of SpaceX's planned Starbase Louisiana launch site near Pecan I
 - **Oct. 26, 2026:** The Vermilion Citizens Coalition and three residents sue the Police Jury and the development board under the Open Meetings Law, asking a judge to void the Aug. 25 approval. [Our story.](/news/residents-sue-to-void-spacex-tax-deal/)
 - **Oct. 28, 2026:** Acadiana News First reports the school district owns about 4,000 acres of Section 16 school land near White Lake, next to the site, which would be appraised before any swap. Gov. Jeff Landry's former chief of staff, Kyle Ruckert, is reported registered as a SpaceX lobbyist.
 - **Oct. 29, 2026:** Vermilion United questions local hiring, the $600,000 fee and an unwritten fire-protection pledge. [Our story.](/news/vermilion-united-questions-spacex-deal/)
+- **Oct. 31, 2026:** The Center Square reports DOTD selected Royal Engineers & Consultants, a firm that gave $115,000 to a Landry-aligned PAC, for work tied to the site; the state is evaluating LA 82 improvements without having settled who pays. [Our story.](/news/landry-donor-firm-spacex-dotd-contract/)
 - **Dec. 14, 2026:** The earliest date Louisiana Economic Development told Vermilion United it would release the state's cooperative endeavor agreement with SpaceX, according to the group.
 
 ## Still unanswered
@@ -31,6 +32,7 @@ A running record of SpaceX's planned Starbase Louisiana launch site near Pecan I
 - What does the state's cooperative endeavor agreement with SpaceX say? It is not public.
 - Will SpaceX's verbal promise of fire equipment, meant to protect homeowners' insurance rates, be put in writing?
 - Where will the development board's annual administrative fee go?
+- Who pays for upgrades to LA 82 and other roads: taxpayers or SpaceX? Was DOTD's SpaceX-related engineering contract bid out?
 - What is the school land near White Lake worth, and what would the parish's schools get in a swap?
 - How will a judge rule on the open meetings lawsuit, and when?
 
