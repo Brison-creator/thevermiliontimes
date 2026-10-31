@@ -162,9 +162,24 @@ def figure(a,cls='story-art',w=None,h=None,lazy=True,caption=True):
     cap=''
     if caption:
         cap=f'<figcaption>{inline(a["img_caption"])} <span class="credit">{a["img_credit"]}</span></figcaption>'
-    load=' loading="lazy"' if lazy else ''
-    return f'<figure class="{cls}"><img src="{a["img"]}" alt="{html.escape(a["img_alt"])}" width="{w}" height="{h}"{load} decoding="async">{cap}</figure>'
+    load=' loading="lazy"' if lazy else ' fetchpriority="high"'
+    sizes={'story-art':'(max-width: 760px) 100vw, 736px','lead-art':'(max-width: 700px) 100vw, (max-width: 1000px) 50vw, 400px'}.get(cls,'(max-width: 1000px) 40vw, 200px')
+    base=a['img'].rsplit('.',1)[0]
+    src=''
+    if a['img'].startswith('/img/photos/') and os.path.exists(R+base.lstrip('/')+'-640.webp') and os.path.exists(R+base.lstrip('/')+'-1280.webp'):
+        src=f'<source type="image/webp" srcset="{base}-640.webp 640w, {base}-1280.webp 1280w" sizes="{sizes}">'
+    img=f'<img src="{a["img"]}" alt="{html.escape(a["img_alt"])}" width="{w}" height="{h}"{load} decoding="async">'
+    return f'<figure class="{cls}">' + (f'<picture>{src}{img}</picture>' if src else img) + f'{cap}</figure>'
 def latest_in(sec): return next((a for a in ARTICLES if a['section']==sec),None)
+
+def map_embed(a, body):
+    # [[map]] in a story becomes an OpenStreetMap map centered on map: lat,lon
+    if not a.get('map') or '[[map]]' not in body: return body.replace('<p class="dropcap">[[map]]</p>','').replace('<p>[[map]]</p>','')
+    lat,lon=(float(x) for x in a['map'].split(','))
+    bbox=f'{lon-0.42:.4f},{lat-0.14:.4f},{lon+0.42:.4f},{lat+0.40:.4f}'
+    fig=(f'<figure class="map-embed"><iframe title="Map of {html.escape(a["title"])}" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox={bbox}&amp;layer=mapnik&amp;marker={lat},{lon}"></iframe>'
+         f'<figcaption>The marker shows the Pecan Island community. Map: <a href="https://www.openstreetmap.org/?mlat={lat}&amp;mlon={lon}#map=10/{lat}/{lon}" rel="noopener">&copy; OpenStreetMap contributors</a></figcaption></figure>')
+    return body.replace('<p>[[map]]</p>',fig).replace('<p class="dropcap">[[map]]</p>',fig)
 
 def article_body(a):
     def src_item(n,u):
@@ -183,7 +198,7 @@ def article_body(a):
   <p class="byline with-photo"><img class="pub-photo" src="/img/publisher.png" width="44" height="44" alt=""><span>{("By "+html.escape(a["byline"])) if a.get("byline") else "By The Vermilion Times"} &middot; Published by <a class="pub-name" href="/about/#publisher">Brison McPhail</a><br>{stamp(a,True)}{upd}</span></p>
   {figure(a,lazy=False)}
   <div class="article-body">
-{a["body_html"]}
+{map_embed(a, a["body_html"])}
   </div>
   {disc}
   <aside class="sources" aria-labelledby="src-h"><h2 id="src-h">Sources</h2><p>This report was compiled from the public sources below.</p><ul>{src}</ul></aside>
@@ -192,12 +207,22 @@ def article_body(a):
   {more_html}
 </article>'''
 
+LOGO={"@type":"ImageObject","url":SITE+"/img/brand/round-720.png","width":720,"height":720}
 def article_ld(a):
-    return {"@context":"https://schema.org","@type":"NewsArticle","headline":a['title'][:110],"description":a['deck'],
-            "datePublished":a['pub'].isoformat(),"dateModified":str(a['upd']) if a['upd'] else a['pub'].isoformat(),"articleSection":re.sub('&amp;','&',SECTION_NAME[a['section']]),
-            "mainEntityOfPage":SITE+a['url'],"isAccessibleForFree":True,"image":[SITE+a['img_share']],
-            "author":{"@type":"Organization","name":"The Vermilion Times","url":SITE+"/"},
-            "publisher":{"@type":"NewsMediaOrganization","name":"The Vermilion Times","url":SITE+"/","founder":{"@type":"Person","name":"Brison McPhail"}}}
+    sec=re.sub('&amp;','&',SECTION_NAME[a['section']])
+    art={"@context":"https://schema.org","@type":"NewsArticle","headline":re.sub('<[^>]+>','',html.unescape(a['title']))[:110],
+         "description":re.sub('<[^>]+>','',inline(a['deck'])),"datePublished":a['pub'].isoformat(),
+         "dateModified":str(a['upd']) if a['upd'] else a['pub'].isoformat(),"articleSection":sec,
+         "mainEntityOfPage":{"@type":"WebPage","@id":SITE+a['url']},"url":SITE+a['url'],"isAccessibleForFree":True,"inLanguage":"en-US",
+         "image":[SITE+a['img_share']],"author":{"@type":"Organization","name":"The Vermilion Times","url":SITE+"/"},
+         "publisher":{"@type":"NewsMediaOrganization","name":"The Vermilion Times","url":SITE+"/","logo":LOGO},
+         "contentLocation":{"@type":"Place","name":"Vermilion Parish, Louisiana"}}
+    if a['section']=='starbase': art["keywords"]=["SpaceX Louisiana","Starbase Louisiana","Pecan Island","Vermilion Parish"]
+    crumbs={"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+        {"@type":"ListItem","position":1,"name":"Home","item":SITE+"/"},
+        {"@type":"ListItem","position":2,"name":sec,"item":f"{SITE}/{a['section']}/"},
+        {"@type":"ListItem","position":3,"name":re.sub('<[^>]+>','',html.unescape(a['title'])),"item":SITE+a['url']}]}
+    return [art,crumbs]
 
 def news_index_body():
     if not ARTICLES:
@@ -208,7 +233,7 @@ def news_index_body():
     return f'<article class="page news-index">{anchors}<p class="kicker">The News</p><h1>Latest News</h1><p class="deck">Every story in The Vermilion Times, newest first.</p><ol class="news-list">{rows}</ol></article>'
 
 
-def page(path,title,desc,body,h1_is_plate=False,ld=None,image='/img/og-nameplate.png'):
+def page(path,title,desc,body,h1_is_plate=False,ld=None,image='/img/og-nameplate.png',art=None):
     cur_attr=' aria-current="page"'
     NAV=[('/news/','Latest Stories'),('/starbase/','Starbase'),('/government/','Government'),('/safety/','Public Safety'),('/business/','Business'),('/sports/','Sports'),('/schools/','Schools'),('/local/','Community'),('/opinion/','Opinion')]
     secnav=''.join(f'<li><a href="{h}"{cur_attr if path==h else ""}>{t}</a></li>' for h,t in NAV)
@@ -230,7 +255,9 @@ def page(path,title,desc,body,h1_is_plate=False,ld=None,image='/img/og-nameplate
 <meta name="description" content="{desc}">
 <link rel="canonical" href="{SITE}{path}">
 <meta name="theme-color" content="#000000">
-<meta property="og:type" content="website">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+{('<meta property="og:type" content="article">'+f'<meta property="article:published_time" content="{art["pub"].isoformat()}"><meta property="article:section" content="{SECTION_NAME[art["section"]]}"><meta property="article:author" content="Brison McPhail">') if art else '<meta property="og:type" content="website">'}
+<meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="The Vermilion Times">
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{desc}">
@@ -324,9 +351,10 @@ def form_hidden(subject):
 BRIEF=f'''<div class="box brief" id="brief"><p class="kicker">Newsletter</p><h3 class="h-2">The Edge of X</h3><p>Your direct feed for Starbase Louisiana. 10,000 launches. $100B spaceport. Zero fluff. Delivered fresh to your inbox.</p>
   <form class="vt-form" action="{FORM_URL}" method="post">{form_hidden('New subscriber: The Edge of X')}<label class="sr" for="brief-email">Email address</label><input id="brief-email" type="email" name="email" required placeholder="you@example.com"><input type="hidden" name="list" value="The Edge of X"><button class="btn" type="submit">Subscribe Free</button><p class="form-msg" role="status" hidden></p></form></div>'''
 SEC_TEXT={k:(head,txt) for k,_,head,txt in CARDS}
+SEC_TEXT['starbase']=('SpaceX Louisiana: Starbase Louisiana News, Jobs, Map and Timeline','Everything about SpaceX&rsquo;s planned Starbase Louisiana launch site at Pecan Island: the jobs, the location, the money, the decisions and the open questions, reported plainly so readers can decide for themselves.')
 SEC_TEXT['opinion']=('Letters, Columns &amp; the Editorial Board','Signed letters from readers, guest columns about the parish and the paper\'s own positions, always labeled as opinion.')
 SEC_TEXT['obituaries']=('Remembering Our Neighbors','Obituaries as sent by families and funeral homes, with service details.')
-SEC_TITLE={'starbase':'Starbase Louisiana News and Timeline','safety':'Vermilion Parish Crime and Public Safety News','government':'Vermilion Parish Government News',
+SEC_TITLE={'starbase':'SpaceX Louisiana and Starbase Louisiana News, Jobs, Map','safety':'Vermilion Parish Crime and Public Safety News','government':'Vermilion Parish Government News',
            'sports':'Vermilion Parish High School Sports','schools':'Vermilion Parish Schools News','local':'Vermilion Parish Local News'}
 def story_list(arts):
     return ''.join(f'''<li id="{a["slug"]}"><a href="{a["url"]}" tabindex="-1" aria-hidden="true" class="art-link">{figure(a,'thumb-art',caption=False)}</a><p class="kicker">{SECTION_NAME[a["section"]]}<span class="new-tag" data-pub="{a["pub"].isoformat()}" hidden>New</span></p><h2 class="h-1"><a href="{a["url"]}">{html.escape(a["title"])}</a></h2>
@@ -513,14 +541,19 @@ def meta_desc(t):
     t=re.sub(r'<[^>]+>','',t).replace('"','&quot;')
     return t if len(t)<=158 else t[:155].rsplit(' ',1)[0]+'...'
 for a in ARTICLES:
-    files[a['url'].strip('/')+'/index.html']=page(a['url'],f'{html.escape(a["title"])} | The Vermilion Times',meta_desc(inline(a['deck'])),article_body(a),False,[article_ld(a)],a['img_share'])
+    files[a['url'].strip('/')+'/index.html']=page(a['url'],f'{html.escape(a["title"])} | The Vermilion Times',meta_desc(inline(a['deck'])),article_body(a),False,article_ld(a),a['img_share'],a)
 # drop pages for stories that were removed
 for d in glob.glob(R+'news/*/'):
     if d[len(R):]+'index.html' not in files:
         import shutil; shutil.rmtree(d)
 for p,s in files.items():
     os.makedirs(os.path.dirname(R+p) or R,exist_ok=True); io.open(R+p,'w',encoding='utf-8').write(s)
-io.open(R+'robots.txt','w').write(f'User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n')
+io.open(R+'robots.txt','w').write(f'User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\nSitemap: {SITE}/news-sitemap.xml\n')
+# Google News sitemap: stories from the last 48 hours (Google's rule), newest first
+_now=datetime.datetime.now(CT)
+_recent=[x for x in ARTICLES if (_now-x['pub']).total_seconds()<48*3600] or ARTICLES[:1]
+io.open(R+'news-sitemap.xml','w',encoding='utf-8').write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n'+
+  ''.join(f'  <url><loc>{SITE}{x["url"]}</loc><news:news><news:publication><news:name>The Vermilion Times</news:name><news:language>en</news:language></news:publication><news:publication_date>{x["pub"].isoformat()}</news:publication_date><news:title>{html.escape(re.sub("<[^>]+>","",html.unescape(x["title"])))}</news:title></news:news><image:image><image:loc>{SITE}{x["img_share"]}</image:loc></image:image></url>\n' for x in _recent)+'</urlset>\n')
 TODAY=str(ARTICLES[0]['d']) if ARTICLES else '2026-10-30'
 urls=[('/',TODAY),('/news/',TODAY)]+[(f'/{k}/',TODAY) for k,_ in SECTIONS]+[('/about/','2026-10-31'),('/send-news/','2026-10-31')]+[(a['url'],str(a['upd'] or a['d'])) for a in ARTICLES]
 io.open(R+'sitemap.xml','w').write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+

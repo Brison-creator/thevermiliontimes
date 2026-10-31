@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://thevermiliontimes.com/sitemap.xml
+Sitemap: https://thevermiliontimes.com/news-sitemap.xml

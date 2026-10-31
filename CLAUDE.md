@@ -99,6 +99,22 @@ the end of the body: `*Correction: ...*` saying what was wrong.
   Brison McPhail" (automatic). Put `byline: Name` in the front matter only for
   a story that person actually reported.
 
+## Search (SEO)
+
+The paper wants to be found for what people search: "SpaceX Louisiana",
+"Starbase Louisiana", "SpaceX Pecan Island", "SpaceX Vermilion Parish", and
+especially **jobs**, **location/map**, the **land deal**, and the parish's own
+offices (School Board, sheriff, jail, assessor, clerk of court).
+- Use those exact phrases in headlines and decks when they fit naturally.
+  Never stuff keywords or write a misleading headline.
+- Link new Starbase stories to Starbase Watch (/starbase/) and to related
+  stories; update `sections/starbase.md` (numbers, timeline) when facts change.
+- Once a week, re-check SpaceX's job board for Louisiana listings
+  (`https://boards-api.greenhouse.io/v1/boards/spacex/jobs`, location
+  "Pecan Island, LA") and update the jobs story with `updated:` if it changed.
+- After adding photos, run `tools/webp.py` (needs Pillow) to make the
+  phone-sized WebP copies the pages serve.
+
 ## Daily story routine
 
 The goal is to be the paper of record for Vermilion Parish: fast, complete and

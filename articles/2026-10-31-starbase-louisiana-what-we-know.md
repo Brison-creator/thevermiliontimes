@@ -4,7 +4,6 @@ deck: The jobs, the money, the timeline and the questions still open about Space
 section: starbase
 date: 2026-10-31
 time: 08:30
-featured: yes
 image: /img/photos/starbase-texas-tower.jpg
 image_alt: SpaceX's Starbase launch site in Boca Chica, Texas: storage tanks and a tall launch tower under construction beside coastal wetlands.
 image_caption: File photo: SpaceX's existing Starbase launch site in Boca Chica, Texas.
