@@ -3,6 +3,7 @@ title: Citizen Group Presses for Answers on SpaceX Deal; Ex-Landry Aide Now a Sp
 deck: Vermilion United says the Starbase Louisiana tax agreement treats local hiring as a goal, not a promise, and wants a verbal SpaceX pledge on fire protection put in writing.
 section: starbase
 date: 2026-10-31
+time: 05:48
 disclosure: Disclosure: Brison McPhail, publisher of The Vermilion Times, also owns Rocket Farm, an RV park in development in Kaplan that expects to house workers in the area. The Times will say so in every story about Starbase Louisiana.
 sources:
 - Acadiana News First, "Vermilion United raises concerns over SpaceX deal and public accountability," Oct. 29, 2026 | https://www.acadiananewsfirst.com/2026/10/29/vermilion-united-raises-concerns-over-spacex-deal-public-accountability/
@@ -32,4 +33,4 @@ Separately, Kyle Ruckert, who served as Landry's chief of staff until February, 
 
 According to The Center Square, the project is expected to create 3,000 direct jobs over the next decade, with construction expected to begin in 2027 and a first launch targeted for 2029. State officials negotiated an incentive package the outlet estimates at $27.5 billion, including roughly $24 billion in property tax exemptions over 25 years.
 
-Both developments follow the lawsuit filed Oct. 26 by the Vermilion Citizens Coalition and three residents seeking to void the development board's Aug. 25 approval of the tax agreement under Louisiana's Open Meetings Law. [The Times reported on that suit here.](https://thevermiliontimes.com/news/residents-sue-to-void-spacex-tax-deal/)
+Both developments follow the lawsuit filed Oct. 26 by the Vermilion Citizens Coalition and three residents seeking to void the development board's Aug. 25 approval of the tax agreement under Louisiana's Open Meetings Law. [The Times reported on that suit Friday.](https://thevermiliontimes.com/news/residents-sue-to-void-spacex-tax-deal/)

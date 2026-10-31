@@ -6,7 +6,7 @@
     python3 tools/commons.py get "File:Some photo.jpg" slug  # download + print front matter
 
 Only public domain, CC0, CC BY and CC BY-SA files are accepted; anything else
-(NC, ND, fair use, unknown) is refused. `get` saves a 1400px-wide copy to
+(NC, ND, fair use, unknown) is refused. `get` saves a 1280px-wide copy to
 img/photos/<slug>.<ext> and prints the image/image_credit lines to paste into
 the story, with the author and license exactly as Commons records them.
 """
@@ -61,7 +61,7 @@ def main():
     elif cmd == 'get':
         slug = sys.argv[3] if len(sys.argv) > 3 else sys.exit('get needs a slug')
         title = arg if arg.startswith('File:') else 'File:' + arg
-        d = api(action='query', titles=title, iiurlwidth='1400', **props())
+        d = api(action='query', titles=title, iiurlwidth='1280', **props())
         p = d['query']['pages'][0]; ii = p['imageinfo'][0]; m = ii['extmetadata']
         lic = strip(m.get('LicenseShortName', {}).get('value'))
         if not OK.match(lic) or re.search(r'\b(nc|nd)\b', lic, re.I):

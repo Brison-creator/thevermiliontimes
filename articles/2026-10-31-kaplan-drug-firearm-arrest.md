@@ -3,6 +3,7 @@ title: Kaplan Man Arrested on Drug and Firearm Charges After Search of Home
 deck: Investigators seized suspected methamphetamine, marijuana, prescription pills and two guns with an estimated street value of more than $68,000, KLFY reported.
 section: safety
 date: 2026-10-31
+time: 05:48
 sources:
 - KLFY, "Kaplan man faces multiple drug and firearm charges," Oct. 29, 2026 | https://www.klfy.com/local/vermilion-parish/kaplan-man-drug-firearm-charges/
 ---

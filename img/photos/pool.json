@@ -1,0 +1,16 @@
+{
+ "starbase": [
+  {"image": "/img/photos/starbase-texas-tower.jpg",
+   "alt": "SpaceX's Starbase launch site in Boca Chica, Texas: storage tanks and a tall launch tower under construction beside coastal wetlands.",
+   "caption": "SpaceX's existing Starbase launch site in Boca Chica, Texas.",
+   "credit": "Alexander Hatley / Wikimedia Commons, CC BY 2.0",
+   "source": "https://commons.wikimedia.org/wiki/File:USA_-_Texas_-_Boca_Chica_-_Starbase_(51286772204).jpg"}
+ ],
+ "land-water": [
+  {"image": "/img/photos/starbase-white-lake.jpg",
+   "alt": "A man in a flat-bottom boat loaded with crates beside a floatplane on dark water, trees along the bank.",
+   "caption": "Whooping cranes are ferried by boat at the White Lake Wetlands Conservation Area in Vermilion Parish.",
+   "credit": "U.S. Fish and Wildlife Service (public domain)",
+   "source": "https://commons.wikimedia.org/wiki/File:Transporting_Whooping_Cranes_to_White_Lake_Wetlands_Conservation_Area_(6777537126).jpg"}
+ ]
+}

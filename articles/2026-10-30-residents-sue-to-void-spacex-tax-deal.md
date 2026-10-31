@@ -2,12 +2,8 @@
 title: Residents Sue to Void Parish's SpaceX Tax Deal Over Open Meetings Law
 deck: A new citizens group and three residents say the Police Jury and a revived development board broke Louisiana's Open Meetings Law eight times while approving the Starbase Louisiana agreement.
 section: starbase
-date: 2026-10-31
-image: /img/photos/pecan-island-marsh-aerial.jpg
-image_alt: Aerial map of Pecan Island, a long wooded ridge crossed by a highway, surrounded by marsh, ponds and open water.
-image_caption: Pecan Island and the surrounding marsh in southern Vermilion Parish, in a shaded-relief map made from 2005 aerial imagery. Cropped.
-image_credit: Paul H. / Wikimedia Commons, CC0
-image_source: https://commons.wikimedia.org/wiki/File:Pecan_Island,_Louisiana,_Shaded_Reiief_Map_With_2005_NAIP_Base.jpg
+date: 2026-10-30
+time: 19:30
 disclosure: Disclosure: Brison McPhail, publisher of The Vermilion Times, also owns Rocket Farm, an RV park in development in Kaplan that expects to house workers in the area. The Times will say so in every story about Starbase Louisiana.
 sources:
 - WWNO / Gulf States Newsroom, "'Behind closed doors': The secret SpaceX deal and the lawsuit challenging it," Oct. 26, 2026 | https://www.wwno.org/politics/2026-10-26/behind-closed-doors-the-secret-spacex-deal-and-the-lawsuit-challenging-it
@@ -36,7 +32,7 @@ The plaintiffs' attorney, William Most of New Orleans, said the Open Meetings La
 
 The Police Jury declined to comment, and the Industrial Development Board did not respond, WWNO reported. The board's minutes say the Aug. 25 meeting notice was "duly posted and given in the manner provided by the Open Meetings Law." The governor's office said its executive counsel attended the July 15 meeting and that the settlement was discussed in executive session before a public vote. SpaceX did not respond to the newsroom.
 
-No hearing date had been reported as of Saturday.
+No hearing date had been reported as of Friday.
 
 ## School land near the site
 
