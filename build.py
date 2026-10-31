@@ -8,7 +8,6 @@ import io, os, re, json, glob, html, datetime
 R=os.path.dirname(os.path.abspath(__file__))+'/'
 SITE='https://thevermiliontimes.com'
 EMAIL='news@thevermiliontimes.com'
-TIPS_EMAIL='brison@jetheatandair.com'  # where tips and the Send Us News page go, per the publisher
 FONTS='https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Grenze+Gotisch:wght@700&family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=IM+Fell+English+SC&display=swap'
 ICON=("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23f3e9d4'/%3E"
       "%3Ctext x='32' y='47' font-family='UnifrakturMaguntia,serif' font-size='44' text-anchor='middle' fill='%237c1f1a'%3EV%3C/text%3E%3C/svg%3E")
@@ -334,7 +333,7 @@ home_body=f'''{RIBBON}
     <div class="box">
       <h3 class="h-2">Got a Tip?</h3>
       <p>Know something the parish should know? Tell us. We read everything, and we will ask before we name you.</p>
-      <a class="btn" href="mailto:{TIPS_EMAIL}?subject=News%20tip">Send a Tip</a>
+      <a class="btn" href="mailto:{EMAIL}?subject=News%20tip">Send a Tip</a>
     </div>
     <div class="box">
       <h3 class="h-2">Advertise in the First Edition</h3>
@@ -408,7 +407,7 @@ send_body=f'''<article class="page">
   <h1>Tell the Parish</h1>
   <p class="deck">The best stories come from the people who live them. Here is how to get yours into the Times.</p>
   <h2 id="news">News &amp; Tips</h2>
-  <p class="dropcap">Email <a href="mailto:{TIPS_EMAIL}">{TIPS_EMAIL}</a> with what happened, where and when, who was involved, and how we can reach you. Photos are welcome; tell us who took them and who is in them.</p>
+  <p class="dropcap">Email <a href="mailto:{EMAIL}">{EMAIL}</a> with what happened, where and when, who was involved, and how we can reach you. Photos are welcome; tell us who took them and who is in them.</p>
   <p>If you want to share something in confidence, say so at the top of your message before you give details.</p>
   <h2 id="announcements">Announcements</h2>
   <ul>
@@ -422,7 +421,7 @@ send_body=f'''<article class="page">
   <h2 id="write">Write for the Times</h2>
   <p>We want correspondents in every town in the parish. Email us with your name, your town, what you would like to cover and, if you have one, something you have written.</p>
   <h2 id="advertise">Advertise</h2>
-  <p>Display ads, classifieds and business announcements. Email <a href="mailto:{TIPS_EMAIL}">{TIPS_EMAIL}</a> with your business name and what you would like to run, and we will send rates and sizes. Charter advertisers who sign on before the first edition get first pick of placement.</p>
+  <p>Display ads, classifieds and business announcements. Email <a href="mailto:{EMAIL}">{EMAIL}</a> with your business name and what you would like to run, and we will send rates and sizes. Charter advertisers who sign on before the first edition get first pick of placement.</p>
 </article>'''
 
 nf_body='''<article class="page" style="text-align:center">
