@@ -38,3 +38,28 @@
   tick();
   setInterval(tick, 60000);
 })();
+
+/* Forms send in place (FormSubmit's AJAX endpoint) and say thanks; without
+   JavaScript they post normally and land on /thanks/. */
+(function () {
+  document.querySelectorAll('form.vt-form').forEach(function (f) {
+    f.addEventListener('submit', function (e) {
+      if (!window.fetch || !window.FormData) return;
+      e.preventDefault();
+      var btn = f.querySelector('button[type=submit]'), msg = f.querySelector('.form-msg');
+      if (f.querySelector('[name=_honey]') && f.querySelector('[name=_honey]').value) return;
+      btn.disabled = true; var label = btn.textContent; btn.textContent = 'Sending...';
+      fetch(f.action.replace('formsubmit.co/', 'formsubmit.co/ajax/'), { method: 'POST', headers: { Accept: 'application/json' }, body: new FormData(f) })
+        .then(function (r) { return r.json().catch(function () { return {}; }).then(function (d) { return { ok: r.ok, d: d }; }); })
+        .then(function (res) {
+          var ok = res.ok && String(res.d.success) !== 'false';
+          msg.hidden = false; msg.className = 'form-msg ' + (ok ? 'ok' : 'err');
+          msg.textContent = ok ? (f.querySelector('[name=list]') ? 'You are signed up for the Parish Brief. Thank you!' : 'Sent. Thank you, we will be in touch.')
+                               : 'That did not go through. Please try again, or email news@thevermiliontimes.com.';
+          if (ok) f.reset();
+        })
+        .catch(function () { msg.hidden = false; msg.className = 'form-msg err'; msg.textContent = 'That did not go through. Please try again, or email news@thevermiliontimes.com.'; })
+        .then(function () { btn.disabled = false; btn.textContent = label; });
+    });
+  });
+})();

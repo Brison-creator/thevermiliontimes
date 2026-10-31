@@ -313,10 +313,16 @@ GRID=''.join(card(*c, DISCLOSE if c[0]=='starbase' else '') for c in CARDS)
 # (Buttondown, Mailchimp...) to collect addresses there; until then the button
 # opens an email to the Times asking to be added.
 BRIEF_ACTION=''
-BRIEF=(f'''<div class="box brief" id="brief"><h3 class="h-2">Get the Parish Brief</h3><p>The day's Vermilion Parish news in your inbox every morning. Free.</p>
-  <form action="{BRIEF_ACTION}" method="post" target="_blank"><label class="sr" for="brief-email">Email address</label><input id="brief-email" type="email" name="email" required placeholder="you@example.com"><button class="btn" type="submit">Sign Me Up</button></form></div>''' if BRIEF_ACTION else
-  f'''<div class="box brief" id="brief"><h3 class="h-2">Get the Parish Brief</h3><p>The day's Vermilion Parish news in your inbox every morning. Free.</p>
-  <a class="btn" href="mailto:{EMAIL}?subject=Sign%20me%20up%20for%20the%20Parish%20Brief&amp;body=Please%20add%20this%20address%20to%20The%20Vermilion%20Times%20Parish%20Brief.">Sign Me Up</a></div>''')
+# Forms (Parish Brief, tips, contact) post through FormSubmit to the
+# publisher's inbox. After FormSubmit is activated, FORM_TO can be swapped for
+# the random alias it emails back, so no address appears in the page source.
+FORM_TO='brison@jetheatandair.com'
+FORM_URL=f'https://formsubmit.co/{FORM_TO}'
+def form_hidden(subject):
+    return (f'<input type="hidden" name="_subject" value="{subject}"><input type="hidden" name="_template" value="table">'
+            f'<input type="hidden" name="_next" value="{SITE}/thanks/"><input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">')
+BRIEF=f'''<div class="box brief" id="brief"><h3 class="h-2">Get the Parish Brief</h3><p>The day's Vermilion Parish news in your inbox every morning. Free.</p>
+  <form class="vt-form" action="{FORM_URL}" method="post">{form_hidden('New Parish Brief subscriber')}<label class="sr" for="brief-email">Email address</label><input id="brief-email" type="email" name="email" required placeholder="you@example.com"><input type="hidden" name="list" value="Parish Brief"><button class="btn" type="submit">Sign Me Up</button><p class="form-msg" role="status" hidden></p></form></div>'''
 SEC_TEXT={k:(head,txt) for k,_,head,txt in CARDS}
 SEC_TEXT['opinion']=('Letters, Columns &amp; the Editorial Board','Signed letters from readers, guest columns about the parish and the paper\'s own positions, always labeled as opinion.')
 SEC_TEXT['obituaries']=('Remembering Our Neighbors','Obituaries as sent by families and funeral homes, with service details.')
@@ -420,13 +426,20 @@ about_body=f'''<article class="page">
     <li><b>Coverage:</b> Vermilion Parish government, public safety, schools, sports, business, the coast, and SpaceX&rsquo;s Starbase Louisiana launch site at Pecan Island.</li>
     <li><b>Publisher:</b> Brison McPhail.</li>
     <li><b>Disclosure:</b> The publisher also owns Rocket Farm, an RV park in development in Kaplan; every Starbase Louisiana story says so.</li>
-    <li><b>Press and credential requests:</b> <a href="mailto:{EMAIL}?subject=Press%20inquiry">{EMAIL}</a>.</li>
+    <li><b>Press and credential requests:</b> use the <a href="/about/#contact">contact form</a> or email <a href="mailto:{EMAIL}">{EMAIL}</a>.</li>
     <li><b>Publishing schedule:</b> new stories daily, each dated and sourced.</li>
   </ul>
   <h3 class="h-2">Recent Stories</h3>
   <ul class="recent">{RECENT}</ul>
   <h2 id="contact">Contact</h2>
-  <p>News, letters, corrections and advertising: <a href="mailto:{EMAIL}">{EMAIL}</a>.</p>
+  <form class="vt-form" action="{FORM_URL}" method="post">{form_hidden('Message to The Vermilion Times')}
+    <div class="form-row"><div><label for="c-name">Name</label><input id="c-name" name="name" required autocomplete="name"></div>
+    <div><label for="c-email">Email</label><input id="c-email" type="email" name="email" required autocomplete="email"></div></div>
+    <label for="c-topic">About</label><select id="c-topic" name="topic"><option>News or a tip</option><option>A correction</option><option>Advertising</option><option>Press or credentials</option><option>Something else</option></select>
+    <label for="c-msg">Message</label><textarea id="c-msg" name="message" rows="5" required></textarea>
+    <button class="btn" type="submit">Send Message</button><p class="form-msg" role="status" hidden></p>
+  </form>
+  <p>Or email <a href="mailto:{EMAIL}">{EMAIL}</a>.</p>
 </article>'''
 
 send_body=f'''<article class="page">
@@ -434,7 +447,16 @@ send_body=f'''<article class="page">
   <h1>Tell the Parish</h1>
   <p class="deck">The best stories come from the people who live them. Here is how to get yours into the Times.</p>
   <h2 id="news">News &amp; Tips</h2>
-  <p class="dropcap">Email <a href="mailto:{EMAIL}">{EMAIL}</a> with what happened, where and when, who was involved, and how we can reach you. Photos are welcome; tell us who took them and who is in them.</p>
+  <form class="vt-form tip-form" action="{FORM_URL}" method="post">{form_hidden('News tip for The Vermilion Times')}
+    <label for="tip-msg">What happened? <span class="req">(required)</span></label><textarea id="tip-msg" name="message" rows="6" required placeholder="What happened, where and when, and who was involved."></textarea>
+    <div class="form-row"><div><label for="tip-town">Town</label><input id="tip-town" name="town" placeholder="Kaplan, Abbeville, Erath..."></div>
+    <div><label for="tip-name">Your name <span class="opt">(optional)</span></label><input id="tip-name" name="name" autocomplete="name"></div></div>
+    <div class="form-row"><div><label for="tip-email">Email <span class="opt">(so we can follow up)</span></label><input id="tip-email" type="email" name="email" autocomplete="email"></div>
+    <div><label for="tip-phone">Phone <span class="opt">(optional)</span></label><input id="tip-phone" name="phone" type="tel" autocomplete="tel"></div></div>
+    <label class="check"><input type="checkbox" name="confidential" value="yes"> Keep my name confidential</label>
+    <button class="btn" type="submit">Send the Tip</button><p class="form-msg" role="status" hidden></p>
+  </form>
+  <p>You can also email <a href="mailto:{EMAIL}">{EMAIL}</a> with what happened, where and when, who was involved, and how we can reach you. Photos are welcome; tell us who took them and who is in them.</p>
   <p>If you want to share something in confidence, say so at the top of your message before you give details.</p>
   <h2 id="announcements">Announcements</h2>
   <ul>
@@ -485,6 +507,8 @@ files['search/index.html']=page('/search/','Search | The Vermilion Times','Searc
   <noscript><p>Search needs JavaScript. Browse <a href="/news/">every story</a> instead.</p></noscript>
 </article>
 <script src="/assets/search.js" defer></script>''')
+files['thanks/index.html']=page('/thanks/','Thank You | The Vermilion Times','Thanks for writing to The Vermilion Times.','''<article class="page"><p class="kicker">Thank You</p><h1>Got it. Thank you.</h1>
+  <p class="deck">Your message is on its way to the Times. If you asked for the Parish Brief, you are on the list.</p><p><a href="/">Back to the front page</a></p></article>''')
 def meta_desc(t):
     t=re.sub(r'<[^>]+>','',t).replace('"','&quot;')
     return t if len(t)<=158 else t[:155].rsplit(' ',1)[0]+'...'
