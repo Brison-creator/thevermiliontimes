@@ -16,7 +16,7 @@ FONTS='https://fonts.googleapis.com/css2?family=Tinos:wght@700&family=Source+Ser
 ICON=("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23f3e9d4'/%3E"
       "%3Ctext x='32' y='47' font-family='UnifrakturMaguntia,serif' font-size='44' text-anchor='middle' fill='%237c1f1a'%3EV%3C/text%3E%3C/svg%3E")
 
-SECTIONS=[('local','Local'),('government','Parish Government'),('safety','Public Safety'),('schools','Schools'),('sports','Sports'),('business','Business'),
+SECTIONS=[('local','Local'),('government','Parish Government'),('safety','Public Safety'),('world','Nation &amp; World'),('schools','Schools'),('sports','Sports'),('business','Business'),
           ('starbase','Starbase Louisiana'),('land-water','Land &amp; Water'),('faith','Faith &amp; Family'),('opinion','Opinion'),('obituaries','Obituaries')]
 
 # ---------------------------------------------------------------- articles
@@ -236,7 +236,7 @@ def news_index_body():
 
 def page(path,title,desc,body,h1_is_plate=False,ld=None,image='/img/og-nameplate.png',art=None):
     cur_attr=' aria-current="page"'
-    NAV=[('/news/','Latest Stories'),('/starbase/','Starbase'),('/government/','Government'),('/safety/','Public Safety'),('/business/','Business'),('/sports/','Sports'),('/schools/','Schools'),('/local/','Community'),('/opinion/','Opinion')]
+    NAV=[('/news/','Latest Stories'),('/starbase/','Starbase'),('/government/','Government'),('/safety/','Public Safety'),('/world/','Nation &amp; World'),('/business/','Business'),('/sports/','Sports'),('/schools/','Schools'),('/local/','Community'),('/opinion/','Opinion')]
     secnav=''.join(f'<li><a href="{h}"{cur_attr if path==h else ""}>{t}</a></li>' for h,t in NAV)
     np='The <span class="red">Vermilion</span> Times'
     plate=(f'<h1 class="nameplate"><a href="/">{np}</a></h1>' if h1_is_plate
@@ -317,6 +317,7 @@ CARDS=[
  ('local','Local','Abbeville to the Gulf','The towns, the roads, the new businesses and the people of every community in the parish.'),
  ('government','Parish Government','Police Jury &amp; Courthouse','Police Jury, city councils and the school board: what was decided, what it costs and who voted how.'),
  ('safety','Public Safety','Sheriff, Police &amp; Courts','Arrests and charges from official releases, wrecks, fires and the courts, reported carefully and fairly.'),
+ ('world','Nation &amp; World','The Big Stories, Close to Home','National and world news that reaches Vermilion Parish: war, energy, Washington and the weather, verified before it runs.'),
  ('schools','Schools','Honor Rolls &amp; Graduations','Classrooms, teachers, awards and every honor roll the schools send us.'),
  ('sports','Sports','Friday Nights &amp; Beyond','Scores, standings and the athletes from Kaplan, Abbeville, Erath, Gueydan and North Vermilion.'),
  ('business','Business','Open for Business','Openings, closings, hiring and the people building things here.'),
@@ -355,7 +356,7 @@ SEC_TEXT={k:(head,txt) for k,_,head,txt in CARDS}
 SEC_TEXT['starbase']=('SpaceX Louisiana: Starbase Louisiana News, Jobs, Map and Timeline','Everything about SpaceX&rsquo;s planned Starbase Louisiana launch site at Pecan Island: the jobs, the location, the money, the decisions and the open questions, reported plainly so readers can decide for themselves.')
 SEC_TEXT['opinion']=('Letters, Columns &amp; the Editorial Board','Signed letters from readers, guest columns about the parish and the paper\'s own positions, always labeled as opinion.')
 SEC_TEXT['obituaries']=('Remembering Our Neighbors','Obituaries as sent by families and funeral homes, with service details.')
-SEC_TITLE={'starbase':'SpaceX Louisiana and Starbase Louisiana News, Jobs, Map','safety':'Vermilion Parish Crime and Public Safety News','government':'Vermilion Parish Government News',
+SEC_TITLE={'world':'Nation and World News for Vermilion Parish','starbase':'SpaceX Louisiana and Starbase Louisiana News, Jobs, Map','safety':'Vermilion Parish Crime and Public Safety News','government':'Vermilion Parish Government News',
            'sports':'Vermilion Parish High School Sports','schools':'Vermilion Parish Schools News','local':'Vermilion Parish Local News'}
 def story_list(arts):
     return ''.join(f'''<li id="{a["slug"]}"><a href="{a["url"]}" tabindex="-1" aria-hidden="true" class="art-link">{figure(a,'thumb-art',caption=False)}</a><p class="kicker">{SECTION_NAME[a["section"]]}<span class="new-tag" data-pub="{a["pub"].isoformat()}" hidden>New</span></p><h2 class="h-1"><a href="{a["url"]}">{html.escape(a["title"])}</a></h2>

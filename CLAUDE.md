@@ -159,3 +159,8 @@ slow day; zero if nothing can be verified).
 - `/starbase/#live` shows upcoming and recent SpaceX launches with the year's count (Launch Library 2), NWS alerts and forecast, live Windy radar, tonight's sky over Pecan Island (`assets/sky.js`, Astronomy Engine: planets, close passes, eclipses, meteor showers), SpaceX jobs at Pecan Island (Greenhouse) and LA 511 for LA 82 roads.
 - Every `python3 build.py` saves fresh snapshots to `data/*.json`, and `assets/watch.js` refreshes them in the reader's browser. Commit the `data/` files with each build.
 - Never invent Louisiana launch dates, viewing areas, parking or road closures. Post them on the Louisiana Status card only after SpaceX, the FAA, DOTD or the parish announces them, and link the source.
+
+## Nation & World
+- `section: world` is for national and world news that reaches the parish (war, energy, Washington, Gulf weather). Same rules: only what sources you opened say, attributed, rewritten, originality check passed.
+- Viral clips ("MOMENTS AGO", "BREAKING") are often old. Confirm the event happened today with at least two major outlets before writing a word.
+- `featured: yes` puts a story at the top of the homepage; the newest pinned story wins. Remove the pin from a breaking story once it is a day old.
