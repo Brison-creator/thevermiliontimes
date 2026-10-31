@@ -33,9 +33,9 @@ For comparison, the same job board lists about 450 openings at SpaceX's existing
 
 ## How many jobs are coming
 
-The project is expected to create 3,000 direct jobs over the next decade, with an average annual salary of $92,600, The Center Square reported. Construction is expected to begin in 2027, with a first launch targeted for 2029.
+SpaceX's Louisiana site is supposed to grow to 3,000 direct jobs within ten years, paying $92,600 a year on average, according to The Center Square. Building is slated to start in 2027 and launches in 2029.
 
-Whether those jobs go to Vermilion Parish residents is an open question. The parish's tax agreement with SpaceX describes local hiring as an aspiration rather than a requirement, Acadiana News First reported, citing the citizens' group Vermilion United.
+Whether those jobs go to Vermilion Parish residents is an open question. The parish's tax deal with SpaceX treats hiring locals as a goal, not a rule, according to the citizens' group Vermilion United, as reported by Acadiana News First.
 
 ## How to apply
 

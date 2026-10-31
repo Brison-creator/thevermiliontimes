@@ -51,9 +51,16 @@ the end of the body: `*Correction: ...*` saying what was wrong.
   quotes short (under ~25 words). Never claim the Times interviewed anyone,
   attended anything or took a photo. Write "according to", "the agenda shows",
   "KATC reported".
-- **Write it yourself.** Original wording, AP style, inverted pyramid, neutral
-  tone, 300-700 words. Do not copy or closely paraphrase another outlet's
-  article; report the facts and credit them.
+- **Rewrite every story. Never copy.** The facts come from sources; every
+  sentence is ours. Start with what it means for Vermilion Parish (a new lead
+  the source did not use), build your own structure (subheads, lists, Q&A),
+  never follow the source's paragraph order, and restate facts in new words.
+  Quote people only in short, attributed quotes. AP style, neutral tone,
+  300-700 words.
+- **Run the originality check before every commit:**
+  `python3 tools/originality.py articles/<story>.md` must pass (no source
+  shares more than 3 runs of 7+ words outside quotes). Official names are the
+  only acceptable overlap; rewrite anything else it flags.
 - **Dates:** state real dates; check that an event is current and has not
   already happened (or say that it did). Today's date is in your environment.
 - **Police, crime and courts (a core beat):** cover arrests, charges, wrecks,
@@ -144,5 +151,6 @@ slow day; zero if nothing can be verified).
    - Weather and the coast, roads, schools, sports, business, community.
 4. Open and read every source you use (search snippets are not sources; if a
    page is blocked, find another outlet or the primary record). Write each
-   story, build, check the pages render, commit (`Add story: <headline>`) and
+   story in your own words, run `tools/originality.py` until it passes, build,
+   check the pages render, commit (`Add story: <headline>`) and
    push to `main`.

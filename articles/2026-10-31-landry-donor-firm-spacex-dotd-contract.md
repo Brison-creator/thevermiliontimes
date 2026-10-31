@@ -1,30 +1,30 @@
 ---
-title: "Firm That Gave $115,000 to Landry-Aligned PAC Gets State Work Tied to SpaceX Louisiana Site"
-deck: DOTD selected Royal Engineers & Consultants for work related to Starbase Louisiana, The Center Square reported. The state has not said whether the contract was bid, what it is worth, or who will pay for upgrades to LA 82.
+title: "Who Pays for LA 82? State Hires Landry Donor's Firm for SpaceX Louisiana Road Work"
+deck: The engineering firm DOTD chose for work around Starbase Louisiana has given $115,000 to a Landry-aligned PAC. The state still won't say if the job was bid, what it costs, or who covers the road bill.
 section: starbase
 date: 2026-10-31
 time: 12:51
 sources:
 - The Center Square (via Livingston Parish News), "Firm that gave $115K to Landry's PAC tapped for SpaceX contract," Oct. 31, 2026 | https://www.livingstonparishnews.com/stories/firm-that-gave-115k-to-landrys-pac-tapped-for-spacex-contract,236633
 ---
-A New Orleans engineering firm that has given $115,000 to a political action committee aligned with Gov. Jeff Landry has been selected by the Louisiana Department of Transportation and Development for work related to SpaceX's planned launch site in Vermilion Parish, The Center Square reported Saturday.
+The state has started lining up engineers for the roads SpaceX will need in southern Vermilion Parish, and the first firm publicly tied to that work is a longtime political donor to Gov. Jeff Landry.
 
-Royal Engineers & Consultants has contributed to Cajun PAC II six times since 2019, including $50,000 in June 2024, $25,000 in May 2025 and $25,000 in March 2026, according to campaign finance records reviewed by the outlet. Cajun PAC II is formally affiliated with Landry, who served as its chairman. The firm has also given at least $27,000 directly to Landry's campaigns since 2014, the report said.
+Royal Engineers & Consultants, based in New Orleans, is DOTD's pick to handle work connected to the Starbase Louisiana site near Pecan Island, The Center Square reported Saturday. Campaign records reviewed by the outlet show the firm gave $115,000 over six donations since 2019 to Cajun PAC II, a committee Landry once chaired. The biggest single check, $50,000, came in June 2024.
 
-## What the state said
+## What parish drivers should watch
 
-DOTD told The Center Square that Royal's Louisiana-based resources are "strategically located near the SpaceX site" and allow for "rapid mobilization" and direct coordination with the department, SpaceX and local stakeholders.
+For people who use LA 82, the bigger question is the bill. State agencies are studying routes, bridges and traffic around the launch site, and LA 82 is being looked at for possible improvements, according to the report. Nobody has decided how much of that SpaceX pays and how much falls to taxpayers.
 
-The department did not answer whether the contract was bid out, according to the report. How much the contract is worth, what services Royal will provide and how the firm was chosen were not disclosed. The contract runs until 2031.
+## What is still unknown
 
-The governor's office did not immediately respond to the outlet's requests for comment, and Royal declined to comment.
+- **Was it bid?** DOTD did not say, according to The Center Square.
+- **What does it cost?** Not disclosed.
+- **What will Royal do?** Not disclosed. The contract runs through 2031.
 
-## The roads question
+DOTD defended the pick, saying the firm's Louisiana staff are "strategically located near the SpaceX site." Royal declined to comment, and the governor's office had not responded, the outlet reported.
 
-The contract comes as the state studies what Starbase Louisiana will demand of parish roads. DOTD is working with SpaceX to evaluate transportation routes, road and bridge conditions and traffic impacts, according to Louisiana Economic Development, and the state is evaluating potential improvements to **LA 82**, The Center Square reported. The state has not determined how those costs will be split between taxpayers and SpaceX.
+## Who Royal is
 
-## The firm's record
+The firm is no stranger to state work. It holds more than $44 million in active state contracts and has inspected highway and bridge projects across south Louisiana for two decades, according to the report. Its political giving has crossed party lines, reaching Republicans and Democrats alike over the years.
 
-Royal has more than $44 million in active contracts with the state, according to public records cited by the outlet. In a May 2025 proposal to DOTD, the firm reported providing construction engineering and inspection on roadway and infrastructure programs totaling more than $2 billion across south Louisiana, and it has given to politicians and committees in both parties for at least two decades, the report said.
-
-Follow the roads, the money and every other development on the Times' [Starbase Watch page](https://thevermiliontimes.com/starbase/).
+The Times is tracking the road question, and every other piece of the SpaceX project, on [Starbase Watch](https://thevermiliontimes.com/starbase/).

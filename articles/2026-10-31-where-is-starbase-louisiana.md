@@ -11,7 +11,7 @@ sources:
 - SpaceX careers job board, listings located in Pecan Island, La., checked Oct. 31, 2026 | https://boards.greenhouse.io/spacex
 - OpenStreetMap, place coordinates for Pecan Island, Kaplan, Abbeville and White Lake | https://www.openstreetmap.org/
 ---
-SpaceX's Starbase Louisiana is planned for about 125,000 acres near Pecan Island in Vermilion Parish, according to The Center Square. SpaceX's own job postings for the project list their location as Pecan Island, La.
+SpaceX is planning Starbase Louisiana on a tract of roughly 125,000 acres in the Pecan Island area of Vermilion Parish, The Center Square reported. SpaceX's own job postings for the project list their location as Pecan Island, La.
 
 [[map]]
 
@@ -27,10 +27,10 @@ Driving distances are longer, since roads in the marsh do not run straight. The 
 
 ## What is next to it
 
-The Vermilion Parish School District owns six parcels, about 4,000 acres, north of LA 82 near White Lake, next to the planned spaceport, Acadiana News First reported Oct. 28. The land is Section 16 school property, which cannot be sold without legislative approval but can be swapped; it would be appraised before any negotiations.
+The Vermilion Parish School District owns six parcels, about 4,000 acres, beside the planned spaceport, on the north side of LA 82 by White Lake, Acadiana News First reported Oct. 28. The land is Section 16 school property, which cannot be sold without legislative approval but can be swapped; it would be appraised before any negotiations.
 
 ## When it will be built
 
-Construction is expected to begin in 2027, with a first launch targeted for 2029, according to The Center Square. SpaceX has begun posting jobs for the site; [the Times lists every opening here](https://thevermiliontimes.com/news/spacex-louisiana-jobs-pecan-island/).
+Building is slated to start in 2027, with the first launch aimed for 2029, according to The Center Square. SpaceX has begun posting jobs for the site; [the Times lists every opening here](https://thevermiliontimes.com/news/spacex-louisiana-jobs-pecan-island/).
 
 For the full timeline, the money and the open questions, see [Starbase Watch](https://thevermiliontimes.com/starbase/).

@@ -15,32 +15,40 @@ sources:
 - Acadiana News First, "Vermilion United raises concerns over SpaceX deal and public accountability," Oct. 29, 2026 | https://www.acadiananewsfirst.com/2026/10/29/vermilion-united-raises-concerns-over-spacex-deal-public-accountability/
 - Acadiana News First, "SpaceX deal reportedly in the works for land owned by Vermilion Parish schools," Oct. 28, 2026 | https://www.acadiananewsfirst.com/2026/10/28/spacex-deal-reportedly-works-land-owned-by-vermilion-parish-schools/
 ---
-SpaceX's Starbase Louisiana is the biggest thing to happen to Vermilion Parish in generations, and most of what residents know about it has come in pieces. Here is what has been reported, where it came from, and what is still unanswered.
+Most of what Vermilion Parish has learned about Starbase Louisiana has arrived in pieces, from a ribbon-cutting announcement to lawsuits and records requests. Here it is in one place, with where each piece came from.
 
-## What is planned
+## What is SpaceX building?
 
-SpaceX plans what the company says will become the world's largest spaceport on about 125,000 acres near Pecan Island, according to The Center Square. The project is expected to create 3,000 direct jobs over the next decade, with an average annual salary of $92,600. Construction is expected to begin in 2027, with a first launch targeted for 2029, the outlet reported.
+A launch site for Starship on a tract of roughly 125,000 acres in the Pecan Island area, which the company bills as the world's largest spaceport, according to The Center Square. SpaceX's own job postings for the project list Pecan Island as the location. [Here is where that is.](https://thevermiliontimes.com/news/where-is-starbase-louisiana/)
 
-## The money
+## When?
 
-The parish's payment-in-lieu-of-taxes agreement calls for SpaceX to pay the parish $25 million a year to start, rising 2% a year for 25 years, about $800 million in all by the Gulf States Newsroom's calculation, WWNO reported. In return, the property tax exemption is worth nearly $23.8 billion over those 25 years, according to the newsroom. The Center Square estimates the full state and local incentive package at about $27.5 billion, including roughly $24 billion in property tax exemptions.
+Groundbreaking is penciled in for 2027 and the first launch for 2029, per The Center Square.
 
-## How it was approved
+## How many jobs?
 
-The parish Industrial Development Board approved the agreement on Aug. 25. That meeting's agenda listed the deal under the code name "Project Osprey," WWNO reported. The Police Jury had revived the board at its July 15 meeting by amending its agenda during the meeting, according to a lawsuit filed Oct. 26 by the Vermilion Citizens Coalition and three residents. The suit claims eight violations of Louisiana's Open Meetings Law and asks a judge to void the board's Aug. 25 approval. [The Times reported on that suit Friday.](https://thevermiliontimes.com/news/residents-sue-to-void-spacex-tax-deal/)
+The outlet reports a target of 3,000 direct jobs within ten years, at an average of $92,600 a year. SpaceX has already posted its first eight openings for the site. [See them all.](https://thevermiliontimes.com/news/spacex-louisiana-jobs-pecan-island/) Whether the jobs go to locals is not guaranteed: the parish tax agreement treats local hiring as a goal, not a rule, Acadiana News First reported.
 
-## What residents are asking
+## What does the parish get, and give up?
 
-Vermilion United, a citizens' coalition, says the agreement describes local hiring as an aspiration rather than a requirement, so the jobs are not guaranteed to parish residents, Acadiana News First reported. The group also wants a verbal SpaceX promise to supply fire equipment, meant to protect homeowners' insurance rates, put in writing, and has asked why the development board's administrative fee, capped at $600,000 a year, would go to a private regional group. [More on those questions here.](https://thevermiliontimes.com/news/vermilion-united-questions-spacex-deal/)
+SpaceX's yearly payments to the parish open at $25 million and climb 2% a year for 25 years, about $800 million altogether by the Gulf States Newsroom's math, as reported by WWNO. On the other side of the ledger, the newsroom pegs the property tax break near $23.8 billion over those years. The Center Square values the whole state-and-local incentive package around $27.5 billion.
 
-## School land next door
+## How was it approved?
 
-The parish school district owns six parcels, about 4,000 acres of Section 16 school land, north of LA 82 near White Lake, next to the planned site, Acadiana News First reported Oct. 28. The land cannot be sold without legislative approval but can be swapped, and it would be appraised before any negotiations.
+The parish Industrial Development Board signed off Aug. 25 on an agenda that called the deal "Project Osprey," WWNO reported. Three residents and the Vermilion Citizens Coalition sued Oct. 26, saying the Police Jury and the board broke the Open Meetings Law eight times along the way. [Our story on the suit.](https://thevermiliontimes.com/news/residents-sue-to-void-spacex-tax-deal/)
 
-## What comes next
+## What are residents asking?
 
-- The open meetings lawsuit is pending in the 15th Judicial District Court. No hearing date had been reported.
-- Louisiana Economic Development told Vermilion United the state's cooperative endeavor agreement with SpaceX would not be released before Dec. 14, according to the group.
-- Kyle Ruckert, Gov. Jeff Landry's former chief of staff, has registered as a SpaceX lobbyist, The Center Square reported.
+The citizens' group Vermilion United wants a verbal SpaceX promise of fire equipment put on paper and is questioning where a $600,000-a-year administrative fee will go. [More here.](https://thevermiliontimes.com/news/vermilion-united-questions-spacex-deal/)
 
-The Times keeps a running timeline, the key numbers and the open questions on its [Starbase Watch page](https://thevermiliontimes.com/starbase/).
+## What is next door?
+
+About 4,000 acres of Section 16 school land sits beside the site near White Lake. It could be swapped, but not sold without the Legislature's OK, after an appraisal, Acadiana News First reported.
+
+## What comes next?
+
+- A judge has yet to schedule the open meetings suit.
+- The state's cooperative endeavor agreement with SpaceX stays private until at least Dec. 14, according to Vermilion United.
+- Gov. Landry's former chief of staff, Kyle Ruckert, is now registered to lobby for SpaceX, The Center Square reported.
+
+The running timeline, numbers and open questions live on [Starbase Watch](https://thevermiliontimes.com/starbase/).
