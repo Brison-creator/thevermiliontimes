@@ -11,7 +11,7 @@ R=os.path.dirname(os.path.abspath(__file__))+'/'
 SITE='https://thevermiliontimes.com'
 EMAIL='news@thevermiliontimes.com'
 TAGLINE='Starbase Louisiana&rsquo;s Local News'  # the official tagline, everywhere
-FONTS='https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Grenze+Gotisch:wght@700&family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=IM+Fell+English+SC&display=swap'
+FONTS='https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:wght@500;600;700&display=swap'
 ICON=("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23f3e9d4'/%3E"
       "%3Ctext x='32' y='47' font-family='UnifrakturMaguntia,serif' font-size='44' text-anchor='middle' fill='%237c1f1a'%3EV%3C/text%3E%3C/svg%3E")
 
@@ -210,9 +210,11 @@ def news_index_body():
 
 def page(path,title,desc,body,h1_is_plate=False,ld=None,image='/img/og-nameplate.png'):
     cur_attr=' aria-current="page"'
-    secnav=''.join(f'<li><a href="/{k}/"{cur_attr if path==f"/{k}/" else ""}>{t}</a></li>' for k,t in SECTIONS)
-    plate=('<h1 class="nameplate">The Vermilion Times</h1>' if h1_is_plate
-           else '<p class="nameplate"><a href="/">The Vermilion Times</a></p>')
+    NAV=[('/news/','Latest Stories'),('/starbase/','Starbase'),('/government/','Government'),('/safety/','Public Safety'),('/business/','Business'),('/sports/','Sports'),('/schools/','Schools'),('/local/','Community'),('/opinion/','Opinion')]
+    secnav=''.join(f'<li><a href="{h}"{cur_attr if path==h else ""}>{t}</a></li>' for h,t in NAV)
+    np='The <span class="red">Vermilion</span> Times'
+    plate=(f'<h1 class="nameplate"><a href="/">{np}</a></h1>' if h1_is_plate
+           else f'<p class="nameplate"><a href="/">{np}</a></p>')
     lds=''.join(f'<script type="application/ld+json">\n{json.dumps(o,indent=1,ensure_ascii=True)}\n</script>\n' for o in (ld or []))
     def li(h,t):
         cur=' aria-current="page"' if h==path else ''
@@ -227,7 +229,7 @@ def page(path,title,desc,body,h1_is_plate=False,ld=None,image='/img/og-nameplate
 <title>{title}</title>
 <meta name="description" content="{desc}">
 <link rel="canonical" href="{SITE}{path}">
-<meta name="theme-color" content="#f6f2e6">
+<meta name="theme-color" content="#000000">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="The Vermilion Times">
 <meta property="og:title" content="{title}">
@@ -245,41 +247,36 @@ def page(path,title,desc,body,h1_is_plate=False,ld=None,image='/img/og-nameplate
 {lds}</head>
 <body>
 <a class="skip" href="#main">Skip to the news</a>
-<header class="wrap">
-  <div class="topbar">
-    <div class="editions"><span><b>Vermilion Parish Edition</b></span><span>Abbeville</span><span>Kaplan</span><span>Erath</span><span>Gueydan</span><span>The Coast</span></div>
-    <div class="top-ctas"><a class="btn ghost" href="/#brief">Get the Brief</a><a class="btn" href="/send-news/">Send a Tip</a></div>
-  </div>
-  <div class="masthead">
-    <div class="mh-side"><b id="today">Vermilion Parish, Louisiana</b><span class="small">Today&rsquo;s Paper</span></div>
-    {plate}
-    <div class="mh-side mh-right"><b>Vol. I &middot; No. 1</b>{UPDATED}<span class="small">Established MMXXVI</span></div>
-  </div>
+<div class="topbar"><div class="wrap topbar-in">
+  <p class="tb-left"><span>{TAGLINE}</span><span class="tb-sep" aria-hidden="true">|</span><span id="today">Vermilion Parish, Louisiana</span></p>
+  <nav class="tb-right" aria-label="Utility"><a href="/about/">About Us</a><a href="/#brief">Subscribe</a><a href="/about/#contact">Contact</a></nav>
+</div></div>
+<header class="wrap mast">
+  {plate}
   <p class="motto">{TAGLINE}</p>
-  <p class="mobile-dateline"><span id="today-m">Vermilion Parish, Louisiana</span>{" &middot; " if UPDATED else ""}{UPDATED}</p>
-  <nav class="secnav" aria-label="Sections"><ul>{secnav}</ul></nav>
 </header>
+<nav class="secnav" aria-label="Sections"><div class="wrap secnav-in">
+  <ul>{secnav}</ul>
+  <a class="search-btn" href="/search/" aria-label="Search the Times"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></a>
+</div></nav>
 <main id="main" class="wrap">
 {body}
 </main>
-<footer class="wrap siteindex">
-  <div class="si-top">
-    <p class="si-plate"><a href="/"><img class="foot-logo" src="/img/brand/horizontal.png" width="1168" height="315" alt="The Vermilion Times, Starbase Louisiana&rsquo;s Local News" loading="lazy"></a></p>
-    <a class="btn ghost" href="/send-news/">Send Us News</a>
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="si-cols">
+      <nav aria-label="News sections"><h3>News</h3><ul>{news}</ul></nav>
+      <nav aria-label="Life sections"><h3>Life &amp; Opinion</h3><ul>{life}</ul></nav>
+      <nav aria-label="Contribute"><h3>Contribute</h3><ul>{li('/send-news/','Send a Tip')}{li('/send-news/#announcements','Announcements')}{li('/send-news/#letters','Letters to the Editor')}{li('/send-news/#write','Write for the Times')}</ul></nav>
+      <nav aria-label="Business"><h3>Business</h3><ul>{li('/send-news/#advertise','Advertise')}{li('/send-news/#advertise','Classifieds')}{li('/send-news/#advertise','Public Notices')}</ul></nav>
+      <nav aria-label="About"><h3>The Times</h3><ul>{li('/about/','About Us')}{li('/about/#standards','Our Standards')}{li('/about/#corrections','Corrections')}{li('/about/#press','Press &amp; Credentials')}{li('/about/#contact','Contact')}</ul></nav>
+    </div>
   </div>
-  <h2 class="si-label">Site Index</h2>
-  <div class="si-cols">
-    <nav aria-label="News sections"><h3>News</h3><ul>{news}</ul></nav>
-    <nav aria-label="Life sections"><h3>Life &amp; Opinion</h3><ul>{life}</ul></nav>
-    <nav aria-label="Contribute"><h3>Contribute</h3><ul>{li('/send-news/','Send a Tip')}{li('/send-news/#announcements','Announcements')}{li('/send-news/#letters','Letters to the Editor')}{li('/send-news/#write','Write for the Times')}</ul></nav>
-    <nav aria-label="Business"><h3>Business</h3><ul>{li('/send-news/#advertise','Advertise')}{li('/send-news/#advertise','Classifieds')}{li('/send-news/#advertise','Public Notices')}</ul></nav>
-    <nav aria-label="About"><h3>The Times</h3><ul>{li('/about/','About the Times')}{li('/about/#standards','Our Standards')}{li('/about/#corrections','Corrections')}{li('/about/#contact','Contact')}{li('/about/#press','Press &amp; Credentials')}</ul></nav>
-  </div>
-  <div class="si-legal">
-    <span>&copy; <span id="year">2026</span> The Vermilion Times</span>
-    <span>{TAGLINE} &middot; Brison McPhail, Publisher &middot; Published in Vermilion Parish, Louisiana</span>
-    <a href="mailto:{EMAIL}">{EMAIL}</a>
-  </div>
+  <div class="foot-bar"><div class="wrap foot-bar-in">
+    <img class="foot-mark" src="/img/brand/icon-192.png" width="40" height="40" alt="" loading="lazy">
+    <p>The Vermilion Times is an independent newsroom serving Vermilion Parish and the communities around Starbase Louisiana. Published by Brison McPhail &middot; <a href="mailto:{EMAIL}">{EMAIL}</a></p>
+    <nav class="foot-links" aria-label="Legal"><a href="/about/#standards">Standards</a><a href="/about/#corrections">Corrections</a><span>&copy; <span id="year">2026</span> The Vermilion Times</span></nav>
+  </div></div>
 </footer>
 <script src="/assets/times.js" defer></script>
 </body>
@@ -301,7 +298,7 @@ CARDS=[
 ]
 def card(k,label,head,txt,extra=''):
     a=latest_in(k)
-    status=(f'<p class="latest"><span class="meta">Latest &middot; {stamp(a)}</span><a href="{a["url"]}">{html.escape(a["title"])}</a></p>'
+    status=(f'<p class="card-latest"><span class="meta">Latest &middot; {stamp(a)}</span><a href="{a["url"]}">{html.escape(a["title"])}</a></p>'
             if a else '<span class="status">Coming Soon</span>')
     return f'''<article id="{k}">
       <p class="kicker"><a href="/{k}/">{label}</a></p>
@@ -344,154 +341,61 @@ def section_body(k):
   {BRIEF}
 </article>'''
 
-def news_block():
-    if not ARTICLES: return ''
-    lead=ARTICLES[0]; side=ARTICLES[1:4]
-    side_html=''.join(f'''<article class="side-story"><a href="{a["url"]}" tabindex="-1" aria-hidden="true" class="art-link">{figure(a,'side-art',caption=False)}</a><p class="kicker">{SECTION_NAME[a["section"]]}<span class="new-tag" data-pub="{a["pub"].isoformat()}" hidden>New</span></p><h3 class="h-2"><a href="{a["url"]}">{html.escape(a["title"])}</a></h3>
-        <p class="summary">{inline(a["deck"])}</p><p class="meta">{stamp(a)}</p></article>''' for a in side)
-    side_col=f'<div class="side-col">{side_html}</div>' if side else ''
-    return f'''<div class="story news-lead{' solo' if not side else ''}">
-      <article>
-        <a href="{lead["url"]}" tabindex="-1" aria-hidden="true" class="art-link">{figure(lead,'lead-art',lazy=False,caption=False)}</a>
-        <p class="kicker">{SECTION_NAME[lead["section"]]}<span class="new-tag" data-pub="{lead["pub"].isoformat()}" hidden>New</span></p>
-        <h2 class="h-lead"><a href="{lead["url"]}">{html.escape(lead["title"])}</a></h2>
-        <p class="summary">{inline(lead["deck"])}</p>
-        <p class="excerpt">{html.escape(lead["excerpt"][:420]).rsplit(" ",1)[0] if len(lead["excerpt"])>420 else html.escape(lead["excerpt"])}{"&hellip;" if len(lead["excerpt"])>420 else ""}</p>
-        <p class="meta">{stamp(lead)} &middot; <a class="link" href="{lead["url"]}">Read the story</a></p>
-      </article>
-      {side_col}
-    </div>'''
-RIBBON=(f'<p class="ribbon"><span class="tag">Latest</span><span><a href="{ARTICLES[0]["url"]}">{html.escape(ARTICLES[0]["title"])}</a></span></p>' if ARTICLES else
-        '<p class="ribbon"><span class="tag">From the Publisher</span><span>The Vermilion Times is getting ready for its first edition. <a href="/send-news/">Send us the news from your town &rarr;</a></span></p>')
-home_body=f'''{RIBBON}
-
-<div class="front">
-  <div class="well">
-    {news_block()}
-    <div class="story lead">
-      <article>
-        <p class="kicker">A Letter From the Publisher</p>
-        <h2 class="h-lead"><a href="#letter">A Newspaper for Vermilion Parish Starts Here</a></h2>
-        <p class="summary">An independent paper, written for the people who live here and about the things that matter to them.</p>
-        <ul class="bullets">
-          <li>Police Jury, councils and the school board, covered meeting by meeting.</li>
-          <li>Scores, honor rolls, festivals and the people of every town.</li>
-          <li>The Starbase Louisiana launch site at Pecan Island, reported plainly.</li>
-        </ul>
-        <p class="meta">3 min read</p>
-      </article>
-      <figure>
-        <div class="cut"><img src="/img/vermilion-oak.svg" width="640" height="400" alt="Engraving of a live oak hung with moss beside the river at sunrise, a man poling a pirogue across the water"></div>
-        <figcaption>Sunrise on the water. Illustration for The Vermilion Times.</figcaption>
-      </figure>
+def pick_featured():
+    pinned=[a for a in ARTICLES if a.get('featured','').lower() in ('yes','true','1')]
+    return pinned[0] if pinned else ARTICLES[0]
+def rail_item(a):
+    return f'''<li><p class="kicker">{SECTION_NAME[a["section"]]}<span class="new-tag" data-pub="{a["pub"].isoformat()}" hidden>New</span></p>
+      <h3 class="rail-head"><a href="{a["url"]}">{html.escape(a["title"])}</a></h3><p class="meta">{stamp(a)}</p></li>'''
+def top_item(a):
+    return f'''<article class="ts-item"><a class="ts-img art-link" href="{a["url"]}" tabindex="-1" aria-hidden="true">{figure(a,'thumb-art',caption=False)}</a>
+      <div><p class="kicker">{SECTION_NAME[a["section"]]}<span class="new-tag" data-pub="{a["pub"].isoformat()}" hidden>New</span></p>
+      <h3 class="ts-head"><a href="{a["url"]}">{html.escape(a["title"])}</a></h3><p class="ts-dek">{inline(a["deck"])}</p><p class="meta">{stamp(a)}</p></div></article>'''
+def home_body_html():
+    if not ARTICLES:
+        return '<p class="empty">The first stories are on their way.</p>'
+    feat=pick_featured(); rest=[a for a in ARTICLES if a is not feat]
+    rail=rest[:3]; top=rest[3:6]
+    TOPS=(f'<section class="top-stories" aria-labelledby="top-h"><h2 id="top-h" class="label">More Top Stories</h2><div class="ts-grid">'+''.join(top_item(a) for a in top)+'</div></section>') if top else ''
+    return f'''<div class="front">
+  <section class="featured" aria-labelledby="feat-h">
+    <div class="feat-text">
+      <p class="label">Featured</p>
+      <h2 id="feat-h" class="h-lead"><a href="{feat["url"]}">{html.escape(feat["title"])}</a></h2>
+      <p class="deck">{inline(feat["deck"])}</p>
+      <p class="byline">By The Vermilion Times <span class="sep">|</span> {stamp(feat,True)}</p>
+      <a class="more-link" href="{feat["url"]}">Read Full Story <span aria-hidden="true">&rarr;</span></a>
     </div>
-
-    <div class="story split">
-      <article id="letter">
-        <p class="kicker">From the Publisher</p>
-        <h2 class="h-1">Every Parish Deserves a Paper That Shows Up</h2>
-        <p class="byline with-photo"><img class="pub-photo" src="/img/publisher.png" width="40" height="40" alt="Brison McPhail"><span>By Brison McPhail, Publisher &middot; Vermilion Parish, La.</span></p>
-        <p class="dropcap">One that sits through the Police Jury meeting, knows the score of Friday night&rsquo;s game, prints the honor roll, and tells you which new business just opened its doors on Main Street.</p>
-        <p>That is what The Vermilion Times sets out to be. We will cover Abbeville and Kaplan, Erath and Gueydan, Delcambre, Maurice and the coast: the councils and the courthouse, the schools and the ball fields, the churches and the festivals, the harvest and the water, and the people who keep it all going.</p>
-      </article>
-      <article>
-        <p class="kicker">The Road Ahead</p>
-        <h2 class="h-1">Big Changes Are Coming. We Will Report Them Fairly.</h2>
-        <p class="summary">From the announced Starbase Louisiana launch site at Pecan Island to the growth it may bring, the parish has a lot to weigh. We intend to lay out the facts so the people who live here can make up their own minds.</p>
-        <p>Our first edition is coming soon. Until then, we want to hear from you: the news, the milestones, the questions nobody is answering. This paper belongs to the parish. Help us fill it.</p>
-        <p class="byline">&mdash; Brison McPhail, Publisher</p>
-      </article>
-    </div>
-
-    <div class="story split">
-      <article>
-        <p class="kicker">Correspondents Wanted</p>
-        <h2 class="h-1"><a href="/send-news/#write">A Correspondent in Every Town</a></h2>
-        <p class="summary">We are looking for people who go to the meetings, know the coaches and can write a clean, fair paragraph. Students and retirees welcome.</p>
-        <p class="meta">Tell us your town</p>
-      </article>
-      <article>
-        <p class="kicker">Your News</p>
-        <h2 class="h-1"><a href="/send-news/">How to Get Your News in the Times</a></h2>
-        <ul class="bullets">
-          <li>Meetings, decisions and public notices</li>
-          <li>Scores, honor rolls and graduations</li>
-          <li>Births, weddings and obituaries</li>
-          <li>Church, club and festival news</li>
-        </ul>
-      </article>
-    </div>
-  </div>
-
-  <aside class="rail" id="opinion" aria-label="Opinion">
-    {BRIEF}
-    <h2 class="rail-head">Opinion</h2>
-    <div class="op">
-      <span class="who">The Editorial Board</span>
-      <h3 class="h-op"><a href="/about/#standards">What This Paper Promises Its Readers</a></h3>
-      <p>Accuracy first. News kept apart from opinion. Conflicts disclosed. Advertising never buys coverage.</p>
-    </div>
-    <div class="op">
-      <span class="who">Letters to the Editor</span>
-      <h3 class="h-op"><a href="/send-news/#letters">The First Letters Page Is Yours to Fill</a></h3>
-      <p>Agree with us, argue with us, tell the parish what is on your mind. Sign your name and your town.</p>
-    </div>
-    <div class="op">
-      <span class="who">Guest Columns</span>
-      <h3 class="h-op"><a href="/send-news/#letters">Have Something to Say About Vermilion?</a></h3>
-      <p>Farmers, teachers, pastors, business owners: pitch us a column about the parish you know.</p>
-    </div>
-    <div class="box">
-      <h3 class="h-2">Got a Tip?</h3>
-      <p>Know something the parish should know? Tell us. We read everything, and we will ask before we name you.</p>
-      <a class="btn" href="mailto:{EMAIL}?subject=News%20tip">Send a Tip</a>
-    </div>
-    <div class="box">
-      <h3 class="h-2">Advertise in the First Edition</h3>
-      <p>Charter advertisers who sign on before the first edition get first pick of placement.</p>
-      <a class="link" href="/send-news/#advertise">Ask about advertising &rarr;</a>
-    </div>
-    <div class="op" id="obituaries">
-      <span class="who">Obituaries</span>
-      <h3 class="h-op"><a href="/send-news/#announcements">Remembering Our Neighbors</a></h3>
-      <p>Obituaries are printed as sent by the family or the funeral home, with service details.</p>
-    </div>
+    <a class="feat-img art-link" href="{feat["url"]}" tabindex="-1" aria-hidden="true">{figure(feat,'lead-art',lazy=False,caption=False)}</a>
+  </section>
+  <aside class="latest" aria-labelledby="latest-h">
+    <h2 id="latest-h" class="label">Latest Stories</h2>
+    <ol class="latest-list">{''.join(rail_item(a) for a in rail)}</ol>
+    <a class="more-link" href="/news/">More Stories <span aria-hidden="true">&rarr;</span></a>
   </aside>
 </div>
-
-<section class="band" aria-labelledby="sections-h">
-  <div class="band-head"><h2 id="sections-h">In These Pages</h2><span>Sections of the Times</span></div>
-  <div class="grid4">
-    {GRID}
+{TOPS}
+<section class="watch-band" aria-labelledby="watch-h">
+  <div>
+    <p class="label">Starbase Watch</p>
+    <h2 id="watch-h" class="h-1"><a href="/starbase/">The timeline, the money and the open questions on SpaceX&rsquo;s Louisiana launch site</a></h2>
+    <p>Every decision, number and unanswered question about Starbase Louisiana at Pecan Island, sourced and kept up to date.</p>
+    <a class="more-link" href="/starbase/">Open Starbase Watch <span aria-hidden="true">&rarr;</span></a>
   </div>
+  {BRIEF}
 </section>
-
-<section class="band" aria-labelledby="join-h">
-  <div class="band-head"><h2 id="join-h">Be Part of the Paper</h2><span>The Times belongs to the parish</span></div>
+<section class="sections-band" aria-labelledby="sections-h">
+  <h2 id="sections-h" class="label">Sections</h2>
+  <div class="grid4">{GRID}</div>
+</section>
+<section class="help-band" aria-labelledby="help-h">
+  <h2 id="help-h" class="label">Be Part of the Paper</h2>
   <div class="grid3">
-    <article>
-      <p class="kicker">Announcements</p>
-      <h3 class="h-2">Births, Weddings &amp; Milestones</h3>
-      <p>Send names, dates, towns and a photo if you have one. Anniversaries and birthdays welcome.</p>
-      <p><a href="/send-news/#announcements">Send an announcement &rarr;</a></p>
-    </article>
-    <article>
-      <p class="kicker">Schools &amp; Coaches</p>
-      <h3 class="h-2">Send Us Your Scores</h3>
-      <p>Coaches and athletic directors: send results after every game, with the standouts and the stats.</p>
-      <p><a href="/send-news/#news">Send scores &rarr;</a></p>
-    </article>
-    <article>
-      <p class="kicker">Local Business</p>
-      <h3 class="h-2">Reach Your Neighbors</h3>
-      <p>Display ads, classifieds and announcements for businesses across the parish.</p>
-      <p><a href="/send-news/#advertise">Advertise with us &rarr;</a></p>
-    </article>
+    <article><h3 class="h-2"><a href="/send-news/">Send a Tip</a></h3><p>Know something the parish should know? We read everything, and we will ask before we name you.</p></article>
+    <article><h3 class="h-2"><a href="/send-news/#write">Write for the Times</a></h3><p>We want a correspondent in every town: meetings, scores, openings and the people behind them.</p></article>
+    <article><h3 class="h-2"><a href="/send-news/#advertise">Advertise</a></h3><p>Reach Vermilion Parish readers with display ads, classifieds and announcements.</p></article>
   </div>
-</section>
-
-<p class="towns">{TOWNS}</p>'''
-
+</section>'''
 RECENT=''.join(f'<li><a href="{a["url"]}">{html.escape(a["title"])}</a> <span class="meta">{stamp(a)}</span></li>' for a in ARTICLES[:8])
 about_body=f'''<article class="page">
   <p class="kicker">About the Times</p>
@@ -559,7 +463,7 @@ org={"@context":"https://schema.org","@type":"NewsMediaOrganization","name":"The
      "publishingPrinciples":SITE+"/about/","correctionsPolicy":SITE+"/about/","ethicsPolicy":SITE+"/about/"}
 files={
  'index.html':page('/','The Vermilion Times | Starbase Louisiana&rsquo;s Local News',
-   'Starbase Louisiana&rsquo;s Local News: The Vermilion Times covers Vermilion Parish, from SpaceX at Pecan Island to Abbeville, Kaplan, Erath and the coast.',home_body,True,[org]),
+   'Starbase Louisiana&rsquo;s Local News: The Vermilion Times covers Vermilion Parish, from SpaceX at Pecan Island to Abbeville, Kaplan, Erath and the coast.',home_body_html(),True,[org]),
  'about/index.html':page('/about/','About the Times | The Vermilion Times',
    'About The Vermilion Times, an independent newspaper for Vermilion Parish, Louisiana: what we cover, our standards, corrections and how to reach us.',about_body),
  'send-news/index.html':page('/send-news/','Send Us News | The Vermilion Times',
@@ -572,6 +476,15 @@ for k,_ in SECTIONS:
     head,txt=SEC_TEXT.get(k,('',''))
     files[f'{k}/index.html']=page(f'/{k}/',f'{SEC_TITLE.get(k,re.sub("&amp;","&",SECTION_NAME[k])+" News")} | The Vermilion Times'.replace('&','&amp;').replace('&amp;amp;','&amp;'),
         re.sub('<[^>]+>','',txt)[:158],section_body(k),False,None,'/img/cuts/'+(k if os.path.exists(os.path.join(R,'img','cuts',k+'.png')) else 'local')+'.png')
+# search: a small JSON index the search page filters in the browser
+io.open(R+'search.json','w',encoding='utf-8').write(json.dumps([{'t':re.sub('<[^>]+>','',html.unescape(x['title'])),'d':re.sub('<[^>]+>','',inline(x['deck'])),
+    's':re.sub('&amp;','&',SECTION_NAME[x['section']]),'u':x['url'],'p':ap_date(x['d']),'b':re.sub('<[^>]+>',' ',x['body_html'])[:4000]} for x in ARTICLES],ensure_ascii=False))
+files['search/index.html']=page('/search/','Search | The Vermilion Times','Search every story in The Vermilion Times, Starbase Louisiana&rsquo;s Local News.','''<article class="page"><p class="kicker">Search</p><h1>Search the Times</h1>
+  <form class="search-box" role="search" onsubmit="return false"><label class="sr" for="q">Search stories</label><input id="q" type="search" placeholder="Starbase, Police Jury, Kaplan..." autocomplete="off"></form>
+  <p id="search-status" class="meta" aria-live="polite"></p><ol id="results" class="news-list"></ol>
+  <noscript><p>Search needs JavaScript. Browse <a href="/news/">every story</a> instead.</p></noscript>
+</article>
+<script src="/assets/search.js" defer></script>''')
 def meta_desc(t):
     t=re.sub(r'<[^>]+>','',t).replace('"','&quot;')
     return t if len(t)<=158 else t[:155].rsplit(' ',1)[0]+'...'

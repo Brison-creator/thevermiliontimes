@@ -1,16 +1,79 @@
 {
  "starbase": [
-  {"image": "/img/photos/starbase-texas-tower.jpg",
+  {
+   "image": "/img/photos/starbase-texas-tower.jpg",
    "alt": "SpaceX's Starbase launch site in Boca Chica, Texas: storage tanks and a tall launch tower under construction beside coastal wetlands.",
    "caption": "SpaceX's existing Starbase launch site in Boca Chica, Texas.",
    "credit": "Alexander Hatley / Wikimedia Commons, CC BY 2.0",
-   "source": "https://commons.wikimedia.org/wiki/File:USA_-_Texas_-_Boca_Chica_-_Starbase_(51286772204).jpg"}
+   "source": "https://commons.wikimedia.org/wiki/File:USA_-_Texas_-_Boca_Chica_-_Starbase_(51286772204).jpg"
+  }
  ],
  "land-water": [
-  {"image": "/img/photos/starbase-white-lake.jpg",
+  {
+   "image": "/img/photos/land-shrimp-boat-abbeville.jpg",
+   "alt": "A blue shrimp boat named Miss Thu Thao II docked along a grassy bank, a white pickup parked beside it.",
+   "caption": "A shrimp boat docked at Abbeville.",
+   "credit": "Louisiana Sea Grant / Wikimedia Commons, CC BY 2.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Turtle_Excluder_Checks-Abbeville_3-15-22_-_001.jpg"
+  },
+  {
+   "image": "/img/photos/starbase-white-lake.jpg",
    "alt": "A man in a flat-bottom boat loaded with crates beside a floatplane on dark water, trees along the bank.",
    "caption": "Whooping cranes are ferried by boat at the White Lake Wetlands Conservation Area in Vermilion Parish.",
    "credit": "U.S. Fish and Wildlife Service (public domain)",
-   "source": "https://commons.wikimedia.org/wiki/File:Transporting_Whooping_Cranes_to_White_Lake_Wetlands_Conservation_Area_(6777537126).jpg"}
+   "source": "https://commons.wikimedia.org/wiki/File:Transporting_Whooping_Cranes_to_White_Lake_Wetlands_Conservation_Area_(6777537126).jpg"
+  }
+ ],
+ "safety": [
+  {
+   "image": "/img/photos/safety-state-police.jpg",
+   "alt": "A white Louisiana State Police SUV marked State Trooper parked on a city street, a fire truck behind it.",
+   "caption": "A Louisiana State Police unit on a New Orleans street.",
+   "credit": "Tomás Del Coro / Wikimedia Commons, CC BY-SA 2.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Louisiana_State_Police_Chevy_Tahoe.jpg"
+  }
+ ],
+ "faith": [
+  {
+   "image": "/img/photos/faith-st-mary-magdalen.jpg",
+   "alt": "The red-brick St. Mary Magdalen Catholic Church in Abbeville, its tall steeple against a blue sky, with a church sign in front.",
+   "caption": "St. Mary Magdalen Catholic Church in Abbeville.",
+   "credit": "Paul / Wikimedia Commons, CC BY 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:St._Mary_Magdalen_Catholic_Church_-_Feb_22,_2009.jpg"
+  },
+  {
+   "image": "/img/photos/faith-omelette-festival.jpg",
+   "alt": "A Cajun band plays fiddle and guitars on an outdoor stage while children watch at the Abbeville Omelette Festival.",
+   "caption": "Musicians on stage at the Giant Omelette Celebration in Abbeville in 2007.",
+   "credit": "Richard Byrd / Wikimedia Commons, CC BY 2.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Abbeville_Langelus_Ommelette_Fest_Oct312007_018.jpg"
+  }
+ ],
+ "local": [
+  {
+   "image": "/img/photos/local-vermilion-river.jpg",
+   "alt": "The wide Vermilion River at Abbeville, tree-lined banks under a cloudy sky.",
+   "caption": "The Vermilion River at Abbeville.",
+   "credit": "Tim Boyd / Wikimedia Commons, CC BY 2.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Vermilion_River_Abbeville_Louisiana.jpg"
+  }
+ ],
+ "business": [
+  {
+   "image": "/img/photos/business-bank-of-gueydan.jpg",
+   "alt": "The two-story red-brick Bank of Gueydan building with arched windows and a crenellated roofline.",
+   "caption": "The historic Bank of Gueydan building.",
+   "credit": "Jerrye & Roy Klotz, MD / Wikimedia Commons, CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:BANK_OF_GUEYDAN,_VERMILION_PARISH,_LA.jpg"
+  }
+ ],
+ "government": [
+  {
+   "image": "/img/photos/local-vermilion-river.jpg",
+   "alt": "The wide Vermilion River at Abbeville, tree-lined banks under a cloudy sky.",
+   "caption": "The Vermilion River at Abbeville.",
+   "credit": "Tim Boyd / Wikimedia Commons, CC BY 2.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Vermilion_River_Abbeville_Louisiana.jpg"
+  }
  ]
 }

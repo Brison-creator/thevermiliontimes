@@ -4,6 +4,7 @@ deck: The jobs, the money, the timeline and the questions still open about Space
 section: starbase
 date: 2026-10-31
 time: 08:30
+featured: yes
 disclosure: Disclosure: Brison McPhail, publisher of The Vermilion Times, also owns Rocket Farm, an RV park in development in Kaplan that expects to house workers in the area. The Times will say so in every story about Starbase Louisiana.
 sources:
 - The Center Square, "Former chief of staff for Landry registers as SpaceX lobbyist," Oct. 28, 2026 | https://www.thecentersquare.com/louisiana/article_0944c3b3-ea0c-4204-ab51-ccd7e633d2fb.html
