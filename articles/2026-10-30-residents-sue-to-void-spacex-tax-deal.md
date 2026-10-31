@@ -4,7 +4,6 @@ deck: A new citizens group and three residents say the Police Jury and a revived
 section: starbase
 date: 2026-10-30
 time: 19:30
-disclosure: Disclosure: Brison McPhail, publisher of The Vermilion Times, also owns Rocket Farm, an RV park in development in Kaplan that expects to house workers in the area. The Times will say so in every story about Starbase Louisiana.
 sources:
 - WWNO / Gulf States Newsroom, "'Behind closed doors': The secret SpaceX deal and the lawsuit challenging it," Oct. 26, 2026 | https://www.wwno.org/politics/2026-10-26/behind-closed-doors-the-secret-spacex-deal-and-the-lawsuit-challenging-it
 - Acadiana News First, "SpaceX deal reportedly in the works for land owned by Vermilion Parish schools," Oct. 28, 2026 | https://www.acadiananewsfirst.com/2026/10/28/spacex-deal-reportedly-works-land-owned-by-vermilion-parish-schools/

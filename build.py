@@ -180,7 +180,7 @@ def article_body(a):
   <p class="kicker"><a href="/news/#{a["section"]}">{SECTION_NAME[a["section"]]}</a></p>
   <h1>{html.escape(a["title"])}</h1>
   <p class="deck">{inline(a["deck"])}</p>
-  <p class="byline">By The Vermilion Times &middot; {stamp(a,True)}{upd}</p>
+  <p class="byline with-photo"><img class="pub-photo" src="/img/publisher.png" width="44" height="44" alt=""><span>{("By "+html.escape(a["byline"])) if a.get("byline") else "By The Vermilion Times"} &middot; Published by <a class="pub-name" href="/about/#publisher">Brison McPhail</a><br>{stamp(a,True)}{upd}</span></p>
   {figure(a,lazy=False)}
   <div class="article-body">
 {a["body_html"]}
@@ -197,7 +197,7 @@ def article_ld(a):
             "datePublished":a['pub'].isoformat(),"dateModified":str(a['upd']) if a['upd'] else a['pub'].isoformat(),"articleSection":re.sub('&amp;','&',SECTION_NAME[a['section']]),
             "mainEntityOfPage":SITE+a['url'],"isAccessibleForFree":True,"image":[SITE+a['img_share']],
             "author":{"@type":"Organization","name":"The Vermilion Times","url":SITE+"/"},
-            "publisher":{"@type":"NewsMediaOrganization","name":"The Vermilion Times","url":SITE+"/"}}
+            "publisher":{"@type":"NewsMediaOrganization","name":"The Vermilion Times","url":SITE+"/","founder":{"@type":"Person","name":"Brison McPhail"}}}
 
 def news_index_body():
     if not ARTICLES:
@@ -306,8 +306,8 @@ def card(k,label,head,txt,extra=''):
       <p>{txt}</p>{extra}
       {status}
     </article>'''
-DISCLOSE='\n      <p class="disclose">Disclosure: Brison McPhail, publisher of the Times, also owns Rocket Farm, an RV park in Kaplan. Any story that touches it will say so.</p>'
-GRID=''.join(card(*c, DISCLOSE if c[0]=='starbase' else '') for c in CARDS)
+DISCLOSE='\n      <p class="disclose">Disclosure: Brison McPhail, publisher of the Times, also owns Rocket Farm, an RV park in Kaplan. Stories that touch it say so.</p>'
+GRID=''.join(card(*c) for c in CARDS)
 
 # The Edge of X newsletter signup (BRIEF). BRIEF_ACTION is unused now:
 # (Buttondown, Mailchimp...) to collect addresses there; until then the button
@@ -369,7 +369,7 @@ def home_body_html():
       <p class="label">Featured</p>
       <h2 id="feat-h" class="h-lead"><a href="{feat["url"]}">{html.escape(feat["title"])}</a></h2>
       <p class="deck">{inline(feat["deck"])}</p>
-      <p class="byline">By The Vermilion Times <span class="sep">|</span> {stamp(feat,True)}</p>
+      <p class="byline">Published by Brison McPhail <span class="sep">|</span> {stamp(feat,True)}</p>
       <a class="more-link" href="{feat["url"]}">Read Full Story <span aria-hidden="true">&rarr;</span></a>
     </div>
     <a class="feat-img art-link" href="{feat["url"]}" tabindex="-1" aria-hidden="true">{figure(feat,'lead-art',lazy=False,caption=False)}</a>
@@ -419,13 +419,13 @@ about_body=f'''<article class="page">
     <li><b>Advertising does not buy coverage.</b> Advertisers do not decide what we report.</li>
   </ul>
   <h2 id="publisher">The Publisher</h2>
-  <p class="with-photo"><img class="pub-photo" src="/img/publisher.png" width="56" height="56" alt="Brison McPhail"><span>The Vermilion Times is published by Brison McPhail. He also owns Rocket Farm, an RV park in development in Kaplan; the Times discloses that connection in every story about Starbase Louisiana or anything touching his businesses.</span></p>
+  <p class="with-photo"><img class="pub-photo" src="/img/publisher.png" width="56" height="56" alt="Brison McPhail"><span>The Vermilion Times is published by Brison McPhail. He also owns Rocket Farm, an RV park in development in Kaplan; the Times discloses that connection on its Starbase Watch page and in any story that touches Rocket Farm, RV parks, worker housing or his other interests.</span></p>
   <h2 id="press">Newsroom &amp; Press</h2>
   <ul>
     <li><b>Outlet:</b> The Vermilion Times, an independent digital news outlet, established 2026.</li>
     <li><b>Coverage:</b> Vermilion Parish government, public safety, schools, sports, business, the coast, and SpaceX&rsquo;s Starbase Louisiana launch site at Pecan Island.</li>
     <li><b>Publisher:</b> Brison McPhail.</li>
-    <li><b>Disclosure:</b> The publisher also owns Rocket Farm, an RV park in development in Kaplan; every Starbase Louisiana story says so.</li>
+    <li><b>Disclosure:</b> The publisher also owns Rocket Farm, an RV park in development in Kaplan; stories that touch it, RV parks or worker housing say so.</li>
     <li><b>Press and credential requests:</b> use the <a href="/about/#contact">contact form</a> or email <a href="mailto:{EMAIL}">{EMAIL}</a>.</li>
     <li><b>Publishing schedule:</b> new stories daily, each dated and sourced.</li>
   </ul>

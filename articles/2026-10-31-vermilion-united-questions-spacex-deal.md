@@ -4,7 +4,6 @@ deck: Vermilion United says the Starbase Louisiana tax agreement treats local hi
 section: starbase
 date: 2026-10-31
 time: 05:48
-disclosure: Disclosure: Brison McPhail, publisher of The Vermilion Times, also owns Rocket Farm, an RV park in development in Kaplan that expects to house workers in the area. The Times will say so in every story about Starbase Louisiana.
 sources:
 - Acadiana News First, "Vermilion United raises concerns over SpaceX deal and public accountability," Oct. 29, 2026 | https://www.acadiananewsfirst.com/2026/10/29/vermilion-united-raises-concerns-over-spacex-deal-public-accountability/
 - The Center Square, "Former chief of staff for Landry registers as SpaceX lobbyist," Oct. 28, 2026 | https://www.thecentersquare.com/louisiana/article_0944c3b3-ea0c-4204-ab51-ccd7e633d2fb.html

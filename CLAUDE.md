@@ -68,9 +68,12 @@ the end of the body: `*Correction: ...*` saying what was wrong.
   social-media-only claims. If charges are dropped or a person is acquitted and
   we named them, publish that too.
 - **Conflict of interest:** the publisher, Brison McPhail, owns Rocket Farm, an RV park in
-  Kaplan. Every Starbase Louisiana / SpaceX story, and any story touching
-  Rocket Farm, RV parks, worker housing or the publisher, must carry
-  `disclosure:` in the front matter (copy the one in an earlier Starbase story). Never write promotional copy for the publisher's businesses.
+  Kaplan. A standing disclosure lives on the About and Starbase Watch pages.
+  Any story that touches Rocket Farm, RV parks, worker or temporary housing,
+  or the publisher himself must carry `disclosure:` in the front matter:
+  "Disclosure: Brison McPhail, publisher of The Vermilion Times, also owns
+  Rocket Farm, an RV park in development in Kaplan." Routine Starbase stories
+  do not need it. Never write promotional copy for the publisher's businesses.
 - **Nothing private in the repo.** It is public: no unpublished drafts, tips,
   tipsters' names or contact details, and no email addresses other than
   news@thevermiliontimes.com (it forwards to the publisher; never publish
@@ -92,6 +95,9 @@ the end of the body: `*Correction: ...*` saying what was wrong.
   photo before using it.
 - **Sections:** `safety` is Public Safety (sheriff, police, courts, fires, wrecks).
 - Do not put model names or AI product identifiers in articles or commits.
+- **Bylines:** compiled stories run "By The Vermilion Times" with "Published by
+  Brison McPhail" (automatic). Put `byline: Name` in the front matter only for
+  a story that person actually reported.
 
 ## Daily story routine
 
@@ -116,7 +122,7 @@ slow day; zero if nothing can be verified).
    Development.
 3. Beats, in priority order:
    - **Starbase Louisiana / SpaceX**: every development (land, lawsuits, FAA,
-     public meetings, roads, jobs, the tax deal, launches). Always disclose.
+     public meetings, roads, jobs, the tax deal, launches). Disclose when housing or RV parks come up.
    - **Police and public safety** (rules above).
    - **Government**: Police Jury, councils, School Board, elections, taxes.
    - Weather and the coast, roads, schools, sports, business, community.
