@@ -54,7 +54,7 @@
         .then(function (res) {
           var ok = res.ok && String(res.d.success) !== 'false';
           msg.hidden = false; msg.className = 'form-msg ' + (ok ? 'ok' : 'err');
-          msg.textContent = ok ? (f.querySelector('[name=list]') ? 'You are signed up for the Parish Brief. Thank you!' : 'Sent. Thank you, we will be in touch.')
+          msg.textContent = ok ? (f.querySelector('[name=list]') ? 'You are subscribed to The Edge of X. Thank you!' : 'Sent. Thank you, we will be in touch.')
                                : 'That did not go through. Please try again, or email news@thevermiliontimes.com.';
           if (ok) f.reset();
         })

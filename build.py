@@ -309,11 +309,11 @@ def card(k,label,head,txt,extra=''):
 DISCLOSE='\n      <p class="disclose">Disclosure: Brison McPhail, publisher of the Times, also owns Rocket Farm, an RV park in Kaplan. Any story that touches it will say so.</p>'
 GRID=''.join(card(*c, DISCLOSE if c[0]=='starbase' else '') for c in CARDS)
 
-# The Parish Brief signup. Set BRIEF_ACTION to an email service's form URL
+# The Edge of X newsletter signup (BRIEF). BRIEF_ACTION is unused now:
 # (Buttondown, Mailchimp...) to collect addresses there; until then the button
 # opens an email to the Times asking to be added.
 BRIEF_ACTION=''
-# Forms (Parish Brief, tips, contact) post through FormSubmit to the
+# Forms (The Edge of X, tips, contact) post through FormSubmit to the
 # publisher's inbox. After FormSubmit is activated, FORM_TO can be swapped for
 # the random alias it emails back, so no address appears in the page source.
 FORM_TO='brison@jetheatandair.com'
@@ -321,8 +321,8 @@ FORM_URL=f'https://formsubmit.co/{FORM_TO}'
 def form_hidden(subject):
     return (f'<input type="hidden" name="_subject" value="{subject}"><input type="hidden" name="_template" value="table">'
             f'<input type="hidden" name="_next" value="{SITE}/thanks/"><input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">')
-BRIEF=f'''<div class="box brief" id="brief"><h3 class="h-2">Get the Parish Brief</h3><p>The day's Vermilion Parish news in your inbox every morning. Free.</p>
-  <form class="vt-form" action="{FORM_URL}" method="post">{form_hidden('New Parish Brief subscriber')}<label class="sr" for="brief-email">Email address</label><input id="brief-email" type="email" name="email" required placeholder="you@example.com"><input type="hidden" name="list" value="Parish Brief"><button class="btn" type="submit">Sign Me Up</button><p class="form-msg" role="status" hidden></p></form></div>'''
+BRIEF=f'''<div class="box brief" id="brief"><p class="kicker">Newsletter</p><h3 class="h-2">The Edge of X</h3><p>Your direct feed for Starbase Louisiana. 10,000 launches. $100B spaceport. Zero fluff. Delivered fresh to your inbox.</p>
+  <form class="vt-form" action="{FORM_URL}" method="post">{form_hidden('New subscriber: The Edge of X')}<label class="sr" for="brief-email">Email address</label><input id="brief-email" type="email" name="email" required placeholder="you@example.com"><input type="hidden" name="list" value="The Edge of X"><button class="btn" type="submit">Subscribe Free</button><p class="form-msg" role="status" hidden></p></form></div>'''
 SEC_TEXT={k:(head,txt) for k,_,head,txt in CARDS}
 SEC_TEXT['opinion']=('Letters, Columns &amp; the Editorial Board','Signed letters from readers, guest columns about the parish and the paper\'s own positions, always labeled as opinion.')
 SEC_TEXT['obituaries']=('Remembering Our Neighbors','Obituaries as sent by families and funeral homes, with service details.')
@@ -508,7 +508,7 @@ files['search/index.html']=page('/search/','Search | The Vermilion Times','Searc
 </article>
 <script src="/assets/search.js" defer></script>''')
 files['thanks/index.html']=page('/thanks/','Thank You | The Vermilion Times','Thanks for writing to The Vermilion Times.','''<article class="page"><p class="kicker">Thank You</p><h1>Got it. Thank you.</h1>
-  <p class="deck">Your message is on its way to the Times. If you asked for the Parish Brief, you are on the list.</p><p><a href="/">Back to the front page</a></p></article>''')
+  <p class="deck">Your message is on its way to the Times. If you subscribed to The Edge of X, you are on the list.</p><p><a href="/">Back to the front page</a></p></article>''')
 def meta_desc(t):
     t=re.sub(r'<[^>]+>','',t).replace('"','&quot;')
     return t if len(t)<=158 else t[:155].rsplit(' ',1)[0]+'...'
