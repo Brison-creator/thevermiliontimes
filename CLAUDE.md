@@ -97,7 +97,10 @@ slow day; zero if nothing can be verified).
 
 1. `git pull`, then list `articles/` so you do not repeat a story already run.
    Follow-ups with genuinely new facts are welcome.
-2. Sweep the feelers. Google News RSS works from the sandbox with curl:
+2. Sweep the feelers: `python3 tools/gnews.py` runs every query below and prints
+   each item's real publisher URL (Google's links are redirects). KLFY and WWL
+   often block fetches; append `amp/` to KLFY URLs, or find another outlet.
+   Google News RSS also works directly with curl:
    `https://news.google.com/rss/search?q=<query>&hl=en-US&gl=US&ceid=US:en`.
    Run at least these queries: `Vermilion+Parish`, `Starbase+Louisiana`,
    `SpaceX+Pecan+Island`, `Vermilion+Parish+Sheriff`, `Abbeville+Louisiana`,
