@@ -6,6 +6,13 @@
    "caption": "SpaceX's existing Starbase launch site in Boca Chica, Texas.",
    "credit": "Alexander Hatley / Wikimedia Commons, CC BY 2.0",
    "source": "https://commons.wikimedia.org/wiki/File:USA_-_Texas_-_Boca_Chica_-_Starbase_(51286772204).jpg"
+  },
+  {
+   "image": "/img/photos/starbase-full-stack.jpg",
+   "alt": "A stainless-steel SpaceX Starship rocket stacked on its booster beside the launch tower, under a blue sky.",
+   "caption": "A SpaceX Starship stacked on its launch tower at Starbase, Texas, in 2022.",
+   "credit": "Hotel Pika / Wikimedia Commons, CC BY-SA 2.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Starship_full_stack.jpg"
   }
  ],
  "land-water": [
@@ -22,6 +29,13 @@
    "caption": "Whooping cranes are ferried by boat at the White Lake Wetlands Conservation Area in Vermilion Parish.",
    "credit": "U.S. Fish and Wildlife Service (public domain)",
    "source": "https://commons.wikimedia.org/wiki/File:Transporting_Whooping_Cranes_to_White_Lake_Wetlands_Conservation_Area_(6777537126).jpg"
+  },
+  {
+   "image": "/img/photos/land-delcambre-aerial-10.jpg",
+   "alt": "Boats tied up in a small marina at Delcambre, seen from above a parking lot.",
+   "caption": "Boats in the harbor at Delcambre.",
+   "credit": "Louisiana Sea Grant / Wikimedia Commons, CC BY 2.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Delcambre_Aerials_11-21-13_-_010.jpg"
   }
  ],
  "safety": [
@@ -56,6 +70,13 @@
    "caption": "The Vermilion River at Abbeville.",
    "credit": "Tim Boyd / Wikimedia Commons, CC BY 2.0",
    "source": "https://commons.wikimedia.org/wiki/File:Vermilion_River_Abbeville_Louisiana.jpg"
+  },
+  {
+   "image": "/img/photos/local-acadian-museum-erath.jpg",
+   "alt": "The white masonry front of the Acadian Museum, Musee Acadien, on a small-town street in Erath.",
+   "caption": "The Acadian Museum in Erath, housed in the town's old bank building.",
+   "credit": "Richard Byrd / Wikimedia Commons, CC BY 2.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Acadian_Museum_Erath_LA_2009.jpg"
   }
  ],
  "business": [
@@ -65,6 +86,13 @@
    "caption": "The historic Bank of Gueydan building.",
    "credit": "Jerrye & Roy Klotz, MD / Wikimedia Commons, CC BY-SA 4.0",
    "source": "https://commons.wikimedia.org/wiki/File:BANK_OF_GUEYDAN,_VERMILION_PARISH,_LA.jpg"
+  },
+  {
+   "image": "/img/photos/business-suires-grocery.jpg",
+   "alt": "The white wooden front of Suire's Cajun Grocery and Restaurant, painted with an alligator and a handwritten menu.",
+   "caption": "Suire's Cajun Grocery and Restaurant in Vermilion Parish.",
+   "credit": "Richard Byrd / Wikimedia Commons, CC BY 2.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Suire's_Cajun_Grocery_and_Restaurant.jpg"
   }
  ],
  "government": [
@@ -74,6 +102,15 @@
    "caption": "The Vermilion River at Abbeville.",
    "credit": "Tim Boyd / Wikimedia Commons, CC BY 2.0",
    "source": "https://commons.wikimedia.org/wiki/File:Vermilion_River_Abbeville_Louisiana.jpg"
+  }
+ ],
+ "sports": [
+  {
+   "image": "/img/photos/sports-cajun-field.jpg",
+   "alt": "Fans in red sit on a grassy hill above a packed football stadium, the end zone painted LOUISIANA.",
+   "caption": "Fans at Cajun Field in Lafayette on game day.",
+   "credit": "Jcarriere / Wikimedia Commons, CC BY-SA 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Cajun_field_gameday.jpg"
   }
  ]
 }
