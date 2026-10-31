@@ -10,6 +10,7 @@ CT=ZoneInfo('America/Chicago')
 R=os.path.dirname(os.path.abspath(__file__))+'/'
 SITE='https://thevermiliontimes.com'
 EMAIL='news@thevermiliontimes.com'
+FACEBOOK='https://www.facebook.com/profile.php?id=61596201236402'
 TAGLINE='Starbase Louisiana&rsquo;s Local News'  # the official tagline, everywhere
 FONTS='https://fonts.googleapis.com/css2?family=Tinos:wght@700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:wght@500;600;700&display=swap'
 ICON=("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23f3e9d4'/%3E"
@@ -276,7 +277,7 @@ def page(path,title,desc,body,h1_is_plate=False,ld=None,image='/img/og-nameplate
 <a class="skip" href="#main">Skip to the news</a>
 <div class="topbar"><div class="wrap topbar-in">
   <p class="tb-left"><span>{TAGLINE}</span><span class="tb-sep" aria-hidden="true">|</span><span id="today">Vermilion Parish, Louisiana</span></p>
-  <nav class="tb-right" aria-label="Utility"><a href="/about/">About Us</a><a href="/#brief">Subscribe</a><a href="/about/#contact">Contact</a></nav>
+  <nav class="tb-right" aria-label="Utility"><a href="/about/">About Us</a><a href="/#brief">Subscribe</a><a href="/about/#contact">Contact</a><a class="tb-fb" href="{FACEBOOK}" rel="noopener" aria-label="The Vermilion Times on Facebook"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/></svg></a></nav>
 </div></div>
 <header class="wrap mast">
   {plate}
@@ -302,7 +303,7 @@ def page(path,title,desc,body,h1_is_plate=False,ld=None,image='/img/og-nameplate
   <div class="foot-bar"><div class="wrap foot-bar-in">
     <img class="foot-mark" src="/img/brand/icon-192.png" width="40" height="40" alt="" loading="lazy">
     <p>The Vermilion Times is an independent newsroom serving Vermilion Parish and the communities around Starbase Louisiana. Published by Brison McPhail &middot; <a href="mailto:{EMAIL}">{EMAIL}</a></p>
-    <nav class="foot-links" aria-label="Legal"><a href="/about/#standards">Standards</a><a href="/about/#corrections">Corrections</a><span>&copy; <span id="year">2026</span> The Vermilion Times</span></nav>
+    <nav class="foot-links" aria-label="Legal"><a class="foot-fb" href="{FACEBOOK}" rel="noopener"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/></svg> Facebook</a><a href="/about/#standards">Standards</a><a href="/about/#corrections">Corrections</a><span>&copy; <span id="year">2026</span> The Vermilion Times</span></nav>
   </div></div>
 </footer>
 <script src="/assets/times.js" defer></script>
@@ -467,7 +468,7 @@ about_body=f'''<article class="page">
     <label for="c-msg">Message</label><textarea id="c-msg" name="message" rows="5" required></textarea>
     <button class="btn" type="submit">Send Message</button><p class="form-msg" role="status" hidden></p>
   </form>
-  <p>Or email <a href="mailto:{EMAIL}">{EMAIL}</a>.</p>
+  <p>Or email <a href="mailto:{EMAIL}">{EMAIL}</a>, or message us on <a href="{FACEBOOK}" rel="noopener">Facebook</a>.</p>
 </article>'''
 
 send_body=f'''<article class="page">
@@ -509,7 +510,7 @@ nf_body='''<article class="page" style="text-align:center">
 </article>'''
 
 org={"@context":"https://schema.org","@type":"NewsMediaOrganization","name":"The Vermilion Times","url":SITE+"/",
-     "slogan":"Starbase Louisiana\u2019s Local News","email":EMAIL,"logo":SITE+"/img/brand/round-720.png","foundingDate":"2026","founder":{"@type":"Person","name":"Brison McPhail","jobTitle":"Publisher"},"areaServed":{"@type":"AdministrativeArea","name":"Vermilion Parish, Louisiana"},
+     "slogan":"Starbase Louisiana\u2019s Local News","sameAs":[FACEBOOK],"email":EMAIL,"logo":SITE+"/img/brand/round-720.png","foundingDate":"2026","founder":{"@type":"Person","name":"Brison McPhail","jobTitle":"Publisher"},"areaServed":{"@type":"AdministrativeArea","name":"Vermilion Parish, Louisiana"},
      "publishingPrinciples":SITE+"/about/","correctionsPolicy":SITE+"/about/","ethicsPolicy":SITE+"/about/"}
 files={
  'index.html':page('/','The Vermilion Times | Starbase Louisiana&rsquo;s Local News',
