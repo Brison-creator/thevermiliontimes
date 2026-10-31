@@ -12,7 +12,7 @@ FONTS='https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Grenze
 ICON=("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23f3e9d4'/%3E"
       "%3Ctext x='32' y='47' font-family='UnifrakturMaguntia,serif' font-size='44' text-anchor='middle' fill='%237c1f1a'%3EV%3C/text%3E%3C/svg%3E")
 
-SECTIONS=[('local','Local'),('government','Parish Government'),('schools','Schools'),('sports','Sports'),('business','Business'),
+SECTIONS=[('local','Local'),('government','Parish Government'),('safety','Public Safety'),('schools','Schools'),('sports','Sports'),('business','Business'),
           ('starbase','Starbase Louisiana'),('land-water','Land &amp; Water'),('faith','Faith &amp; Family'),('opinion','Opinion'),('obituaries','Obituaries')]
 
 # ---------------------------------------------------------------- articles
@@ -96,6 +96,49 @@ def load_articles():
     return arts
 
 ARTICLES=load_articles()
+
+# ---------------------------------------------------------------- images
+# A story may carry a freely licensed photo (see tools/commons.py):
+#   image: /img/photos/slug.jpg   image_alt: ...   image_caption: ...
+#   image_credit: Author / Wikimedia Commons, CC BY 2.0   image_source: https://commons...
+# Without one it shows its section's engraving from img/cuts/ (or `illustration: <name>`).
+def cut_title(name):
+    try: return re.search(r'<title>(.*?)</title>',io.open(os.path.join(R,'img','cuts',name+'.svg'),encoding='utf-8').read()).group(1)
+    except (OSError,AttributeError): return ''
+for a in ARTICLES:
+    if a.get('image'):
+        if not os.path.exists(R+a['image'].lstrip('/')): raise SystemExit(f'{a["slug"]}: image {a["image"]} not found')
+        for need in ('image_alt','image_credit'):
+            if not a.get(need): raise SystemExit(f'{a["slug"]}: a photo needs {need}')
+        a['img']=a['image']; a['img_share']=a['image']; a['img_alt']=a['image_alt']
+        a['img_caption']=smart(a.get('image_caption',''))
+        cred=html.escape(a['image_credit'])
+        a['img_credit']=f'<a href="{html.escape(a["image_source"])}" rel="noopener">{cred}</a>' if a.get('image_source') else cred
+    else:
+        name=a.get('illustration') or a['section']
+        if not os.path.exists(os.path.join(R,'img','cuts',name+'.svg')): name='local'
+        a['img']=f'/img/cuts/{name}.svg'; a['img_share']=f'/img/cuts/{name}.png'
+        a['img_alt']=cut_title(name); a['img_caption']=''; a['img_credit']='Illustration: The Vermilion Times'
+
+def img_size(path):
+    # width and height of a JPEG or PNG, so pages reserve the right space
+    f=io.open(R+path.lstrip('/'),'rb'); d=f.read(); f.close()
+    if d[:8]==b'\x89PNG\r\n\x1a\n': return int.from_bytes(d[16:20],'big'),int.from_bytes(d[20:24],'big')
+    i=2
+    while i<len(d):
+        if d[i]!=0xFF: i+=1; continue
+        m=d[i+1]
+        if m in (0xC0,0xC1,0xC2): return int.from_bytes(d[i+7:i+9],'big'),int.from_bytes(d[i+5:i+7],'big')
+        i+=2+int.from_bytes(d[i+2:i+4],'big')
+    return 640,400
+
+def figure(a,cls='story-art',w=None,h=None,lazy=True,caption=True):
+    if w is None: w,h=img_size(a['img']) if a['img'].endswith(('.jpg','.jpeg','.png')) else (640,400)
+    cap=''
+    if caption:
+        cap=f'<figcaption>{inline(a["img_caption"])} <span class="credit">{a["img_credit"]}</span></figcaption>'
+    load=' loading="lazy"' if lazy else ''
+    return f'<figure class="{cls}"><img src="{a["img"]}" alt="{html.escape(a["img_alt"])}" width="{w}" height="{h}"{load} decoding="async">{cap}</figure>'
 def latest_in(sec): return next((a for a in ARTICLES if a['section']==sec),None)
 
 def article_body(a):
@@ -113,6 +156,7 @@ def article_body(a):
   <h1>{html.escape(a["title"])}</h1>
   <p class="deck">{inline(a["deck"])}</p>
   <p class="byline">By The Vermilion Times &middot; <time datetime="{a["d"]}">{ap_date(a["d"])}</time>{upd}</p>
+  {figure(a,lazy=False)}
   <div class="article-body">
 {a["body_html"]}
   </div>
@@ -125,20 +169,20 @@ def article_body(a):
 def article_ld(a):
     return {"@context":"https://schema.org","@type":"NewsArticle","headline":a['title'][:110],"description":a['deck'],
             "datePublished":str(a['d']),"dateModified":str(a['upd'] or a['d']),"articleSection":re.sub('&amp;','&',SECTION_NAME[a['section']]),
-            "mainEntityOfPage":SITE+a['url'],"isAccessibleForFree":True,
+            "mainEntityOfPage":SITE+a['url'],"isAccessibleForFree":True,"image":[SITE+a['img_share']],
             "author":{"@type":"Organization","name":"The Vermilion Times","url":SITE+"/"},
             "publisher":{"@type":"NewsMediaOrganization","name":"The Vermilion Times","url":SITE+"/"}}
 
 def news_index_body():
     if not ARTICLES:
         return '<article class="page"><p class="kicker">The News</p><h1>Latest News</h1><p class="deck">The first stories are on their way.</p></article>'
-    rows=''.join(f'''<li id="{a["slug"]}"><p class="kicker">{SECTION_NAME[a["section"]]}</p><h2 class="h-1"><a href="{a["url"]}">{html.escape(a["title"])}</a></h2>
+    rows=''.join(f'''<li id="{a["slug"]}"><a href="{a["url"]}" tabindex="-1" aria-hidden="true" class="art-link">{figure(a,'thumb-art',caption=False)}</a><p class="kicker">{SECTION_NAME[a["section"]]}</p><h2 class="h-1"><a href="{a["url"]}">{html.escape(a["title"])}</a></h2>
       <p class="summary">{inline(a["deck"])}</p><p class="meta">{ap_date(a["d"])}</p></li>''' for a in ARTICLES)
     anchors=''.join(f'<span id="{k}"></span>' for k,_ in SECTIONS)
     return f'<article class="page news-index">{anchors}<p class="kicker">The News</p><h1>Latest News</h1><p class="deck">Every story in The Vermilion Times, newest first.</p><ol class="news-list">{rows}</ol></article>'
 
 
-def page(path,title,desc,body,h1_is_plate=False,ld=None):
+def page(path,title,desc,body,h1_is_plate=False,ld=None,image='/img/og-nameplate.png'):
     secnav=''.join(f'<li><a href="/#{k}">{t}</a></li>' for k,t in SECTIONS)
     plate=('<h1 class="nameplate">The Vermilion Times</h1>' if h1_is_plate
            else '<p class="nameplate"><a href="/">The Vermilion Times</a></p>')
@@ -146,8 +190,8 @@ def page(path,title,desc,body,h1_is_plate=False,ld=None):
     def li(h,t):
         cur=' aria-current="page"' if h==path else ''
         return f'<li><a href="{h}"{cur}>{t}</a></li>'
-    news=''.join(li(f'/#{k}',t) for k,t in SECTIONS[:6])
-    life=''.join(li(f'/#{k}',t) for k,t in SECTIONS[6:])
+    news=''.join(li(f'/#{k}',t) for k,t in SECTIONS[:7])
+    life=''.join(li(f'/#{k}',t) for k,t in SECTIONS[7:])
     return f'''<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -162,6 +206,8 @@ def page(path,title,desc,body,h1_is_plate=False,ld=None):
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{desc}">
 <meta property="og:url" content="{SITE}{path}">
+<meta property="og:image" content="{SITE}{image}">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="{ICON}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -215,6 +261,7 @@ TOWNS=' <span class="fleur" aria-hidden="true">&#x269C;</span> '.join(['Abbevill
 CARDS=[
  ('local','Local','Abbeville to the Gulf','The towns, the roads, the new businesses and the people of every community in the parish.'),
  ('government','Parish Government','Police Jury &amp; Courthouse','Police Jury, city councils and the school board: what was decided, what it costs and who voted how.'),
+ ('safety','Public Safety','Sheriff, Police &amp; Courts','Arrests and charges from official releases, wrecks, fires and the courts, reported carefully and fairly.'),
  ('schools','Schools','Honor Rolls &amp; Graduations','Classrooms, teachers, awards and every honor roll the schools send us.'),
  ('sports','Sports','Friday Nights &amp; Beyond','Scores, standings and the athletes from Kaplan, Abbeville, Erath, Gueydan and North Vermilion.'),
  ('business','Business','Open for Business','Openings, closings, hiring and the people building things here.'),
@@ -238,11 +285,12 @@ GRID=''.join(card(*c, DISCLOSE if c[0]=='starbase' else '') for c in CARDS)
 def news_block():
     if not ARTICLES: return ''
     lead=ARTICLES[0]; side=ARTICLES[1:4]
-    side_html=''.join(f'''<article class="side-story"><p class="kicker">{SECTION_NAME[a["section"]]}</p><h3 class="h-2"><a href="{a["url"]}">{html.escape(a["title"])}</a></h3>
+    side_html=''.join(f'''<article class="side-story"><a href="{a["url"]}" tabindex="-1" aria-hidden="true" class="art-link">{figure(a,'side-art',caption=False)}</a><p class="kicker">{SECTION_NAME[a["section"]]}</p><h3 class="h-2"><a href="{a["url"]}">{html.escape(a["title"])}</a></h3>
         <p class="summary">{inline(a["deck"])}</p><p class="meta">{ap_date(a["d"])}</p></article>''' for a in side)
     side_col=f'<div class="side-col">{side_html}</div>' if side else ''
     return f'''<div class="story news-lead{' solo' if not side else ''}">
       <article>
+        <a href="{lead["url"]}" tabindex="-1" aria-hidden="true" class="art-link">{figure(lead,'lead-art',lazy=False,caption=False)}</a>
         <p class="kicker">{SECTION_NAME[lead["section"]]}</p>
         <h2 class="h-lead"><a href="{lead["url"]}">{html.escape(lead["title"])}</a></h2>
         <p class="summary">{inline(lead["deck"])}</p>
@@ -280,7 +328,7 @@ home_body=f'''{RIBBON}
       <article id="letter">
         <p class="kicker">From the Publisher</p>
         <h2 class="h-1">Every Parish Deserves a Paper That Shows Up</h2>
-        <p class="byline">By Brison McPhail, Publisher &middot; Vermilion Parish, La.</p>
+        <p class="byline with-photo"><img class="pub-photo" src="/img/publisher.png" width="40" height="40" alt="Brison McPhail"><span>By Brison McPhail, Publisher &middot; Vermilion Parish, La.</span></p>
         <p class="dropcap">One that sits through the Police Jury meeting, knows the score of Friday night&rsquo;s game, prints the honor roll, and tells you which new business just opened its doors on Main Street.</p>
         <p>That is what The Vermilion Times sets out to be. We will cover Abbeville and Kaplan, Erath and Gueydan, Delcambre, Maurice and the coast: the councils and the courthouse, the schools and the ball fields, the churches and the festivals, the harvest and the water, and the people who keep it all going.</p>
       </article>
@@ -397,7 +445,7 @@ about_body=f'''<article class="page">
     <li><b>Advertising does not buy coverage.</b> Advertisers do not decide what we report.</li>
   </ul>
   <h2 id="publisher">The Publisher</h2>
-  <p>The Vermilion Times is published by Brison McPhail. He also owns Rocket Farm, an RV park in development in Kaplan; the Times discloses that connection in every story about Starbase Louisiana or anything touching his businesses.</p>
+  <p class="with-photo"><img class="pub-photo" src="/img/publisher.png" width="56" height="56" alt="Brison McPhail"><span>The Vermilion Times is published by Brison McPhail. He also owns Rocket Farm, an RV park in development in Kaplan; the Times discloses that connection in every story about Starbase Louisiana or anything touching his businesses.</span></p>
   <h2 id="contact">Contact</h2>
   <p>News, letters, corrections and advertising: <a href="mailto:{EMAIL}">{EMAIL}</a>.</p>
 </article>'''
@@ -432,7 +480,7 @@ nf_body='''<article class="page" style="text-align:center">
 </article>'''
 
 org={"@context":"https://schema.org","@type":"NewsMediaOrganization","name":"The Vermilion Times","url":SITE+"/",
-     "email":EMAIL,"foundingDate":"2026","founder":{"@type":"Person","name":"Brison McPhail","jobTitle":"Publisher"},"areaServed":{"@type":"AdministrativeArea","name":"Vermilion Parish, Louisiana"},
+     "email":EMAIL,"logo":SITE+"/img/logo-square.png","foundingDate":"2026","founder":{"@type":"Person","name":"Brison McPhail","jobTitle":"Publisher"},"areaServed":{"@type":"AdministrativeArea","name":"Vermilion Parish, Louisiana"},
      "publishingPrinciples":SITE+"/about/","correctionsPolicy":SITE+"/about/","ethicsPolicy":SITE+"/about/"}
 files={
  'index.html':page('/','The Vermilion Times | News for Vermilion Parish, Louisiana',
@@ -449,7 +497,7 @@ def meta_desc(t):
     t=re.sub(r'<[^>]+>','',t).replace('"','&quot;')
     return t if len(t)<=158 else t[:155].rsplit(' ',1)[0]+'...'
 for a in ARTICLES:
-    files[a['url'].strip('/')+'/index.html']=page(a['url'],f'{html.escape(a["title"])} | The Vermilion Times',meta_desc(inline(a['deck'])),article_body(a),False,[article_ld(a)])
+    files[a['url'].strip('/')+'/index.html']=page(a['url'],f'{html.escape(a["title"])} | The Vermilion Times',meta_desc(inline(a['deck'])),article_body(a),False,[article_ld(a)],a['img_share'])
 # drop pages for stories that were removed
 for d in glob.glob(R+'news/*/'):
     if d[len(R):]+'index.html' not in files:

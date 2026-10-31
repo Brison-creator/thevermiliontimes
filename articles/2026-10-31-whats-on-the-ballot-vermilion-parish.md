@@ -2,6 +2,7 @@
 title: What's on the Ballot in Vermilion Parish on Tuesday
 deck: Contested races for district attorney, mayor of Erath and Gueydan, two School Board seats and more are on the Nov. 3 ballot, along with 10 statewide constitutional amendments.
 section: government
+illustration: elections
 date: 2026-10-31
 sources:
 - Louisiana Secretary of State, candidate list for Vermilion Parish, Nov. 3, 2026 election | https://voterportal.sos.la.gov/CandidateInquiry/ParishCandidate/Print?electionDate=11%2F03%2F2026&electionId=344&parishId=58&parishName=VERMILION

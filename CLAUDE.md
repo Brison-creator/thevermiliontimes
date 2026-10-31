@@ -27,7 +27,7 @@ edit `build.py`, `assets/` or `articles/` and run `python3 build.py`.
    More paragraphs. - list items, > quotations, **bold**, *italic*, [link](https://...).
    ```
 
-   Sections: `local`, `government`, `schools`, `sports`, `business`, `starbase`,
+   Sections: `local`, `government`, `safety`, `schools`, `sports`, `business`, `starbase`,
    `land-water`, `faith`, `opinion`, `obituaries`.
 3. `python3 build.py` (it refuses a story with no sources or an unknown section).
 4. Check the page renders (`python3 -m http.server` and open `/news/<slug>/`).
@@ -75,7 +75,18 @@ the end of the body: `*Correction: ...*` saying what was wrong.
   his personal address).
 - **If you cannot verify a story, do not publish it.** A day with no story is
   better than a wrong one.
-- Do not invent images. Stories run as text.
+- **Images.** Every story shows an image automatically: its section's engraving
+  from `img/cuts/` (set `illustration: elections` etc. to pick another), or a
+  real photo when a free one fits. Find photos with `python3 tools/commons.py`
+  (Wikimedia Commons; public domain, CC0, CC BY, CC BY-SA only). The tool
+  refuses other licenses and prints the `image:`/`image_credit:`/`image_source:`
+  lines; write `image_alt:` and `image_caption:` yourself, describing only what
+  the photo actually shows, and never imply a file photo was taken at the
+  event. U.S. government photos (NASA, NOAA, FAA, USGS, FEMA) are public domain
+  and fine with credit. Never copy photos from news sites, Facebook or Google
+  Images, and never use AI-generated pictures presented as photos. Look at a
+  photo before using it.
+- **Sections:** `safety` is Public Safety (sheriff, police, courts, fires, wrecks).
 - Do not put model names or AI product identifiers in articles or commits.
 
 ## Daily story routine
