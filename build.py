@@ -559,8 +559,8 @@ TODAY=str(ARTICLES[0]['d']) if ARTICLES else '2026-10-30'
 urls=[('/',TODAY),('/news/',TODAY)]+[(f'/{k}/',TODAY) for k,_ in SECTIONS]+[('/about/','2026-10-31'),('/send-news/','2026-10-31')]+[(a['url'],str(a['upd'] or a['d'])) for a in ARTICLES]
 io.open(R+'sitemap.xml','w').write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+
   ''.join(f'  <url><loc>{SITE}{u}</loc><lastmod>{d}</lastmod></url>\n' for u,d in urls)+'</urlset>\n')
-def rfc822(d): return datetime.datetime(d.year,d.month,d.day,6,0,tzinfo=datetime.timezone(datetime.timedelta(hours=-6))).strftime('%a, %d %b %Y %H:%M:%S %z')
-items=''.join(f'''  <item><title>{html.escape(a["title"])}</title><link>{SITE}{a["url"]}</link><guid>{SITE}{a["url"]}</guid><pubDate>{rfc822(a["d"])}</pubDate><category>{html.escape(re.sub("&amp;","&",SECTION_NAME[a["section"]]))}</category><description>{html.escape(re.sub(r"<[^>]+>","",inline(a["deck"])))}</description></item>
+def rfc822(t): return t.strftime('%a, %d %b %Y %H:%M:%S %z')
+items=''.join(f'''  <item><title>{html.escape(a["title"])}</title><link>{SITE}{a["url"]}</link><guid>{SITE}{a["url"]}</guid><pubDate>{rfc822(a["pub"])}</pubDate><category>{html.escape(re.sub("&amp;","&",SECTION_NAME[a["section"]]))}</category><description>{html.escape(re.sub(r"<[^>]+>","",inline(a["deck"])))}</description></item>
 ''' for a in ARTICLES[:30])
 io.open(R+'feed.xml','w',encoding='utf-8').write(f'''<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0"><channel><title>The Vermilion Times</title><link>{SITE}/</link><description>Starbase Louisiana's Local News</description><language>en-us</language>
