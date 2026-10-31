@@ -77,9 +77,11 @@ the end of the body: `*Correction: ...*` saying what was wrong.
   his personal address).
 - **If you cannot verify a story, do not publish it.** A day with no story is
   better than a wrong one.
-- **Images.** Every story shows an image automatically: its section's engraving
-  from `img/cuts/` (set `illustration: elections` etc. to pick another), or a
-  real photo when a free one fits. Find photos with `python3 tools/commons.py`
+- **Images.** Every story shows a real photo. Without its own `image:`, a story
+  gets a credited file photo from its section's pool in `img/photos/pool.json`
+  (captioned "File photo:"); engravings in `img/cuts/` are only a last resort.
+  Grow the pools when you find good free photos (Commons rate-limits hard:
+  space requests out, use 1280px thumbnails). Find photos with `python3 tools/commons.py`
   (Wikimedia Commons; public domain, CC0, CC BY, CC BY-SA only). The tool
   refuses other licenses and prints the `image:`/`image_credit:`/`image_source:`
   lines; write `image_alt:` and `image_caption:` yourself, describing only what
