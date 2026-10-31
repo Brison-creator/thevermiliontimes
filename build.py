@@ -201,7 +201,7 @@ def page(path,title,desc,body,h1_is_plate=False,ld=None):
   </div>
   <div class="si-legal">
     <span>&copy; <span id="year">2026</span> The Vermilion Times</span>
-    <span>Published in Vermilion Parish, Louisiana</span>
+    <span>Brison McPhail, Publisher &middot; Published in Vermilion Parish, Louisiana</span>
     <a href="mailto:{EMAIL}">{EMAIL}</a>
   </div>
 </footer>
@@ -232,7 +232,7 @@ def card(k,label,head,txt,extra=''):
       <p>{txt}</p>{extra}
       {status}
     </article>'''
-DISCLOSE='\n      <p class="disclose">Disclosure: the publisher of the Times also owns Rocket Farm, an RV park in Kaplan. Any story that touches it will say so.</p>'
+DISCLOSE='\n      <p class="disclose">Disclosure: Brison McPhail, publisher of the Times, also owns Rocket Farm, an RV park in Kaplan. Any story that touches it will say so.</p>'
 GRID=''.join(card(*c, DISCLOSE if c[0]=='starbase' else '') for c in CARDS)
 
 def news_block():
@@ -280,7 +280,7 @@ home_body=f'''{RIBBON}
       <article id="letter">
         <p class="kicker">From the Publisher</p>
         <h2 class="h-1">Every Parish Deserves a Paper That Shows Up</h2>
-        <p class="byline">By the Publisher &middot; Vermilion Parish, La.</p>
+        <p class="byline">By Brison McPhail, Publisher &middot; Vermilion Parish, La.</p>
         <p class="dropcap">One that sits through the Police Jury meeting, knows the score of Friday night&rsquo;s game, prints the honor roll, and tells you which new business just opened its doors on Main Street.</p>
         <p>That is what The Vermilion Times sets out to be. We will cover Abbeville and Kaplan, Erath and Gueydan, Delcambre, Maurice and the coast: the councils and the courthouse, the schools and the ball fields, the churches and the festivals, the harvest and the water, and the people who keep it all going.</p>
       </article>
@@ -289,7 +289,7 @@ home_body=f'''{RIBBON}
         <h2 class="h-1">Big Changes Are Coming. We Will Report Them Fairly.</h2>
         <p class="summary">From the announced Starbase Louisiana launch site at Pecan Island to the growth it may bring, the parish has a lot to weigh. We intend to lay out the facts so the people who live here can make up their own minds.</p>
         <p>Our first edition is coming soon. Until then, we want to hear from you: the news, the milestones, the questions nobody is answering. This paper belongs to the parish. Help us fill it.</p>
-        <p class="byline">&mdash; The Publisher</p>
+        <p class="byline">&mdash; Brison McPhail, Publisher</p>
       </article>
     </div>
 
@@ -393,9 +393,11 @@ about_body=f'''<article class="page">
     <li><b>Accuracy first.</b> We check what we print, and we name our sources whenever we can.</li>
     <li id="corrections"><b>Corrections.</b> When we get something wrong, we fix it promptly and say so plainly. Send corrections to <a href="mailto:{EMAIL}">{EMAIL}</a>.</li>
     <li><b>News and opinion are kept apart.</b> Opinion is always labeled as opinion.</li>
-    <li><b>Conflicts are disclosed.</b> When we report on a business or organization connected to the paper&rsquo;s owner, including Rocket Farm, an RV park in Kaplan, we say so in the story.</li>
+    <li><b>Conflicts are disclosed.</b> When we report on a business or organization connected to the paper&rsquo;s publisher, Brison McPhail, including Rocket Farm, his RV park in Kaplan, we say so in the story.</li>
     <li><b>Advertising does not buy coverage.</b> Advertisers do not decide what we report.</li>
   </ul>
+  <h2 id="publisher">The Publisher</h2>
+  <p>The Vermilion Times is published by Brison McPhail. He also owns Rocket Farm, an RV park in development in Kaplan; the Times discloses that connection in every story about Starbase Louisiana or anything touching his businesses.</p>
   <h2 id="contact">Contact</h2>
   <p>News, letters, corrections and advertising: <a href="mailto:{EMAIL}">{EMAIL}</a>.</p>
 </article>'''
@@ -430,7 +432,7 @@ nf_body='''<article class="page" style="text-align:center">
 </article>'''
 
 org={"@context":"https://schema.org","@type":"NewsMediaOrganization","name":"The Vermilion Times","url":SITE+"/",
-     "email":EMAIL,"foundingDate":"2026","areaServed":{"@type":"AdministrativeArea","name":"Vermilion Parish, Louisiana"},
+     "email":EMAIL,"foundingDate":"2026","founder":{"@type":"Person","name":"Brison McPhail","jobTitle":"Publisher"},"areaServed":{"@type":"AdministrativeArea","name":"Vermilion Parish, Louisiana"},
      "publishingPrinciples":SITE+"/about/","correctionsPolicy":SITE+"/about/","ethicsPolicy":SITE+"/about/"}
 files={
  'index.html':page('/','The Vermilion Times | News for Vermilion Parish, Louisiana',

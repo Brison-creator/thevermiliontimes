@@ -65,7 +65,7 @@ the end of the body: `*Correction: ...*` saying what was wrong.
   name juveniles, victims, or anyone not charged. No mugshots, no rumor, no
   social-media-only claims. If charges are dropped or a person is acquitted and
   we named them, publish that too.
-- **Conflict of interest:** the publisher owns Rocket Farm, an RV park in
+- **Conflict of interest:** the publisher, Brison McPhail, owns Rocket Farm, an RV park in
   Kaplan. Every Starbase Louisiana / SpaceX story, and any story touching
   Rocket Farm, RV parks, worker housing or the publisher, must carry
   `disclosure:` in the front matter (copy the one in an earlier Starbase story). Never write promotional copy for the publisher's businesses.
