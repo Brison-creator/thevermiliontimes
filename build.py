@@ -273,7 +273,7 @@ def page(path,title,desc,body,h1_is_plate=False,ld=None,image='/img/og-nameplate
     <nav aria-label="Life sections"><h3>Life &amp; Opinion</h3><ul>{life}</ul></nav>
     <nav aria-label="Contribute"><h3>Contribute</h3><ul>{li('/send-news/','Send a Tip')}{li('/send-news/#announcements','Announcements')}{li('/send-news/#letters','Letters to the Editor')}{li('/send-news/#write','Write for the Times')}</ul></nav>
     <nav aria-label="Business"><h3>Business</h3><ul>{li('/send-news/#advertise','Advertise')}{li('/send-news/#advertise','Classifieds')}{li('/send-news/#advertise','Public Notices')}</ul></nav>
-    <nav aria-label="About"><h3>The Times</h3><ul>{li('/about/','About the Times')}{li('/about/#standards','Our Standards')}{li('/about/#corrections','Corrections')}{li('/about/#contact','Contact')}</ul></nav>
+    <nav aria-label="About"><h3>The Times</h3><ul>{li('/about/','About the Times')}{li('/about/#standards','Our Standards')}{li('/about/#corrections','Corrections')}{li('/about/#contact','Contact')}{li('/about/#press','Press &amp; Credentials')}</ul></nav>
   </div>
   <div class="si-legal">
     <span>&copy; <span id="year">2026</span> The Vermilion Times</span>
@@ -492,10 +492,11 @@ home_body=f'''{RIBBON}
 
 <p class="towns">{TOWNS}</p>'''
 
+RECENT=''.join(f'<li><a href="{a["url"]}">{html.escape(a["title"])}</a> <span class="meta">{stamp(a)}</span></li>' for a in ARTICLES[:8])
 about_body=f'''<article class="page">
   <p class="kicker">About the Times</p>
   <h1>Of the Parish, for the Parish</h1>
-  <p class="deck">The Vermilion Times is an independent local newspaper serving Vermilion Parish, Louisiana.</p>
+  <p class="deck">The Vermilion Times is an independent digital news outlet covering Vermilion Parish, Louisiana, and Starbase Louisiana: {TAGLINE}.</p>
   <p class="dropcap">We started this paper because Vermilion Parish deserves steady, local coverage: of its government, its schools, its businesses and its people. We are independent and locally owned, and we answer to our readers.</p>
   <h2>What We Cover</h2>
   <p>Local government and public meetings, schools and sports, business, faith and community life, agriculture and the coast, and the changes coming to the parish, including the announced Starbase Louisiana launch site at Pecan Island.</p>
@@ -509,6 +510,17 @@ about_body=f'''<article class="page">
   </ul>
   <h2 id="publisher">The Publisher</h2>
   <p class="with-photo"><img class="pub-photo" src="/img/publisher.png" width="56" height="56" alt="Brison McPhail"><span>The Vermilion Times is published by Brison McPhail. He also owns Rocket Farm, an RV park in development in Kaplan; the Times discloses that connection in every story about Starbase Louisiana or anything touching his businesses.</span></p>
+  <h2 id="press">Newsroom &amp; Press</h2>
+  <ul>
+    <li><b>Outlet:</b> The Vermilion Times, an independent digital news outlet, established 2026.</li>
+    <li><b>Coverage:</b> Vermilion Parish government, public safety, schools, sports, business, the coast, and SpaceX&rsquo;s Starbase Louisiana launch site at Pecan Island.</li>
+    <li><b>Publisher:</b> Brison McPhail.</li>
+    <li><b>Disclosure:</b> The publisher also owns Rocket Farm, an RV park in development in Kaplan; every Starbase Louisiana story says so.</li>
+    <li><b>Press and credential requests:</b> <a href="mailto:{EMAIL}?subject=Press%20inquiry">{EMAIL}</a>.</li>
+    <li><b>Publishing schedule:</b> new stories daily, each dated and sourced.</li>
+  </ul>
+  <h3 class="h-2">Recent Stories</h3>
+  <ul class="recent">{RECENT}</ul>
   <h2 id="contact">Contact</h2>
   <p>News, letters, corrections and advertising: <a href="mailto:{EMAIL}">{EMAIL}</a>.</p>
 </article>'''
