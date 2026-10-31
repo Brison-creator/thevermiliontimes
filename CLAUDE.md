@@ -154,3 +154,8 @@ slow day; zero if nothing can be verified).
    story in your own words, run `tools/originality.py` until it passes, build,
    check the pages render, commit (`Add story: <headline>`) and
    push to `main`.
+
+## Starbase Watch live data
+- `/starbase/#live` shows upcoming SpaceX launches (Launch Library 2), SpaceX jobs at Pecan Island (Greenhouse), Pecan Island weather (NWS) and a link to LA 511 for LA 82 roads.
+- Every `python3 build.py` saves fresh snapshots to `data/*.json`, and `assets/watch.js` refreshes them in the reader's browser. Commit the `data/` files with each build.
+- Never invent Louisiana launch dates, viewing areas, parking or road closures. Post them on the Louisiana Status card only after SpaceX, the FAA, DOTD or the parish announces them, and link the source.

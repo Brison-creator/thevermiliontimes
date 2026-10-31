@@ -360,6 +360,109 @@ SEC_TITLE={'starbase':'SpaceX Louisiana and Starbase Louisiana News, Jobs, Map',
 def story_list(arts):
     return ''.join(f'''<li id="{a["slug"]}"><a href="{a["url"]}" tabindex="-1" aria-hidden="true" class="art-link">{figure(a,'thumb-art',caption=False)}</a><p class="kicker">{SECTION_NAME[a["section"]]}<span class="new-tag" data-pub="{a["pub"].isoformat()}" hidden>New</span></p><h2 class="h-1"><a href="{a["url"]}">{html.escape(a["title"])}</a></h2>
       <p class="summary">{inline(a["deck"])}</p><p class="meta">{stamp(a)}</p></li>''' for a in arts)
+
+# ---------------------------------------------------------------- Starbase Watch live data
+# Snapshots are saved to data/ at every build (so the page has content without
+# JavaScript and for search engines); assets/watch.js refreshes them live.
+import urllib.request as _ur
+FEEDS={
+ 'launches':'https://ll.thespacedevs.com/2.3.0/launches/upcoming/?lsp__name=SpaceX&limit=12&mode=normal',
+ 'jobs':'https://boards-api.greenhouse.io/v1/boards/spacex/jobs',
+ 'weather':'https://api.weather.gov/gridpoints/LCH/89,69/forecast',
+}
+def _snapshot(name,url,shrink):
+    f=os.path.join(R,'data',name+'.json')
+    try:
+        raw=json.loads(_ur.urlopen(_ur.Request(url,headers={'User-Agent':'VermilionTimes/1.0 (news@thevermiliontimes.com)','Accept':'application/json'}),timeout=25).read())
+        data={'fetched':datetime.datetime.now(CT).isoformat(timespec='minutes'),'items':shrink(raw)}
+        io.open(f,'w',encoding='utf-8').write(json.dumps(data,ensure_ascii=False))
+    except Exception as e:
+        print(f'note: {name} feed unavailable ({e.__class__.__name__}); keeping the last snapshot')
+    try: return json.load(io.open(f,encoding='utf-8'))
+    except OSError: return {'fetched':'','items':[]}
+def _launches(raw):
+    out=[]
+    for l in raw.get('results',[]):
+        out.append({'name':l['name'],'net':l['net'],'precision':(l.get('net_precision') or {}).get('name',''),'status':l['status']['abbrev'],
+                    'status_name':l['status']['name'],'rocket':l['rocket']['configuration']['name'],'pad':l['pad']['name'],'site':l['pad']['location']['name'],
+                    'mission':((l.get('mission') or {}).get('description') or '')[:240],'webcast':l.get('webcast_live',False),
+                    'video':((l.get('vid_urls') or [{}])[0] or {}).get('url','') if l.get('vid_urls') else ''})
+    return out
+def _jobs(raw):
+    return [{'title':j['title'].strip(),'url':j['absolute_url'],'updated':j.get('updated_at','')[:10]} for j in raw.get('jobs',[]) if 'pecan island' in j['location']['name'].lower() or 'louisiana' in j['title'].lower()]
+def _weather(raw):
+    return [{'name':p['name'],'temp':p['temperature'],'unit':p['temperatureUnit'],'short':p['shortForecast'],'wind':f"{p['windSpeed']} {p['windDirection']}",'icon':p.get('icon','')}
+            for p in raw['properties']['periods'][:6]]
+LIVE={k:_snapshot(k,u,f) for (k,u),f in zip(FEEDS.items(),(_launches,_jobs,_weather))}
+
+def _ct(iso):
+    t=datetime.datetime.fromisoformat(iso.replace('Z','+00:00')).astimezone(CT)
+    return t
+def _when(l):
+    t=_ct(l['net']); p=(l.get('precision') or '').lower()
+    u=datetime.datetime.fromisoformat(l['net'].replace('Z','+00:00'))  # coarse dates are set in UTC
+    if 'year' in p: return f'Sometime in {u.year}'
+    if 'quarter' in p or 'half' in p: return f'{(l.get("precision") or "").replace("Quarter ","Q")} {u.year}'
+    if 'month' in p: return f'No earlier than {u.strftime("%B %Y")}'
+    if p=='day' or 'week' in p: return f'No earlier than {MONTHS[u.month-1]} {u.day}'
+    if 'hour' in p: return f'{t.strftime("%a.")} {MONTHS[t.month-1]} {t.day}, about {ap_time(t)} CT'
+    return f'{t.strftime("%a.")} {MONTHS[t.month-1]} {t.day}, {ap_time(t)} CT'
+def _badge(st):
+    cls={'Go':'go','TBC':'tbc','TBD':'tbd','Success':'ok','Hold':'hold','In Flight':'go'}.get(st,'tbd')
+    return f'<span class="lv-badge {cls}">{html.escape(st)}</span>'
+def watch_dashboard():
+    L=LIVE['launches']['items']; J=LIVE['jobs']['items']; W=LIVE['weather']['items']
+    now=datetime.datetime.now(datetime.timezone.utc)
+    up=[l for l in L if _ct(l['net'])>now-datetime.timedelta(hours=3) and l['status']!='Success']
+    ship=next((l for l in up if 'starship' in l['rocket'].lower() or 'starship' in l['name'].lower()),None)
+    ship_html=(f'''<div class="lv-card lv-ship" data-net="{html.escape(ship['net'])}" data-precision="{html.escape(ship.get('precision',''))}">
+      <p class="label">Next Starship Flight</p><h3 class="h-1">{html.escape(ship['name'])}</h3>
+      <p class="lv-when">{html.escape(_when(ship))} {_badge(ship['status'])}</p>
+      <p class="lv-countdown" aria-live="off"></p>
+      <p class="meta">{html.escape(ship['pad'])}, {html.escape(ship['site'])}</p>
+      {('<p class="summary">'+html.escape(ship['mission'])+'</p>') if ship['mission'] else ''}
+    </div>''' if ship else '<div class="lv-card lv-ship"><p class="label">Next Starship Flight</p><p>No Starship flight is on the public schedule right now.</p></div>')
+    def _row(l):
+        net=f' data-net="{html.escape(l["net"])}"' if (l.get('precision') or '').lower() in ('second','minute') else ''
+        return (f'<li{net}><span class="lv-date">{html.escape(_when(l))}</span><span class="lv-name">{html.escape(l["name"])}</span>'
+                f'<span class="lv-site">{html.escape(l["site"])}</span>{_badge(l["status"])}<span class="lv-countdown"></span></li>')
+    rows=''.join(_row(l) for l in up[:8])
+    jobs=''.join(f'<li><a href="{html.escape(j["url"])}" rel="noopener">{html.escape(j["title"])}</a></li>' for j in J)
+    wx=''.join(f'''<li><b>{html.escape(w['name'])}</b><span class="lv-temp">{w['temp']}&deg;{w['unit']}</span><span>{html.escape(w['short'])}</span><span class="meta">Wind {html.escape(w['wind'])}</span></li>''' for w in W[:4])
+    return f'''<section class="live-watch" id="live" aria-labelledby="live-h" data-fetched="{html.escape(LIVE['launches']['fetched'])}">
+  <h2 id="live-h" class="label">Live: SpaceX Louisiana Watch</h2>
+  <div class="lv-grid">
+    <div class="lv-card lv-status"><p class="label">Louisiana Status</p>
+      <p class="lv-big">No launches yet</p>
+      <p>Construction at Pecan Island is expected to begin in 2027, with a first launch targeted for 2029, according to The Center Square. Launch times, viewing areas, parking and road closures for Louisiana launches will be posted here as soon as SpaceX and the state announce them.</p>
+      <p class="lv-stat"><b id="lv-jobcount">{len(J)}</b> SpaceX job openings listed at Pecan Island</p></div>
+    {ship_html}
+  </div>
+  <div class="lv-grid">
+    <div class="lv-card"><p class="label">Upcoming SpaceX Launches</p><ol class="lv-launches" id="lv-launches">{rows or '<li>No launches on the public schedule.</li>'}</ol>
+      <p class="lv-src">Times in Central. Source: <a href="https://thespacedevs.com/llapi" rel="noopener">Launch Library 2, The Space Devs</a>. Schedules change often.</p></div>
+    <div class="lv-card"><p class="label">SpaceX Jobs at Pecan Island</p><ul class="lv-jobs" id="lv-jobs">{jobs or '<li>No Louisiana openings listed right now.</li>'}</ul>
+      <p class="lv-src">Live from <a href="https://boards.greenhouse.io/spacex" rel="noopener">SpaceX's job board</a>. <a href="/news/spacex-louisiana-jobs-pecan-island/">Our story on the first openings.</a></p></div>
+  </div>
+  <div class="lv-grid">
+    <div class="lv-card"><p class="label">Pecan Island Weather</p><ul class="lv-wx" id="lv-wx">{wx}</ul>
+      <p class="lv-src">Forecast for the Pecan Island area from the <a href="https://forecast.weather.gov/MapClick.php?lat=29.6466&amp;lon=-92.4532" rel="noopener">National Weather Service, Lake Charles</a>.</p></div>
+    <div class="lv-card"><p class="label">Getting Around: LA 82</p>
+      <p>LA 82 is the main road to Pecan Island. For live road conditions, closures and construction, check the state's official traveler system before you drive.</p>
+      <p><a class="btn" href="https://www.511la.org/" rel="noopener">LA 511 Road Conditions</a></p>
+      <p class="lv-src">The state is studying LA 82 improvements tied to the project; who pays has not been decided. <a href="/news/landry-donor-firm-spacex-dotd-contract/">Our story.</a></p></div>
+  </div>
+  <p class="lv-updated meta">Data last refreshed <span id="lv-fetched">{html.escape(_ct(LIVE['launches']['fetched']).strftime('%b. %d, %I:%M %p').replace(' 0',' ') + ' CT' if LIVE['launches']['fetched'] else '')}</span>.</p>
+</section>
+<script src="/assets/watch.js" defer></script>'''
+
+def watch_teaser():
+    # One-line live summary for the homepage band, from the build snapshot.
+    now=datetime.datetime.now(datetime.timezone.utc)
+    nxt=next((l for l in LIVE['launches']['items'] if _ct(l['net'])>now and l['status']!='Success'),None)
+    bits=[f'<b>{len(LIVE["jobs"]["items"])}</b> SpaceX jobs open at Pecan Island']
+    if nxt: bits.append(f'Next SpaceX launch: {html.escape(nxt["name"].split(" | ")[-1])}, {html.escape(_when(nxt))}')
+    return '<p class="lv-teaser">'+' &middot; '.join(bits)+'</p>'
 def section_body(k):
     head,txt=SEC_TEXT.get(k,('',''))
     intro=''
@@ -370,7 +473,9 @@ def section_body(k):
     lst=(f'<h2 class="list-head">Latest {SECTION_NAME[k]} Stories</h2><ol class="news-list">{story_list(arts)}</ol>' if arts else
          f'<p class="empty">No stories in this section yet. Know something we should report? <a href="/send-news/">Send us the news from your town</a>.</p>')
     disc=DISCLOSE if k=='starbase' else ''
+    live=watch_dashboard() if k=='starbase' else ''
     return f'''<article class="page section-page"><p class="kicker">{SECTION_NAME[k]}</p><h1>{head}</h1><p class="deck">{txt}</p>{disc}
+  {live}
   {intro}
   {lst}
   {BRIEF}
@@ -415,7 +520,8 @@ def home_body_html():
     <p class="label">Starbase Watch</p>
     <h2 id="watch-h" class="h-1"><a href="/starbase/">The timeline, the money and the open questions on SpaceX&rsquo;s Louisiana launch site</a></h2>
     <p>Every decision, number and unanswered question about Starbase Louisiana at Pecan Island, sourced and kept up to date.</p>
-    <a class="more-link" href="/starbase/">Open Starbase Watch <span aria-hidden="true">&rarr;</span></a>
+    {watch_teaser()}
+    <a class="more-link" href="/starbase/#live">Open Starbase Watch <span aria-hidden="true">&rarr;</span></a>
   </div>
   {BRIEF}
 </section>

@@ -235,3 +235,43 @@ picture{display:block}
 .tb-fb{display:inline-flex;align-items:center}
 .foot-fb{display:inline-flex;align-items:center;gap:.35rem}
 @media (max-width:700px){.tb-right{display:flex;gap:1rem}.tb-right a:not(.tb-fb){display:none}.topbar-in{justify-content:space-between}}
+
+/* ---------- Starbase Watch live dashboard ---------- */
+.live-watch{border-top:3px solid var(--ink);margin:1.5rem 0 2rem;padding-top:.75rem}
+.live-watch>h2.label{display:flex;align-items:center;gap:.5rem;font-size:.85rem;margin:0 0 .75rem}
+.live-watch>h2.label::before{content:"";width:.6rem;height:.6rem;border-radius:50%;background:var(--red);animation:lvpulse 1.6s ease-in-out infinite}
+@keyframes lvpulse{50%{opacity:.25}}
+@media (prefers-reduced-motion:reduce){.live-watch>h2.label::before{animation:none}}
+.lv-grid{display:grid;grid-template-columns:1fr;gap:1rem;margin-bottom:1rem}
+@media (min-width:760px){.lv-grid{grid-template-columns:1fr 1fr}}
+.lv-card{border:1px solid #d9d9d9;padding:1rem;background:#fff;min-width:0}
+.lv-card .label{margin:0 0 .5rem}
+.lv-card h3{margin:.1rem 0 .4rem}
+.lv-big{font-family:var(--f-plate);font-size:1.8rem;font-weight:700;margin:.2rem 0 .5rem;line-height:1.1}
+.lv-stat{font-family:var(--f-ui);font-size:.9rem;margin:.75rem 0 0}
+.lv-stat b{color:var(--red);font-size:1.4rem;margin-right:.2rem}
+.lv-when{font-family:var(--f-ui);font-weight:600;color:var(--blue);margin:.2rem 0}
+.lv-countdown{font-family:var(--f-ui);font-variant-numeric:tabular-nums;font-weight:700;color:var(--red)}
+.lv-countdown:empty{display:none}
+.lv-ship .lv-countdown{font-size:1.6rem;margin:.3rem 0}
+.lv-launches,.lv-jobs,.lv-wx{list-style:none;margin:0;padding:0}
+.lv-launches li{display:grid;grid-template-columns:1fr auto;gap:.1rem .5rem;padding:.6rem 0;border-bottom:1px solid #eee;font-family:var(--f-ui);font-size:.88rem}
+.lv-launches li:last-child,.lv-jobs li:last-child{border-bottom:0}
+.lv-date{grid-column:1/-1;color:var(--blue);font-weight:600;font-size:.8rem}
+.lv-name{font-weight:600;color:var(--ink);overflow-wrap:anywhere}
+.lv-site{grid-column:1;color:#666;font-size:.8rem}
+.lv-launches .lv-badge{grid-column:2;grid-row:2/4;align-self:center}
+.lv-launches .lv-countdown{grid-column:1/-1;font-size:.82rem}
+.lv-watchlive{grid-column:1/-1;font-size:.8rem;font-weight:600}
+.lv-badge{display:inline-block;font-family:var(--f-ui);font-size:.68rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:.15rem .45rem;border-radius:2px;background:#eee;color:#444;vertical-align:middle}
+.lv-badge.go{background:#e3f4e8;color:#13652f}.lv-badge.tbc{background:#fff4d6;color:#7a5500}
+.lv-badge.hold{background:#fde5e6;color:var(--red)}.lv-badge.ok{background:#e6eef9;color:var(--blue)}
+.lv-jobs li{padding:.45rem 0;border-bottom:1px solid #eee;font-family:var(--f-ui);font-size:.9rem}
+.lv-wx{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
+.lv-wx li{font-family:var(--f-ui);font-size:.82rem;display:flex;flex-direction:column;gap:.1rem}
+.lv-temp{font-family:var(--f-plate);font-size:1.6rem;font-weight:700;color:var(--ink)}
+.lv-src{font-family:var(--f-ui);font-size:.75rem;color:#666;margin:.75rem 0 0}
+.lv-updated{font-size:.78rem;margin:0}
+.live-watch ul.lv-jobs,.live-watch ul.lv-wx,.live-watch ol.lv-launches{padding-left:0;margin-left:0}
+.lv-teaser{font-family:var(--f-ui);font-size:.85rem;color:var(--blue);font-weight:600}
+.lv-teaser b{color:var(--red)}
