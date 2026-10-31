@@ -1,8 +1,8 @@
 /* The Vermilion Times — old-world gothic, laid out like a big-city daily.
-   Ground: natural linen. Nameplate: UnifrakturMaguntia. Heads: Grenze Gotisch.
+   Ground: flat newsprint. Nameplate: UnifrakturMaguntia. Heads: Grenze Gotisch.
    Text: EB Garamond. Labels: IM Fell English SC. Ink: near-black with oxblood. */
 :root{
-  --linen:#eee6d5; --linen-2:#e6dcc7; --panel:#f4eee1; --ink:#1b1712; --ink-2:#3a3129;
+  --linen:#f6f2e6; --linen-2:#ece6d4; --panel:#faf7ee; --ink:#14100b; --ink-2:#3a3129;
   --muted:#6b5d4c; --oxblood:#7c1f1a; --gold:#94763a; --rule:#1b1712; --hair:rgba(27,23,18,.28);
   --wrap:1220px; --gutter:clamp(16px,3.4vw,40px);
   --f-plate:"UnifrakturMaguntia","Old English Text MT",serif;
@@ -13,14 +13,8 @@
 *,*::before,*::after{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
 
-/* linen: horizontal and vertical fibres from stretched noise, a fine weave, a soft light falloff */
-body{margin:0;color:var(--ink);font:1.12rem/1.6 var(--f-text);background-color:var(--linen);
-  background-image:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='h'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.01 .9' numOctaves='3' seed='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .32 0 0 0 0 .26 0 0 0 0 .17 0 0 0 -1.1 .52'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23h)'/%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='v'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9 .01' numOctaves='3' seed='8' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .32 0 0 0 0 .26 0 0 0 0 .17 0 0 0 -1.1 .52'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23v)'/%3E%3C/svg%3E"),
-    repeating-linear-gradient(0deg,rgba(90,70,40,.035) 0 1px,transparent 1px 3px),
-    repeating-linear-gradient(90deg,rgba(90,70,40,.035) 0 1px,transparent 1px 3px),
-    radial-gradient(130% 90% at 50% 0%,rgba(255,252,242,.55),transparent 65%)}
+/* newsprint: one flat, pale grey-cream, like the paper itself */
+body{margin:0;color:var(--ink);font:1.12rem/1.6 var(--f-text);background:var(--linen)}
 img,svg{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
 a:hover{text-decoration:underline;text-underline-offset:.16em;text-decoration-thickness:1px}

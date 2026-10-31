@@ -200,7 +200,7 @@ def page(path,title,desc,body,h1_is_plate=False,ld=None,image='/img/og-nameplate
 <title>{title}</title>
 <meta name="description" content="{desc}">
 <link rel="canonical" href="{SITE}{path}">
-<meta name="theme-color" content="#eee6d5">
+<meta name="theme-color" content="#f6f2e6">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="The Vermilion Times">
 <meta property="og:title" content="{title}">

@@ -3,7 +3,7 @@
 Every story without a photo shows the illustration for its section."""
 import math, os, random
 OUT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'img', 'cuts')
-I, P = '#1b1712', '#f4eee1'
+I, P = '#14100b', '#faf7ee'
 W, H = 640, 400
 
 def sky(horizon, sun=None, rays=True, night=False, step=5):
