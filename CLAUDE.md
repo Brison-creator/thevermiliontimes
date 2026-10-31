@@ -71,7 +71,8 @@ the end of the body: `*Correction: ...*` saying what was wrong.
   `disclosure:` in the front matter (copy the one in an earlier Starbase story). Never write promotional copy for the publisher's businesses.
 - **Nothing private in the repo.** It is public: no unpublished drafts, tips,
   tipsters' names or contact details, and no email addresses other than
-  news@thevermiliontimes.com.
+  news@thevermiliontimes.com and the publisher's tips address already in
+  `build.py` (TIPS_EMAIL).
 - **If you cannot verify a story, do not publish it.** A day with no story is
   better than a wrong one.
 - Do not invent images. Stories run as text.
