@@ -177,3 +177,45 @@ figcaption{margin-top:.35rem;font:italic .78rem/1.35 var(--f-text);color:var(--m
 }
 @media print{body{background:#fff}.topbar,.secnav,.ribbon,.btn{display:none}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+/* ---------- news on the front page ---------- */
+.news-lead{grid-template-columns:minmax(0,1.5fr) minmax(0,1fr)}
+.news-lead.solo{grid-template-columns:1fr}
+.news-lead .excerpt{margin:0 0 .6rem;font-size:1.02rem;line-height:1.55}
+.side-col{border-left:1px solid var(--hair);padding-left:clamp(1rem,2vw,1.5rem)}
+.side-story{padding-bottom:.8rem;margin-bottom:.8rem;border-bottom:1px solid var(--hair)}
+.side-story:last-child{border-bottom:0;margin-bottom:0;padding-bottom:0}
+.side-story .summary{font-size:.96rem;margin-bottom:.3rem}
+.latest{margin:.3rem 0 0}
+.latest .meta{display:block;margin-bottom:.2rem;color:var(--oxblood)}
+.latest a{font:600 1rem/1.3 var(--f-text)}
+.h-lead a,.h-1 a,.h-2 a,.h-op a{color:inherit;text-decoration:none}
+.h-lead a:hover,.h-1 a:hover,.h-2 a:hover,.h-op a:hover{text-decoration:underline}
+
+/* ---------- article pages ---------- */
+.article .kicker a{color:inherit;text-decoration:none}
+.article-body p{margin:0 0 1rem}
+.article-body h2{font-size:1.3rem}
+.article-body blockquote{margin:1.2rem 0;padding:.2rem 0 .2rem 1rem;border-left:3px solid var(--oxblood);font-style:italic;color:var(--ink-2)}
+.article .disclose{border-top:1px solid var(--hair);padding-top:.8rem;color:var(--ink-2)}
+.sources{margin-top:1.6rem;border:3px double var(--rule);padding:.9rem 1.1rem;background:rgba(244,238,225,.55)}
+.sources h2{margin:0 0 .3rem !important;border:0 !important;padding:0 !important;font-size:1.1rem !important}
+.sources p{margin:0 0 .4rem;font-size:.92rem;color:var(--muted)}
+.sources ul{margin:0;padding-left:1.1rem;font-size:.95rem;line-height:1.45}
+.sources li{overflow-wrap:anywhere}
+.corrections{font-size:.92rem;color:var(--muted)}
+.more{margin-top:1.8rem}
+.more ul{list-style:none;padding:0}
+.more li{padding:.45rem 0;border-top:1px solid var(--hair)}
+.more li a{font:600 1.02rem/1.3 var(--f-text);color:var(--ink);text-decoration:none}
+.more li .meta{display:block}
+
+/* ---------- news index ---------- */
+.news-list{list-style:none;padding:0;margin:1.2rem 0 0}
+.news-list li{padding:1rem 0;border-top:1px solid var(--hair)}
+.news-list .summary{margin:.2rem 0}
+@media (max-width:640px){
+  .news-lead{grid-template-columns:1fr}
+  .side-col{border-left:0;padding-left:0;border-top:1px solid var(--hair);padding-top:1rem}
+}
+.nameplate a{color:inherit;text-decoration:none}
