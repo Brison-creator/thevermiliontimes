@@ -156,6 +156,6 @@ slow day; zero if nothing can be verified).
    push to `main`.
 
 ## Starbase Watch live data
-- `/starbase/#live` shows upcoming SpaceX launches (Launch Library 2), SpaceX jobs at Pecan Island (Greenhouse), Pecan Island weather (NWS) and a link to LA 511 for LA 82 roads.
+- `/starbase/#live` shows upcoming and recent SpaceX launches with the year's count (Launch Library 2), NWS alerts and forecast, live Windy radar, tonight's sky over Pecan Island (`assets/sky.js`, Astronomy Engine: planets, close passes, eclipses, meteor showers), SpaceX jobs at Pecan Island (Greenhouse) and LA 511 for LA 82 roads.
 - Every `python3 build.py` saves fresh snapshots to `data/*.json`, and `assets/watch.js` refreshes them in the reader's browser. Commit the `data/` files with each build.
 - Never invent Louisiana launch dates, viewing areas, parking or road closures. Post them on the Louisiana Status card only after SpaceX, the FAA, DOTD or the parish announces them, and link the source.

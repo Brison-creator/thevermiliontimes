@@ -363,41 +363,50 @@ def story_list(arts):
 
 # ---------------------------------------------------------------- Starbase Watch live data
 # Snapshots are saved to data/ at every build (so the page has content without
-# JavaScript and for search engines); assets/watch.js refreshes them live.
+# JavaScript and for search engines); assets/watch.js refreshes them live and
+# assets/sky.js works out the night sky over Pecan Island in the browser.
 import urllib.request as _ur
+PECAN=(29.6466076,-92.4531922)
+_YEAR=datetime.datetime.now(CT).year
 FEEDS={
  'launches':'https://ll.thespacedevs.com/2.3.0/launches/upcoming/?lsp__name=SpaceX&limit=12&mode=normal',
+ 'recent':f'https://ll.thespacedevs.com/2.3.0/launches/previous/?lsp__name=SpaceX&limit=5&mode=normal&net__gte={_YEAR}-01-01',
  'jobs':'https://boards-api.greenhouse.io/v1/boards/spacex/jobs',
  'weather':'https://api.weather.gov/gridpoints/LCH/89,69/forecast',
+ 'alerts':f'https://api.weather.gov/alerts/active?point={PECAN[0]:.4f},{PECAN[1]:.4f}',
 }
 def _snapshot(name,url,shrink):
     f=os.path.join(R,'data',name+'.json')
     try:
         raw=json.loads(_ur.urlopen(_ur.Request(url,headers={'User-Agent':'VermilionTimes/1.0 (news@thevermiliontimes.com)','Accept':'application/json'}),timeout=25).read())
-        data={'fetched':datetime.datetime.now(CT).isoformat(timespec='minutes'),'items':shrink(raw)}
+        data={'fetched':datetime.datetime.now(CT).isoformat(timespec='minutes'),**shrink(raw)}
         io.open(f,'w',encoding='utf-8').write(json.dumps(data,ensure_ascii=False))
     except Exception as e:
         print(f'note: {name} feed unavailable ({e.__class__.__name__}); keeping the last snapshot')
     try: return json.load(io.open(f,encoding='utf-8'))
     except OSError: return {'fetched':'','items':[]}
-def _launches(raw):
-    out=[]
-    for l in raw.get('results',[]):
-        out.append({'name':l['name'],'net':l['net'],'precision':(l.get('net_precision') or {}).get('name',''),'status':l['status']['abbrev'],
-                    'status_name':l['status']['name'],'rocket':l['rocket']['configuration']['name'],'pad':l['pad']['name'],'site':l['pad']['location']['name'],
-                    'mission':((l.get('mission') or {}).get('description') or '')[:240],'webcast':l.get('webcast_live',False),
-                    'video':((l.get('vid_urls') or [{}])[0] or {}).get('url','') if l.get('vid_urls') else ''})
-    return out
+def _launch(l):
+    return {'name':l['name'],'net':l['net'],'precision':(l.get('net_precision') or {}).get('name',''),'status':l['status']['abbrev'],
+            'status_name':l['status']['name'],'rocket':l['rocket']['configuration']['name'],'pad':l['pad']['name'],'site':l['pad']['location']['name'],
+            'mission':((l.get('mission') or {}).get('description') or '')[:240],'orbit':(((l.get('mission') or {}).get('orbit')) or {}).get('abbrev',''),
+            'wstart':l.get('window_start') or '','wend':l.get('window_end') or '','prob':l.get('probability'),'webcast':bool(l.get('webcast_live'))}
+def _launches(raw): return {'items':[_launch(l) for l in raw.get('results',[])]}
+def _recent(raw): return {'count':raw.get('count',0),'year':_YEAR,'items':[_launch(l) for l in raw.get('results',[])]}
 def _jobs(raw):
-    return [{'title':j['title'].strip(),'url':j['absolute_url'],'updated':j.get('updated_at','')[:10]} for j in raw.get('jobs',[]) if 'pecan island' in j['location']['name'].lower() or 'louisiana' in j['title'].lower()]
+    return {'items':[{'title':j['title'].strip(),'url':j['absolute_url']} for j in raw.get('jobs',[])
+                     if 'pecan island' in j['location']['name'].lower() or 'louisiana' in j['title'].lower()]}
 def _weather(raw):
-    return [{'name':p['name'],'temp':p['temperature'],'unit':p['temperatureUnit'],'short':p['shortForecast'],'wind':f"{p['windSpeed']} {p['windDirection']}",'icon':p.get('icon','')}
-            for p in raw['properties']['periods'][:6]]
-LIVE={k:_snapshot(k,u,f) for (k,u),f in zip(FEEDS.items(),(_launches,_jobs,_weather))}
+    return {'items':[{'name':p['name'],'temp':p['temperature'],'unit':p['temperatureUnit'],'short':p['shortForecast'],'wind':f"{p['windSpeed']} {p['windDirection']}"}
+            for p in raw['properties']['periods'][:6]]}
+def _alerts(raw):
+    return {'items':[{'event':a['properties']['event'],'headline':a['properties'].get('headline') or '','severity':a['properties'].get('severity') or '',
+                      'ends':a['properties'].get('ends') or a['properties'].get('expires') or '','url':a['properties'].get('@id') or a.get('id','')}
+                     for a in raw.get('features',[])]}
+_SHRINK={'launches':_launches,'recent':_recent,'jobs':_jobs,'weather':_weather,'alerts':_alerts}
+LIVE={k:_snapshot(k,u,_SHRINK[k]) for k,u in FEEDS.items()}
 
 def _ct(iso):
-    t=datetime.datetime.fromisoformat(iso.replace('Z','+00:00')).astimezone(CT)
-    return t
+    return datetime.datetime.fromisoformat(iso.replace('Z','+00:00')).astimezone(CT)
 def _when(l):
     t=_ct(l['net']); p=(l.get('precision') or '').lower()
     u=datetime.datetime.fromisoformat(l['net'].replace('Z','+00:00'))  # coarse dates are set in UTC
@@ -407,11 +416,27 @@ def _when(l):
     if p=='day' or 'week' in p: return f'No earlier than {MONTHS[u.month-1]} {u.day}'
     if 'hour' in p: return f'{t.strftime("%a.")} {MONTHS[t.month-1]} {t.day}, about {ap_time(t)} CT'
     return f'{t.strftime("%a.")} {MONTHS[t.month-1]} {t.day}, {ap_time(t)} CT'
+def _precise(l): return (l.get('precision') or '').lower() in ('second','minute')
+def _window(l):
+    if not _precise(l) or not l.get('wstart') or not l.get('wend') or l['wstart']==l['wend']: return ''
+    a,b=_ct(l['wstart']),_ct(l['wend'])
+    return f'Window {ap_time(a)} to {ap_time(b)}'
 def _badge(st):
-    cls={'Go':'go','TBC':'tbc','TBD':'tbd','Success':'ok','Hold':'hold','In Flight':'go'}.get(st,'tbd')
+    cls={'Go':'go','TBC':'tbc','TBD':'tbd','Success':'ok','Hold':'hold','In Flight':'go','Failure':'hold','Partial Failure':'tbc'}.get(st,'tbd')
     return f'<span class="lv-badge {cls}">{html.escape(st)}</span>'
+def _extras(l):
+    bits=[x for x in (_window(l), l.get('orbit') and f'Orbit: {l["orbit"]}', l.get('prob') is not None and f'Weather {l["prob"]}% go') if x]
+    return f'<span class="lv-extra">{html.escape(" · ".join(bits))}</span>' if bits else ''
+CD='<span class="lv-countdown"></span>'
+def _row(l,count=True):
+    net=f' data-net="{html.escape(l["net"])}"' if count and _precise(l) else ''
+    live='<a class="lv-watchlive" href="https://www.spacex.com/launches/" rel="noopener">Live now: watch at SpaceX.com</a>' if l.get('webcast') else ''
+    return (f'<li{net}><span class="lv-date">{html.escape(_when(l))}</span><span class="lv-name">{html.escape(l["name"])}</span>'
+            f'<span class="lv-site">{html.escape(l["site"])}</span>{_badge(l["status"])}{_extras(l) if count else ""}{live}'
+            f'{CD if count else ""}</li>')
+def _stamp_ct(iso): return (lambda t:f'{MONTHS[t.month-1]} {t.day}, {ap_time(t)} CT')(_ct(iso)) if iso else ''
 def watch_dashboard():
-    L=LIVE['launches']['items']; J=LIVE['jobs']['items']; W=LIVE['weather']['items']
+    L=LIVE['launches']['items']; P=LIVE['recent']; J=LIVE['jobs']['items']; W=LIVE['weather']['items']; A=LIVE['alerts']['items']
     now=datetime.datetime.now(datetime.timezone.utc)
     up=[l for l in L if _ct(l['net'])>now-datetime.timedelta(hours=3) and l['status']!='Success']
     ship=next((l for l in up if 'starship' in l['rocket'].lower() or 'starship' in l['name'].lower()),None)
@@ -422,15 +447,19 @@ def watch_dashboard():
       <p class="meta">{html.escape(ship['pad'])}, {html.escape(ship['site'])}</p>
       {('<p class="summary">'+html.escape(ship['mission'])+'</p>') if ship['mission'] else ''}
     </div>''' if ship else '<div class="lv-card lv-ship"><p class="label">Next Starship Flight</p><p>No Starship flight is on the public schedule right now.</p></div>')
-    def _row(l):
-        net=f' data-net="{html.escape(l["net"])}"' if (l.get('precision') or '').lower() in ('second','minute') else ''
-        return (f'<li{net}><span class="lv-date">{html.escape(_when(l))}</span><span class="lv-name">{html.escape(l["name"])}</span>'
-                f'<span class="lv-site">{html.escape(l["site"])}</span>{_badge(l["status"])}<span class="lv-countdown"></span></li>')
     rows=''.join(_row(l) for l in up[:8])
+    recent=''.join(_row(l,False) for l in P.get('items',[]))
     jobs=''.join(f'<li><a href="{html.escape(j["url"])}" rel="noopener">{html.escape(j["title"])}</a></li>' for j in J)
     wx=''.join(f'''<li><b>{html.escape(w['name'])}</b><span class="lv-temp">{w['temp']}&deg;{w['unit']}</span><span>{html.escape(w['short'])}</span><span class="meta">Wind {html.escape(w['wind'])}</span></li>''' for w in W[:4])
+    alerts=''.join(f'<li><a href="{html.escape(a["url"])}" rel="noopener"><b>{html.escape(a["event"])}</b></a> {html.escape(a["headline"])}</li>' for a in A)
+    lat,lon=PECAN
+    radar=(f'https://embed.windy.com/embed2.html?lat={lat:.3f}&amp;lon={lon:.3f}&amp;detailLat={lat:.3f}&amp;detailLon={lon:.3f}&amp;zoom=7&amp;level=surface'
+           f'&amp;overlay=radar&amp;product=radar&amp;menu=&amp;message=true&amp;marker=true&amp;calendar=now&amp;pressure=&amp;type=map&amp;location=coordinates'
+           f'&amp;detail=&amp;metricWind=mph&amp;metricTemp=%C2%B0F&amp;radarRange=-1')
     return f'''<section class="live-watch" id="live" aria-labelledby="live-h" data-fetched="{html.escape(LIVE['launches']['fetched'])}">
   <h2 id="live-h" class="label">Live: SpaceX Louisiana Watch</h2>
+  <nav class="lv-jump" aria-label="On this page"><a href="#lv-launch-h">Launches</a><a href="#lv-radar-h">Radar</a><a href="#lv-sky-h">Night sky</a><a href="#lv-jobs-h">Jobs</a><a href="#lv-roads-h">Roads</a></nav>
+  <div class="lv-alerts" id="lv-alerts"{'' if A else ' hidden'}><p class="label">Weather alerts for Pecan Island</p><ul>{alerts}</ul></div>
   <div class="lv-grid">
     <div class="lv-card lv-status"><p class="label">Louisiana Status</p>
       <p class="lv-big">No launches yet</p>
@@ -439,28 +468,45 @@ def watch_dashboard():
     {ship_html}
   </div>
   <div class="lv-grid">
-    <div class="lv-card"><p class="label">Upcoming SpaceX Launches</p><ol class="lv-launches" id="lv-launches">{rows or '<li>No launches on the public schedule.</li>'}</ol>
+    <div class="lv-card"><h3 class="label" id="lv-launch-h">Upcoming SpaceX Launches</h3><ol class="lv-launches" id="lv-launches">{rows or '<li>No launches on the public schedule.</li>'}</ol>
       <p class="lv-src">Times in Central. Source: <a href="https://thespacedevs.com/llapi" rel="noopener">Launch Library 2, The Space Devs</a>. Schedules change often.</p></div>
-    <div class="lv-card"><p class="label">SpaceX Jobs at Pecan Island</p><ul class="lv-jobs" id="lv-jobs">{jobs or '<li>No Louisiana openings listed right now.</li>'}</ul>
-      <p class="lv-src">Live from <a href="https://boards.greenhouse.io/spacex" rel="noopener">SpaceX's job board</a>. <a href="/news/spacex-louisiana-jobs-pecan-island/">Our story on the first openings.</a></p></div>
+    <div class="lv-card"><h3 class="label">SpaceX So Far This Year</h3>
+      <p class="lv-big"><span id="lv-yearcount">{P.get('count',0)}</span> <span class="lv-big-sub">launches in <span id="lv-year">{P.get('year',_YEAR)}</span></span></p>
+      <p class="label lv-sub">Latest results</p><ol class="lv-launches" id="lv-recent">{recent}</ol>
+      <p class="lv-src">Counts every SpaceX launch attempt this year, including Starship test flights. Source: Launch Library 2.</p></div>
   </div>
+  <div class="lv-card lv-wide lv-radar"><h3 class="label" id="lv-radar-h">Live Weather Radar: Pecan Island and the Gulf Coast</h3>
+    <div class="lv-radar-frame"><iframe title="Live weather radar centered on Pecan Island, Louisiana" src="{radar}" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+    <p class="lv-src">Radar map by <a href="https://www.windy.com/?radar,{lat:.3f},{lon:.3f},7" rel="noopener">Windy.com</a>. Press play to loop the last hour. For official watches and warnings, follow the <a href="https://www.weather.gov/lch/" rel="noopener">National Weather Service in Lake Charles</a>.</p></div>
   <div class="lv-grid">
-    <div class="lv-card"><p class="label">Pecan Island Weather</p><ul class="lv-wx" id="lv-wx">{wx}</ul>
-      <p class="lv-src">Forecast for the Pecan Island area from the <a href="https://forecast.weather.gov/MapClick.php?lat=29.6466&amp;lon=-92.4532" rel="noopener">National Weather Service, Lake Charles</a>.</p></div>
-    <div class="lv-card"><p class="label">Getting Around: LA 82</p>
-      <p>LA 82 is the main road to Pecan Island. For live road conditions, closures and construction, check the state's official traveler system before you drive.</p>
+    <div class="lv-card"><h3 class="label">Pecan Island Forecast</h3><ul class="lv-wx" id="lv-wx">{wx}</ul>
+      <p class="lv-src">From the <a href="https://forecast.weather.gov/MapClick.php?lat=29.6466&amp;lon=-92.4532" rel="noopener">National Weather Service, Lake Charles</a>.</p></div>
+    <div class="lv-card"><h3 class="label" id="lv-roads-h">Getting Around: LA 82</h3>
+      <p>LA 82 is the main road to Pecan Island. For live road conditions, closures and construction, check the state&rsquo;s official traveler system before you drive.</p>
       <p><a class="btn" href="https://www.511la.org/" rel="noopener">LA 511 Road Conditions</a></p>
       <p class="lv-src">The state is studying LA 82 improvements tied to the project; who pays has not been decided. <a href="/news/landry-donor-firm-spacex-dotd-contract/">Our story.</a></p></div>
   </div>
-  <p class="lv-updated meta">Data last refreshed <span id="lv-fetched">{html.escape(_ct(LIVE['launches']['fetched']).strftime('%b. %d, %I:%M %p').replace(' 0',' ') + ' CT' if LIVE['launches']['fetched'] else '')}</span>.</p>
+  <div class="lv-card lv-wide lv-sky" id="lv-sky" data-lat="{lat}" data-lon="{lon}"><h3 class="label" id="lv-sky-h">Tonight&rsquo;s Sky Over Pecan Island</h3>
+    <div class="lv-sky-grid">
+      <div><p class="label lv-sub">Sun and Moon</p><ul class="lv-skylist" id="lv-sunmoon"><li>Loading&hellip;</li></ul></div>
+      <div><p class="label lv-sub">Planets tonight</p><ul class="lv-skylist" id="lv-planets"><li>Loading&hellip;</li></ul></div>
+      <div><p class="label lv-sub">Coming up: alignments and sky events</p><ul class="lv-skylist" id="lv-events"><li>Loading&hellip;</li></ul></div>
+    </div>
+    <p class="lv-src">Calculated for Pecan Island with <a href="https://github.com/cosinekitty/astronomy" rel="noopener">Astronomy Engine</a>. &ldquo;Close pass&rdquo; means two objects appear within a few degrees of each other; a fist at arm&rsquo;s length covers about 10 degrees. Meteor shower peaks are approximate.</p>
+    <noscript><p>Turn on JavaScript to see tonight&rsquo;s sky.</p></noscript></div>
+  <div class="lv-card lv-wide"><h3 class="label" id="lv-jobs-h">SpaceX Jobs at Pecan Island</h3><ul class="lv-jobs lv-cols" id="lv-jobs">{jobs or '<li>No Louisiana openings listed right now.</li>'}</ul>
+    <p class="lv-src">Live from <a href="https://boards.greenhouse.io/spacex" rel="noopener">SpaceX&rsquo;s job board</a>. <a href="/news/spacex-louisiana-jobs-pecan-island/">Our story on the first openings.</a></p></div>
+  <p class="lv-updated meta">Data last refreshed <span id="lv-fetched">{html.escape(_stamp_ct(LIVE['launches']['fetched']))}</span>.</p>
 </section>
-<script src="/assets/watch.js" defer></script>'''
+<script src="/assets/watch.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/astronomy-engine@2.1.19/astronomy.browser.min.js" integrity="sha384-LTVHvxfbG3XHla4Lu0C0s9U18B2sBOuzJIeOoVHm2t05SOOORvMbBMEVjXrGau9g" crossorigin="anonymous" defer></script>
+<script src="/assets/sky.js" defer></script>'''
 
 def watch_teaser():
     # One-line live summary for the homepage band, from the build snapshot.
     now=datetime.datetime.now(datetime.timezone.utc)
     nxt=next((l for l in LIVE['launches']['items'] if _ct(l['net'])>now and l['status']!='Success'),None)
-    bits=[f'<b>{len(LIVE["jobs"]["items"])}</b> SpaceX jobs open at Pecan Island']
+    bits=[f'<b>{len(LIVE["jobs"]["items"])}</b> SpaceX jobs open at Pecan Island',f'<b>{LIVE["recent"].get("count",0)}</b> SpaceX launches this year']
     if nxt: bits.append(f'Next SpaceX launch: {html.escape(nxt["name"].split(" | ")[-1])}, {html.escape(_when(nxt))}')
     return '<p class="lv-teaser">'+' &middot; '.join(bits)+'</p>'
 def section_body(k):
