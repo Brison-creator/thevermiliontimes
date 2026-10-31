@@ -11,7 +11,7 @@ R=os.path.dirname(os.path.abspath(__file__))+'/'
 SITE='https://thevermiliontimes.com'
 EMAIL='news@thevermiliontimes.com'
 TAGLINE='Starbase Louisiana&rsquo;s Local News'  # the official tagline, everywhere
-FONTS='https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:wght@500;600;700&display=swap'
+FONTS='https://fonts.googleapis.com/css2?family=Tinos:wght@700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:wght@500;600;700&display=swap'
 ICON=("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23f3e9d4'/%3E"
       "%3Ctext x='32' y='47' font-family='UnifrakturMaguntia,serif' font-size='44' text-anchor='middle' fill='%237c1f1a'%3EV%3C/text%3E%3C/svg%3E")
 

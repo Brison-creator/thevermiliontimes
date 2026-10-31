@@ -4,7 +4,7 @@
   --ink:#111; --ink-2:#333; --muted:#666; --rule:#d9d9d9; --rule-dark:#111;
   --red:#b5121b; --blue:#1d4f91; --bg:#fff; --panel:#f6f6f4;
   --wrap:1180px; --gutter:clamp(16px,3.4vw,32px);
-  --f-plate:"Libre Caslon Text",Georgia,"Times New Roman",serif;
+  --f-plate:"Tinos","Times New Roman",Times,serif;
   --f-head:"Source Serif 4",Georgia,"Times New Roman",serif;
   --f-text:"Source Serif 4",Georgia,"Times New Roman",serif;
   --f-ui:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
@@ -33,9 +33,9 @@ p a,li a,.link{color:var(--red);text-decoration:underline;text-underline-offset:
 
 /* masthead */
 .mast{text-align:center;padding-block:1.1rem .7rem}
-.nameplate{margin:0;font:700 clamp(2.2rem,6.2vw,4.4rem)/1 var(--f-plate);letter-spacing:-.01em;color:var(--ink)}
+.nameplate{margin:0;font:700 clamp(2.2rem,6.6vw,4.6rem)/1 var(--f-plate);letter-spacing:-.015em;color:var(--ink)}
 .nameplate a:hover{text-decoration:none}
-.motto{margin:.55rem 0 0;font:600 clamp(.72rem,1.4vw,.95rem)/1.2 var(--f-ui);letter-spacing:.2em;text-transform:uppercase;color:var(--red)}
+.motto{margin:.5rem 0 0;font:600 clamp(.95rem,1.8vw,1.25rem)/1.2 var(--f-ui);letter-spacing:.02em;color:var(--red)}
 
 /* section bar */
 .secnav{border-top:2px solid var(--red);border-bottom:1px solid var(--rule)}
@@ -205,7 +205,7 @@ p.card-latest{margin:.3rem 0 0}
 p.card-latest .meta{display:block;margin-bottom:.15rem;color:var(--blue)}
 p.card-latest a{display:block;font:700 .98rem/1.3 var(--f-head);color:var(--ink);text-decoration:none}
 .nameplate{white-space:nowrap}
-@media (max-width:700px){.nameplate{font-size:clamp(1.4rem,8.4vw,2.4rem)}.motto{letter-spacing:.12em}}
+@media (max-width:700px){.nameplate{font-size:clamp(1.5rem,8.8vw,2.6rem)}}
 @media (max-width:520px){.tb-sep,#today{display:none}.topbar-in{justify-content:center}}
 .secnav ul{min-width:0}
 .lead-art img,.thumb-art img{object-position:50% 30%}
