@@ -54,13 +54,21 @@ the end of the body: `*Correction: ...*` saying what was wrong.
   article; report the facts and credit them.
 - **Dates:** state real dates; check that an event is current and has not
   already happened (or say that it did). Today's date is in your environment.
-- **Crime and courts:** do not name private individuals who are suspects or
-  arrested unless formally charged per an official record, and even then
-  prefer stories that do not need names. No mugshots, no speculation.
+- **Police, crime and courts (a core beat):** cover arrests, charges, wrecks,
+  fires, searches and court rulings from official sources: Vermilion Parish
+  Sheriff's Office, Abbeville / Kaplan / Erath / Gueydan / Delcambre police,
+  Louisiana State Police (Troop I), the district attorney, court records, or an
+  established outlet quoting them. Attribute every fact to the agency ("according
+  to the Sheriff's Office"). Adults may be named only when the agency has
+  publicly released their name and charges; say they were "arrested on" or
+  "booked on" charges and that charges are accusations, not convictions. Never
+  name juveniles, victims, or anyone not charged. No mugshots, no rumor, no
+  social-media-only claims. If charges are dropped or a person is acquitted and
+  we named them, publish that too.
 - **Conflict of interest:** the publisher owns Rocket Farm, an RV park in
-  Kaplan. Any story touching Rocket Farm, RV parks or worker housing near
-  Starbase Louisiana, or the publisher must carry `disclosure:` in the front
-  matter saying so. Never write promotional copy for the publisher's businesses.
+  Kaplan. Every Starbase Louisiana / SpaceX story, and any story touching
+  Rocket Farm, RV parks, worker housing or the publisher, must carry
+  `disclosure:` in the front matter (copy the one in an earlier Starbase story). Never write promotional copy for the publisher's businesses.
 - **Nothing private in the repo.** It is public: no unpublished drafts, tips,
   tipsters' names or contact details, and no email addresses other than
   news@thevermiliontimes.com.
@@ -71,14 +79,29 @@ the end of the body: `*Correction: ...*` saying what was wrong.
 
 ## Daily story routine
 
+The goal is to be the paper of record for Vermilion Parish: fast, complete and
+trusted. Each run publishes **up to three** verified stories (one is fine on a
+slow day; zero if nothing can be verified).
+
 1. `git pull`, then list `articles/` so you do not repeat a story already run.
-2. Search for news from the last 48 hours (or events in the next 7 days) in
-   Vermilion Parish: Abbeville, Kaplan, Erath, Gueydan, Delcambre, Maurice,
-   Pecan Island, Intracoastal City and the coast. Good beats: Police Jury, city
-   and town councils, school board, elections, roads and DOTD, weather and the
-   coast, fishing and hunting seasons, rice/crawfish/cattle, school sports,
-   festivals, church and community events, business openings, Starbase
-   Louisiana at Pecan Island.
-3. Pick the one story with the best sources and broadest local interest. A
-   follow-up to an earlier story is fine if there is something new.
-4. Write it, build, check, commit (`Add story: <headline>`) and push to `main`.
+   Follow-ups with genuinely new facts are welcome.
+2. Sweep the feelers. Google News RSS works from the sandbox with curl:
+   `https://news.google.com/rss/search?q=<query>&hl=en-US&gl=US&ceid=US:en`.
+   Run at least these queries: `Vermilion+Parish`, `Starbase+Louisiana`,
+   `SpaceX+Pecan+Island`, `Vermilion+Parish+Sheriff`, `Abbeville+Louisiana`,
+   `Kaplan+Louisiana`, `Erath+Louisiana`, `Gueydan`, `Delcambre`,
+   `Maurice+Louisiana`, `Intracoastal+City`. Then check primary sources
+   directly: vppj.org (agendas, minutes, notices), voterportal.sos.la.gov,
+   the School Board, City of Abbeville, Town of Kaplan, DOTD, LDWF, NWS Lake
+   Charles, FAA (Starbase Louisiana environmental review), Louisiana Economic
+   Development.
+3. Beats, in priority order:
+   - **Starbase Louisiana / SpaceX**: every development (land, lawsuits, FAA,
+     public meetings, roads, jobs, the tax deal, launches). Always disclose.
+   - **Police and public safety** (rules above).
+   - **Government**: Police Jury, councils, School Board, elections, taxes.
+   - Weather and the coast, roads, schools, sports, business, community.
+4. Open and read every source you use (search snippets are not sources; if a
+   page is blocked, find another outlet or the primary record). Write each
+   story, build, check the pages render, commit (`Add story: <headline>`) and
+   push to `main`.
