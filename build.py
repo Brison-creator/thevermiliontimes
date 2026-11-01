@@ -303,7 +303,7 @@ def page(path,title,desc,body,h1_is_plate=False,ld=None,image='/img/og-nameplate
   <div class="foot-bar"><div class="wrap foot-bar-in">
     <img class="foot-mark" src="/img/brand/icon-192.png" width="40" height="40" alt="" loading="lazy">
     <p>The Vermilion Times is an independent newsroom serving Vermilion Parish and the communities around Starbase Louisiana. Published by Brison McPhail &middot; <a href="mailto:{EMAIL}">{EMAIL}</a></p>
-    <nav class="foot-links" aria-label="Legal"><a class="foot-fb" href="{FACEBOOK}" rel="noopener"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/></svg> Facebook</a><a href="/about/#standards">Standards</a><a href="/about/#corrections">Corrections</a><span>&copy; <span id="year">2026</span> The Vermilion Times</span></nav>
+    <nav class="foot-links" aria-label="Legal"><a class="foot-fb" href="{FACEBOOK}" rel="noopener"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/></svg> Facebook</a><a href="/about/#standards">Standards</a><a href="/about/#corrections">Corrections</a><a href="/privacy/">Privacy</a><span>&copy; <span id="year">2026</span> The Vermilion Times</span></nav>
   </div></div>
 </footer>
 <script src="/assets/times.js" defer></script>
@@ -691,6 +691,17 @@ files['search/index.html']=page('/search/','Search | The Vermilion Times','Searc
 <script src="/assets/search.js" defer></script>''')
 files['thanks/index.html']=page('/thanks/','Thank You | The Vermilion Times','Thanks for writing to The Vermilion Times.','''<article class="page"><p class="kicker">Thank You</p><h1>Got it. Thank you.</h1>
   <p class="deck">Your message is on its way to the Times. If you subscribed to The Edge of X, you are on the list.</p><p><a href="/">Back to the front page</a></p></article>''')
+files['privacy/index.html']=page('/privacy/','Privacy Policy | The Vermilion Times','How The Vermilion Times handles the information readers send and what the website collects.','''<article class="page article-body"><p class="kicker">Privacy</p><h1>Privacy Policy</h1>
+  <p class="deck">The Vermilion Times is a news website. We collect as little about readers as we can.</p>
+  <h2>What you send us</h2>
+  <p>When you use a form on this site (newsletter sign-up, news tips, contact), the information you type, such as your name, email address and message, is delivered to the newsroom by email through the form service FormSubmit. We use it only to answer you, to send the newsletter you asked for, or to report a story. We do not sell or rent it. Ask us at <a href="mailto:news@thevermiliontimes.com">news@thevermiliontimes.com</a> and we will delete what you sent.</p>
+  <p>News tips are handled with care. We do not publish a tipster&rsquo;s name or contact information without permission.</p>
+  <h2>What the website collects</h2>
+  <p>We do not run advertising trackers or sell data. The site stores a few settings in your own browser (for example, cached Starbase Watch data) so pages load faster; that information stays on your device. Some pages load content from other services, which receive your device&rsquo;s IP address as part of delivering it: Google Fonts (typefaces), jsDelivr (a code library for the night-sky calculator), Windy.com (the radar map), OpenStreetMap (maps), and public data from Launch Library 2, SpaceX&rsquo;s job board and the National Weather Service. Our host, GitHub Pages, keeps standard server logs.</p>
+  <h2>Facebook</h2>
+  <p>We share our stories on our Facebook Page. Our publishing tool only posts the paper&rsquo;s own headlines and links to that Page; it does not read or collect information about people who see or interact with the posts.</p>
+  <h2>Questions</h2>
+  <p>Write to <a href="mailto:news@thevermiliontimes.com">news@thevermiliontimes.com</a>. This policy took effect Nov. 1, 2026.</p></article>''')
 def meta_desc(t):
     t=re.sub(r'<[^>]+>','',t).replace('"','&quot;')
     return t if len(t)<=158 else t[:155].rsplit(' ',1)[0]+'...'
