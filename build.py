@@ -4,7 +4,7 @@ the RSS feed and the sitemap. Run it after adding or editing a story:
 
     python3 build.py
 """
-import io, os, re, json, glob, html, datetime
+import email.utils, io, os, re, json, glob, html, datetime
 from zoneinfo import ZoneInfo
 CT=ZoneInfo('America/Chicago')
 R=os.path.dirname(os.path.abspath(__file__))+'/'
@@ -716,7 +716,8 @@ def rfc822(t): return t.strftime('%a, %d %b %Y %H:%M:%S %z')
 items=''.join(f'''  <item><title>{html.escape(a["title"])}</title><link>{SITE}{a["url"]}</link><guid>{SITE}{a["url"]}</guid><pubDate>{rfc822(a["pub"])}</pubDate><category>{html.escape(re.sub("&amp;","&",SECTION_NAME[a["section"]]))}</category><description>{html.escape(re.sub(r"<[^>]+>","",inline(a["deck"])))}</description></item>
 ''' for a in ARTICLES[:30])
 io.open(R+'feed.xml','w',encoding='utf-8').write(f'''<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0"><channel><title>The Vermilion Times</title><link>{SITE}/</link><description>Starbase Louisiana's Local News</description><language>en-us</language>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>The Vermilion Times</title><link>{SITE}/</link><description>Starbase Louisiana's Local News</description><language>en-us</language>
+<atom:link href="{SITE}/feed.xml" rel="self" type="application/rss+xml"/><lastBuildDate>{email.utils.format_datetime(ARTICLES[0]['pub'])}</lastBuildDate><ttl>15</ttl>
 {items}</channel></rss>
 ''')
 for p,s in files.items():
