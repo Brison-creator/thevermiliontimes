@@ -2,7 +2,6 @@
 title: "Iran Vows Retaliation 'Without Geographic Limits' as Trump Weighs New Strikes After Midterms"
 deck: No new U.S. strike had been announced as of Saturday afternoon. Mediators are working in Qatar to restart talks, and Secretary of State Marco Rubio says the president has not decided.
 section: world
-featured: yes
 date: 2026-10-31
 time: 15:14
 image: /img/photos/world-strait-of-hormuz-iss.jpg
