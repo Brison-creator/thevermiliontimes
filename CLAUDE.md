@@ -122,6 +122,24 @@ offices (School Board, sheriff, jail, assessor, clerk of court).
 - After adding photos, run `tools/webp.py` (needs Pillow) to make the
   phone-sized WebP copies the pages serve.
 
+## Our own reporting first (publisher's rule)
+
+Brison wants the Times to do its own research, not rewrite other outlets.
+- **Other outlets are tips, not sources.** A TV or newspaper story tells us
+  where to look; we then confirm it in the public record ourselves and cite
+  that record. If we cannot confirm it, we do not run it, or we run only the
+  part we confirmed.
+- **Primary sources to work every run:**
+  - Police Jury: agendas, minutes and notices at vppj.org (`PDFforms/Agendas/Agendas <year>/`, `PDFforms/minutes/`, `PDFforms/Notices/`). Read the PDFs with `pdftotext -layout`.
+  - School Board (vpsb.net), City of Abbeville, towns of Kaplan, Erath, Gueydan, Delcambre, Maurice.
+  - Election results and candidate lists: voterportal.sos.la.gov.
+  - Federal Register API (FAA, Army Corps notices for Pecan Island / Starbase Louisiana), FAA commercial space pages.
+  - Legislative Auditor reports (app.lla.state.la.us) for parish bodies.
+  - DOTD lettings, LDWF notices, NWS Lake Charles, Louisiana Ethics campaign finance.
+  - SpaceX's own job board and the live data on Starbase Watch.
+- In each story say what records we read ("according to the agenda the parish posted"). List those documents in `sources:`.
+- What we cannot do from records (interviews, photos at meetings, phone calls) goes to Brison as a short "go get this" note in the run summary.
+
 ## Daily story routine
 
 The goal is to be the paper of record for Vermilion Parish: fast, complete and
@@ -149,8 +167,8 @@ slow day; zero if nothing can be verified).
    - **Police and public safety** (rules above).
    - **Government**: Police Jury, councils, School Board, elections, taxes.
    - Weather and the coast, roads, schools, sports, business, community.
-4. Open and read every source you use (search snippets are not sources; if a
-   page is blocked, find another outlet or the primary record). Write each
+4. Open and read every source you use (search snippets are not sources). Use
+   the primary record; another outlet's story is only a lead (see above). Write each
    story in your own words, run `tools/originality.py` until it passes, build,
    check the pages render, commit (`Add story: <headline>`) and
    push to `main`.
