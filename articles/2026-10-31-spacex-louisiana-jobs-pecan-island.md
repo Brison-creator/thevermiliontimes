@@ -4,6 +4,7 @@ deck: SpaceX's own job board lists eight positions at its planned Starbase Louis
 section: starbase
 date: 2026-10-31
 time: 12:30
+updated: 2026-11-02
 featured: yes
 sources:
 - SpaceX careers job board (Greenhouse), listings for Pecan Island, La., checked Oct. 31, 2026 | https://boards.greenhouse.io/spacex
@@ -36,6 +37,8 @@ For comparison, the same job board lists about 450 openings at SpaceX's existing
 SpaceX's Louisiana site is supposed to grow to 3,000 direct jobs within ten years, paying $92,600 a year on average, according to The Center Square. Building is slated to start in 2027 and launches in 2029.
 
 Whether those jobs go to Vermilion Parish residents is an open question. The parish's tax deal with SpaceX treats hiring locals as a goal, not a rule, according to the citizens' group Vermilion United, as reported by Acadiana News First.
+
+**Update, Nov. 2:** SpaceX added a ninth Pecan Island opening Monday, a second Communications Lead. [Read about it.](/news/spacex-ninth-pecan-island-job-communications/)
 
 ## How to apply
 
