@@ -4,7 +4,7 @@ deck: The Learjet 60 was bound for the Bahamas when it went down near a mobile h
 section: world
 featured: yes
 date: 2026-11-01
-time: 23:04
+time: 23:18
 image: /img/photos/world-learjet-60.jpg
 image_alt: A white Learjet 60 business jet parked on an airport ramp
 image_caption: "File photo: A Learjet 60, the same model that crashed Sunday in Palm Beach County, Fla. This is not the plane involved."
