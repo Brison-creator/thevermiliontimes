@@ -182,3 +182,7 @@ slow day; zero if nothing can be verified).
 - `section: world` is for national and world news that reaches the parish (war, energy, Washington, Gulf weather). Same rules: only what sources you opened say, attributed, rewritten, originality check passed.
 - Viral clips ("MOMENTS AGO", "BREAKING") are often old. Confirm the event happened today with at least two major outlets before writing a word.
 - `featured: yes` puts a story at the top of the homepage; the newest pinned story wins. Remove the pin from a breaking story once it is a day old.
+
+## Election nights
+- `python3 tools/results.py YYYYMMDD` prints Vermilion Parish results (every race on parish ballots, plus all-parish totals for district and statewide races) as Markdown from the Secretary of State's live feed. Vermilion is parish 57 in that feed (58 is Vernon).
+- Publish one results story (`section: government`, `featured: yes`) and update it as precincts report; say "unofficial" until the state certifies. Name a winner only when all precincts are in, and note runoffs.

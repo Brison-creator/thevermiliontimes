@@ -2,7 +2,6 @@
 title: "Nine Killed as Business Jet From Austin Crashes Into Palm Beach County Neighborhood"
 deck: "Updated Monday: The NTSB says there is evidence the Learjet began breaking up before it hit the ground, minutes after the crew reported ice and turbulence at 35,000 feet."
 section: world
-featured: yes
 date: 2026-11-01
 time: 23:18
 updated: 2026-11-02
