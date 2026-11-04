@@ -1,6 +1,6 @@
 ---
-title: "Vermilion Parish Election Results: Broussard Wins Erath Mayor, Gueydan Heads to Runoff, Landry Leads DA Race"
-deck: All 66 Vermilion Parish precincts have reported. Here are the unofficial winners in every local race, the Gueydan runoff, and where the district attorney race stands across three parishes.
+title: "Vermilion Parish Election Results: Landry Wins DA Race, Broussard Wins Erath Mayor, Gueydan Heads to Runoff"
+deck: Unofficial final returns: Don Landry is the 15th Judicial District's next district attorney, Stephanie Broussard will lead Erath, and Gueydan picks its mayor in a Dec. 12 runoff. Both parish tax renewals passed.
 section: government
 featured: yes
 illustration: elections
@@ -11,53 +11,59 @@ sources:
 - Louisiana Secretary of State, election dates (Dec. 12, 2026 general election) | https://www.sos.la.gov/elections-voting/election-dates
 - Louisiana Secretary of State, unofficial election results, Nov. 3, 2026 (Vermilion Parish and multiparish races) | https://voterportal.sos.la.gov/graphical
 ---
-**Updated 9:50 p.m.** All 66 precincts in Vermilion Parish have reported, according to unofficial returns from the Louisiana Secretary of State. Results are not final until the state certifies them.
+**Updated 11:20 p.m.** All precincts have reported in Vermilion Parish and across the 15th Judicial District, according to unofficial returns from the Louisiana Secretary of State. The results become official once the state certifies them.
 
-## Who won in Vermilion Parish (unofficial)
+## Landry wins district attorney
 
-- **Mayor of Erath:** Stephanie P. Broussard defeated Marlene Menard, 561 votes to 221 (71.7%).
+Donald "Don" Landry defeated Kristian Earles to become district attorney for the 15th Judicial District, which covers Lafayette, Acadia and Vermilion parishes. With all 244 precincts counted, Landry had 60,606 votes (55.9%) to Earles' 47,878 (44.1%). Vermilion voters gave Landry an even bigger edge, 10,513 to 6,058, or 63.4%.
+
+## Local winners (unofficial)
+
+- **Mayor of Erath:** Stephanie P. Broussard beat Marlene Menard, 561 to 221 (71.7%).
 - **Erath police chief:** Randall Toups beat Anna Lapointe, 418 to 370.
 - **Maurice police chief:** John Dayries beat Guy Nerren, 553 to 447, after the two were tied in early voting.
-- **Abbeville City Council, District A:** William "Billy" Noegel defeated Cornelius Darby, 465 to 252.
-- **Kaplan city marshal:** William J. Seaux defeated Ruby Thibeaux, 1,641 to 1,264.
+- **Abbeville City Council, District A:** William "Billy" Noegel beat Cornelius Darby, 465 to 252.
+- **Kaplan city marshal:** William J. Seaux beat Ruby Thibeaux, 1,641 to 1,264.
 - **School Board District C:** Coeyn Wise beat Harry "Gregg" Meaux, 902 to 688.
 - **School Board District F:** Roderick Darby beat Tyrone Alexander, 820 to 496.
 - **Justice of the Peace, Ward 4:** Cheryl Granger beat Philip DeBaillon, 1,829 to 832.
-- **Tax renewals:** Consolidated Gravity Drainage District No. 1's 16-mill renewal passed 62% to 38%, and Hospital Service District No. 3's 8.29-mill renewal passed 66% to 34%.
 
-## Gueydan mayor goes to a runoff
+## Gueydan mayor: runoff Dec. 12
 
-No one won a majority in Gueydan. Jason Suire finished first with 133 votes (36%), Efrem "Zim" Livingston second with 121 (32.8%) and Jeffrey Lamson third with 115 (31.2%). Suire and Livingston would meet again in the state's next election, on Saturday, Dec. 12.
+No candidate got a majority. Jason Suire led with 133 votes (36%), Efrem "Zim" Livingston had 121 (32.8%) and Jeffrey Lamson 115 (31.2%), a spread of 18 votes from first to third. Suire and Livingston are set to meet in the Dec. 12 general election on the state's calendar.
 
 ## Maurice aldermen
 
-Six candidates ran for five seats. Troy Catalon led with 774 votes, followed by Scott Trahan (725), Megan Landry-Lalande (682), Matthew Trahan (643), Wayne Theriot (541) and Jonathan Schlicher (487). Multi-seat races have their own majority rules, and The Vermilion Times will confirm which seats, if any, go to a runoff once the state's count is final.
+Six candidates ran for five seats: Troy Catalon (774), Scott Trahan (725), Megan Landry-Lalande (682), Matthew Trahan (643), Wayne Theriot (541) and Jonathan Schlicher (487). Multi-seat races use their own majority rules, and The Vermilion Times will report which seats are settled once the count is certified.
 
-## District attorney still being counted
+## Taxes
 
-Vermilion voters backed Donald "Don" Landry over Kristian Earles, 10,513 to 6,058 (63.4%). The 15th Judicial District also covers Lafayette and Acadia parishes, and across all three Landry led 54.5% to 45.5% with 233 of 244 precincts reporting.
+Voters renewed both property taxes on the ballot. Consolidated Gravity Drainage District No. 1's 16-mill tax passed 2,017 to 1,243 (62%), and Hospital Service District No. 3's 8.29-mill tax passed 559 to 283 (66%). Both run 10 more years.
 
-## Statewide and federal races
+## Congress and Senate
 
-- **U.S. Senate:** Vermilion went 72% for Julia Letlow over "Jamie" Davis. Statewide, Letlow led 54.6% to 45.4% with 3,229 of 3,722 precincts in.
-- **U.S. House, 3rd District:** Clay Higgins took 69.8% in Vermilion and led the district with 55.7%, enough to avoid a runoff if it holds, with 554 of 571 precincts in.
-- About 17,400 Vermilion voters cast a ballot in the Senate race, roughly 46% of the parish's 38,099 registered voters.
+- **U.S. House, 3rd District:** Clay Higgins won another term outright with 55% districtwide, all 571 precincts reporting, avoiding a runoff. He took 69.8% in Vermilion.
+- **U.S. Senate:** Julia Letlow led "Jamie" Davis 52.4% to 47.6% statewide with 3,714 of 3,722 precincts in. Vermilion went 72% for Letlow.
 
-## The constitutional amendments
+## Turnout
 
-Vermilion voters approved Amendments 1, 3, 4, 6, 7, 8 and 9 and rejected 2, 5 and 10. Amendment 10, on tax breaks for rehabilitated blighted property, failed in the parish by 96 votes. Statewide, with most precincts in, the same three amendments were trailing and the other seven were leading.
+About 17,400 Vermilion voters cast a ballot in the Senate race, roughly 46% of the parish's 38,099 registered voters. More than 4,600 of them voted early or absentee.
+
+## The amendments
+
+Vermilion voters approved Amendments 1, 3, 4, 6, 7, 8 and 9 and rejected 2, 5 and 10, matching where the statewide count stood with all but eight precincts in. Amendment 10, on tax breaks for fixed-up blighted property, lost in Vermilion by just 96 votes.
 
 <!-- RESULTS -->
 ## Every race on Vermilion Parish ballots
 
-*Unofficial results from the Louisiana Secretary of State, data as of 21:43 Central.*
+*Unofficial results from the Louisiana Secretary of State, data as of 23:00 Central.*
 
 ### U. S. Senator
 *66 of 66 precincts reporting (all in); early and absentee votes counted*
 
 - Julia Letlow (REP): **12,501** (72.0%)
 - "Jamie" Davis (DEM): **4,864** (28.0%)
-- *All parishes in this race (3229 of 3722 precincts): Julia Letlow (REP) 642,604 (54.6%); "Jamie" Davis (DEM) 534,192 (45.4%)*
+- *All parishes in this race (3714 of 3722 precincts): Julia Letlow (REP) 741,722 (52.4%); "Jamie" Davis (DEM) 673,653 (47.6%)*
 
 ### U. S. Representative -- 3rd Congressional District
 *66 of 66 precincts reporting (all in); early and absentee votes counted*
@@ -68,14 +74,14 @@ Vermilion voters approved Amendments 1, 3, 4, 6, 7, 8 and 9 and rejected 2, 5 an
 - Caleb "With a C" Walker (DEM): **889** (5.1%)
 - Priscilla Gonzalez (DEM): **807** (4.6%)
 - Tia LeBrun (NOPTY): **256** (1.5%)
-- *All parishes in this race (554 of 571 precincts): "Clay" Higgins (REP) 111,679 (55.7%); John Day (DEM) 40,929 (20.4%); Caleb "With a C" Walker (DEM) 17,325 (8.6%); Priscilla Gonzalez (DEM) 13,848 (6.9%)*
+- *All parishes in this race (571 of 571 precincts): "Clay" Higgins (REP) 129,203 (55.0%); John Day (DEM) 49,162 (20.9%); Caleb "With a C" Walker (DEM) 19,932 (8.5%); Priscilla Gonzalez (DEM) 16,828 (7.2%)*
 
 ### District Attorney -- 15th Judicial District Court
 *66 of 66 precincts reporting (all in); early and absentee votes counted*
 
 - Donald "Don" Landry (REP): **10,513** (63.4%)
 - Kristian Earles (REP): **6,058** (36.6%)
-- *All parishes in this race (233 of 244 precincts): Donald "Don" Landry (REP) 42,267 (54.5%); Kristian Earles (REP) 35,224 (45.5%)*
+- *All parishes in this race (244 of 244 precincts): Donald "Don" Landry (REP) 60,606 (55.9%); Kristian Earles (REP) 47,878 (44.1%)*
 
 ### City Marshal -- City Court, City of Kaplan
 *16 of 16 precincts reporting (all in); early and absentee votes counted*
@@ -148,70 +154,70 @@ Vermilion voters approved Amendments 1, 3, 4, 6, 7, 8 and 9 and rejected 2, 5 an
 
 - YES: **13,633** (80.4%)
 - NO: **3,330** (19.6%)
-- *All parishes in this race (3229 of 3722 precincts): YES 879,756 (76.1%); NO 276,858 (23.9%)*
+- *All parishes in this race (3714 of 3722 precincts): YES 1,040,923 (74.8%); NO 351,030 (25.2%)*
 
 ### CA No.  2 (ACT No. 273, 2026-RS - HB 521) -- Allows taxing authority to continue lower millage rate without losing ability to adjust to max rate
 *66 of 66 precincts reporting (all in); early and absentee votes counted*
 
 - NO: **9,787** (58.4%)
 - YES: **6,972** (41.6%)
-- *All parishes in this race (3229 of 3722 precincts): NO 648,365 (56.9%); YES 490,361 (43.1%)*
+- *All parishes in this race (3714 of 3722 precincts): NO 793,540 (57.9%); YES 577,000 (42.1%)*
 
 ### CA No.  3 (ACT No. 271, 2026-RS - HB 51) -- Prohibits release on bail for defendants who have been convicted of certain offenses against a child
 *66 of 66 precincts reporting (all in); early and absentee votes counted*
 
 - YES: **12,829** (76.1%)
 - NO: **4,040** (23.9%)
-- *All parishes in this race (3229 of 3722 precincts): YES 802,403 (69.8%); NO 347,021 (30.2%)*
+- *All parishes in this race (3714 of 3722 precincts): YES 947,357 (68.5%); NO 436,145 (31.5%)*
 
 ### CA No.  4 (ACT No. 414, 2026-RS - HB 225) -- Sets a lifetime term limit on a person who has served as governor more than one and one-half terms
 *66 of 66 precincts reporting (all in); early and absentee votes counted*
 
 - YES: **10,477** (62.2%)
 - NO: **6,360** (37.8%)
-- *All parishes in this race (3229 of 3722 precincts): YES 652,516 (56.9%); NO 495,264 (43.1%)*
+- *All parishes in this race (3714 of 3722 precincts): YES 777,431 (56.3%); NO 604,599 (43.7%)*
 
 ### CA No.  5 (ACT No. 606, 2026-RS - HB 27) -- Authorizes retirement systems to apply funds to any unfunded accrued liability, not only the oldest
 *66 of 66 precincts reporting (all in); early and absentee votes counted*
 
 - NO: **9,837** (59.6%)
 - YES: **6,664** (40.4%)
-- *All parishes in this race (3229 of 3722 precincts): NO 689,200 (61.4%); YES 433,071 (38.6%)*
+- *All parishes in this race (3714 of 3722 precincts): NO 837,399 (62.0%); YES 514,144 (38.0%)*
 
 ### CA No.  6 (ACT No. 274, 2026-RS - HB 514) -- Authorizes extension of an additional property tax exemption for owners who are 65 or older
 *66 of 66 precincts reporting (all in); early and absentee votes counted*
 
 - YES: **11,873** (71.2%)
 - NO: **4,798** (28.8%)
-- *All parishes in this race (3229 of 3722 precincts): YES 742,240 (65.4%); NO 392,629 (34.6%)*
+- *All parishes in this race (3714 of 3722 precincts): YES 873,947 (64.0%); NO 492,479 (36.0%)*
 
 ### CA No.  7 (ACT No. 607, 2026-RS - SB 228) -- Authorizes the use of public funds to identify, inventory, remove, or replace certain water lines
 *66 of 66 precincts reporting (all in); early and absentee votes counted*
 
 - YES: **9,617** (57.9%)
 - NO: **7,000** (42.1%)
-- *All parishes in this race (3229 of 3722 precincts): YES 725,023 (63.9%); NO 409,552 (36.1%)*
+- *All parishes in this race (3714 of 3722 precincts): YES 883,997 (64.7%); NO 482,529 (35.3%)*
 
 ### CA No.  8 (ACT No. 277, 2026-RS - HB 192) -- Prohibits expropriation of property by a foreign adversary or an agent of a foreign adversary
 *66 of 66 precincts reporting (all in); early and absentee votes counted*
 
 - YES: **11,844** (71.3%)
 - NO: **4,772** (28.7%)
-- *All parishes in this race (3229 of 3722 precincts): YES 728,100 (64.4%); NO 403,061 (35.6%)*
+- *All parishes in this race (3714 of 3722 precincts): YES 856,116 (62.9%); NO 505,859 (37.1%)*
 
 ### CA No.  9 (ACT No. 220, 2025-RS - HB 300) -- Increases the income limit to qualify for the special assessment level for a homestead exemption
 *66 of 66 precincts reporting (all in); early and absentee votes counted*
 
 - YES: **11,020** (66.2%)
 - NO: **5,634** (33.8%)
-- *All parishes in this race (3229 of 3722 precincts): YES 680,488 (60.0%); NO 453,713 (40.0%)*
+- *All parishes in this race (3714 of 3722 precincts): YES 800,009 (58.6%); NO 565,614 (41.4%)*
 
 ### CA No. 10 (ACT No. 272, 2026-RS - HB 214) -- Allows property tax exemption of rehabilitated blighted property under conditions provided by law
 *66 of 66 precincts reporting (all in); early and absentee votes counted*
 
 - NO: **8,312** (50.3%)
 - YES: **8,216** (49.7%)
-- *All parishes in this race (3229 of 3722 precincts): NO 590,549 (52.4%); YES 537,185 (47.6%)*
+- *All parishes in this race (3714 of 3722 precincts): NO 720,868 (53.1%); YES 637,338 (46.9%)*
 
 ### Cons. Grav. Drain. Dist. No. 1 -- 16 Mills Renewal - BOC - 10 Yrs.
 *14 of 14 precincts reporting (all in); early and absentee votes counted*
