@@ -3,6 +3,7 @@ title: "SpaceX Posts a Ninth Starbase Louisiana Job: A Second Communications Lea
 deck: The new opening, posted Monday on SpaceX's job board, is a second community-outreach role for the site. Like the first, it must work at Pecan Island full time.
 section: starbase
 date: 2026-11-02
+updated: 2026-11-04
 time: 15:46
 sources:
 - SpaceX job board (Greenhouse), "Communications Lead," Pecan Island, La., first published Nov. 2, 2026 | https://boards.greenhouse.io/spacex/jobs/8926138002?gh_jid=8926138002
@@ -28,6 +29,8 @@ One line in both listings stands out: the role is to develop strategies "that ge
 - U.S. citizenship, permanent residency or another status allowed under federal export rules (ITAR)
 
 The listing does not give a salary.
+
+**Update, Nov. 4:** The Principal Construction Project Engineer listing has since been removed from SpaceX's board, so eight Pecan Island openings remain.
 
 ## The nine openings
 

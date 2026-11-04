@@ -15,5 +15,5 @@ text = open(path, encoding='utf-8').read()
 top = text.split('<!-- RESULTS -->')[0].rstrip()
 stamp, md = results.markdown(date)
 open(path, 'w', encoding='utf-8').write(f"{top}\n\n<!-- RESULTS -->\n## Every race on Vermilion Parish ballots\n\n"
-    f"*Unofficial results from the Louisiana Secretary of State, data as of {stamp[11:16]} Central.*\n\n{md}\n")
+    f"*Unofficial results from the Louisiana Secretary of State, {'final count' if stamp.startswith('1900') else 'data as of ' + stamp[11:16] + ' Central'}.*\n\n{md}\n")
 print('updated', path, 'state data', stamp)

@@ -4,7 +4,7 @@ deck: SpaceX's own job board lists eight positions at its planned Starbase Louis
 section: starbase
 date: 2026-10-31
 time: 12:30
-updated: 2026-11-02
+updated: 2026-11-04
 featured: yes
 sources:
 - SpaceX careers job board (Greenhouse), listings for Pecan Island, La., checked Oct. 31, 2026 | https://boards.greenhouse.io/spacex
@@ -39,6 +39,8 @@ SpaceX's Louisiana site is supposed to grow to 3,000 direct jobs within ten year
 Whether those jobs go to Vermilion Parish residents is an open question. The parish's tax deal with SpaceX treats hiring locals as a goal, not a rule, according to the citizens' group Vermilion United, as reported by Acadiana News First.
 
 **Update, Nov. 2:** SpaceX added a ninth Pecan Island opening Monday, a second Communications Lead. [Read about it.](/news/spacex-ninth-pecan-island-job-communications/)
+
+**Update, Nov. 4:** The Principal Construction Project Engineer (Starship Infrastructure – Louisiana) listing, first posted Oct. 23, is no longer on SpaceX's job board as of Wednesday morning, bringing the count back to eight. SpaceX does not say why listings come down; a role may have been filled or paused.
 
 ## How to apply
 

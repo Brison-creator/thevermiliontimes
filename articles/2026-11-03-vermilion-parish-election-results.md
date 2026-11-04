@@ -6,12 +6,12 @@ featured: yes
 illustration: elections
 date: 2026-11-03
 time: 20:41
-updated: 2026-11-03
+updated: 2026-11-04
 sources:
 - Louisiana Secretary of State, election dates (Dec. 12, 2026 general election) | https://www.sos.la.gov/elections-voting/election-dates
 - Louisiana Secretary of State, unofficial election results, Nov. 3, 2026 (Vermilion Parish and multiparish races) | https://voterportal.sos.la.gov/graphical
 ---
-**Updated 11:20 p.m.** All precincts have reported in Vermilion Parish and across the 15th Judicial District, according to unofficial returns from the Louisiana Secretary of State. The results become official once the state certifies them.
+**Updated 5:50 a.m. Wednesday.** All precincts have reported statewide, in Vermilion Parish and across the 15th Judicial District, according to unofficial returns from the Louisiana Secretary of State. The results become official once the state certifies them.
 
 ## Landry wins district attorney
 
@@ -43,7 +43,7 @@ Voters renewed both property taxes on the ballot. Consolidated Gravity Drainage 
 ## Congress and Senate
 
 - **U.S. House, 3rd District:** Clay Higgins won another term outright with 55% districtwide, all 571 precincts reporting, avoiding a runoff. He took 69.8% in Vermilion.
-- **U.S. Senate:** Julia Letlow led "Jamie" Davis 52.4% to 47.6% statewide with 3,714 of 3,722 precincts in. Vermilion went 72% for Letlow.
+- **U.S. Senate:** Julia Letlow won the seat, beating "Jamie" Davis 745,963 to 720,106 (50.9% to 49.1%) statewide with all 3,722 precincts counted. Her margin narrowed as the last precincts came in overnight. Vermilion went 72% for Letlow.
 
 ## Turnout
 
@@ -51,19 +51,19 @@ About 17,400 Vermilion voters cast a ballot in the Senate race, roughly 46% of t
 
 ## The amendments
 
-Vermilion voters approved Amendments 1, 3, 4, 6, 7, 8 and 9 and rejected 2, 5 and 10, matching where the statewide count stood with all but eight precincts in. Amendment 10, on tax breaks for fixed-up blighted property, lost in Vermilion by just 96 votes.
+Vermilion voters approved Amendments 1, 3, 4, 6, 7, 8 and 9 and rejected 2, 5 and 10, matching the final statewide count: Amendments 2, 5 and 10 failed statewide and the other seven passed. Amendment 10, on tax breaks for fixed-up blighted property, lost in Vermilion by just 96 votes.
 
 <!-- RESULTS -->
 ## Every race on Vermilion Parish ballots
 
-*Unofficial results from the Louisiana Secretary of State, data as of 23:00 Central.*
+*Unofficial results from the Louisiana Secretary of State, final count.*
 
 ### U. S. Senator
 *66 of 66 precincts reporting (all in); early and absentee votes counted*
 
 - Julia Letlow (REP): **12,501** (72.0%)
 - "Jamie" Davis (DEM): **4,864** (28.0%)
-- *All parishes in this race (3714 of 3722 precincts): Julia Letlow (REP) 741,722 (52.4%); "Jamie" Davis (DEM) 673,653 (47.6%)*
+- *All parishes in this race (3722 of 3722 precincts): Julia Letlow (REP) 745,963 (50.9%); "Jamie" Davis (DEM) 720,106 (49.1%)*
 
 ### U. S. Representative -- 3rd Congressional District
 *66 of 66 precincts reporting (all in); early and absentee votes counted*
@@ -154,70 +154,70 @@ Vermilion voters approved Amendments 1, 3, 4, 6, 7, 8 and 9 and rejected 2, 5 an
 
 - YES: **13,633** (80.4%)
 - NO: **3,330** (19.6%)
-- *All parishes in this race (3714 of 3722 precincts): YES 1,040,923 (74.8%); NO 351,030 (25.2%)*
+- *All parishes in this race (3722 of 3722 precincts): YES 1,071,202 (74.3%); NO 371,217 (25.7%)*
 
 ### CA No.  2 (ACT No. 273, 2026-RS - HB 521) -- Allows taxing authority to continue lower millage rate without losing ability to adjust to max rate
 *66 of 66 precincts reporting (all in); early and absentee votes counted*
 
 - NO: **9,787** (58.4%)
 - YES: **6,972** (41.6%)
-- *All parishes in this race (3714 of 3722 precincts): NO 793,540 (57.9%); YES 577,000 (42.1%)*
+- *All parishes in this race (3722 of 3722 precincts): NO 824,341 (58.0%); YES 596,340 (42.0%)*
 
 ### CA No.  3 (ACT No. 271, 2026-RS - HB 51) -- Prohibits release on bail for defendants who have been convicted of certain offenses against a child
 *66 of 66 precincts reporting (all in); early and absentee votes counted*
 
 - YES: **12,829** (76.1%)
 - NO: **4,040** (23.9%)
-- *All parishes in this race (3714 of 3722 precincts): YES 947,357 (68.5%); NO 436,145 (31.5%)*
+- *All parishes in this race (3722 of 3722 precincts): YES 972,108 (67.8%); NO 461,710 (32.2%)*
 
 ### CA No.  4 (ACT No. 414, 2026-RS - HB 225) -- Sets a lifetime term limit on a person who has served as governor more than one and one-half terms
 *66 of 66 precincts reporting (all in); early and absentee votes counted*
 
 - YES: **10,477** (62.2%)
 - NO: **6,360** (37.8%)
-- *All parishes in this race (3714 of 3722 precincts): YES 777,431 (56.3%); NO 604,599 (43.7%)*
+- *All parishes in this race (3722 of 3722 precincts): YES 801,160 (55.9%); NO 631,352 (44.1%)*
 
 ### CA No.  5 (ACT No. 606, 2026-RS - HB 27) -- Authorizes retirement systems to apply funds to any unfunded accrued liability, not only the oldest
 *66 of 66 precincts reporting (all in); early and absentee votes counted*
 
 - NO: **9,837** (59.6%)
 - YES: **6,664** (40.4%)
-- *All parishes in this race (3714 of 3722 precincts): NO 837,399 (62.0%); YES 514,144 (38.0%)*
+- *All parishes in this race (3722 of 3722 precincts): NO 874,544 (62.4%); YES 526,531 (37.6%)*
 
 ### CA No.  6 (ACT No. 274, 2026-RS - HB 514) -- Authorizes extension of an additional property tax exemption for owners who are 65 or older
 *66 of 66 precincts reporting (all in); early and absentee votes counted*
 
 - YES: **11,873** (71.2%)
 - NO: **4,798** (28.8%)
-- *All parishes in this race (3714 of 3722 precincts): YES 873,947 (64.0%); NO 492,479 (36.0%)*
+- *All parishes in this race (3722 of 3722 precincts): YES 900,356 (63.6%); NO 516,251 (36.4%)*
 
 ### CA No.  7 (ACT No. 607, 2026-RS - SB 228) -- Authorizes the use of public funds to identify, inventory, remove, or replace certain water lines
 *66 of 66 precincts reporting (all in); early and absentee votes counted*
 
 - YES: **9,617** (57.9%)
 - NO: **7,000** (42.1%)
-- *All parishes in this race (3714 of 3722 precincts): YES 883,997 (64.7%); NO 482,529 (35.3%)*
+- *All parishes in this race (3722 of 3722 precincts): YES 924,321 (65.3%); NO 492,210 (34.7%)*
 
 ### CA No.  8 (ACT No. 277, 2026-RS - HB 192) -- Prohibits expropriation of property by a foreign adversary or an agent of a foreign adversary
 *66 of 66 precincts reporting (all in); early and absentee votes counted*
 
 - YES: **11,844** (71.3%)
 - NO: **4,772** (28.7%)
-- *All parishes in this race (3714 of 3722 precincts): YES 856,116 (62.9%); NO 505,859 (37.1%)*
+- *All parishes in this race (3722 of 3722 precincts): YES 876,953 (62.1%); NO 534,925 (37.9%)*
 
 ### CA No.  9 (ACT No. 220, 2025-RS - HB 300) -- Increases the income limit to qualify for the special assessment level for a homestead exemption
 *66 of 66 precincts reporting (all in); early and absentee votes counted*
 
 - YES: **11,020** (66.2%)
 - NO: **5,634** (33.8%)
-- *All parishes in this race (3714 of 3722 precincts): YES 800,009 (58.6%); NO 565,614 (41.4%)*
+- *All parishes in this race (3722 of 3722 precincts): YES 823,788 (58.2%); NO 591,838 (41.8%)*
 
 ### CA No. 10 (ACT No. 272, 2026-RS - HB 214) -- Allows property tax exemption of rehabilitated blighted property under conditions provided by law
 *66 of 66 precincts reporting (all in); early and absentee votes counted*
 
 - NO: **8,312** (50.3%)
 - YES: **8,216** (49.7%)
-- *All parishes in this race (3714 of 3722 precincts): NO 720,868 (53.1%); YES 637,338 (46.9%)*
+- *All parishes in this race (3722 of 3722 precincts): NO 749,063 (53.2%); YES 659,113 (46.8%)*
 
 ### Cons. Grav. Drain. Dist. No. 1 -- 16 Mills Renewal - BOC - 10 Yrs.
 *14 of 14 precincts reporting (all in); early and absentee votes counted*
