@@ -124,7 +124,12 @@ def cut_title(name):
     try: return re.search(r'<title>(.*?)</title>',io.open(os.path.join(R,'img','cuts',name+'.svg'),encoding='utf-8').read()).group(1)
     except (OSError,AttributeError): return ''
 for a in ARTICLES:
-    if a.get('image'):
+    if (a.get('image') or '').strip().lower()=='cut':
+        name=a.get('illustration') or a['section']
+        if not os.path.exists(os.path.join(R,'img','cuts',name+'.svg')): name='local'
+        a['img']=f'/img/cuts/{name}.svg'; a['img_share']=f'/img/cuts/{name}.png'
+        a['img_alt']=cut_title(name); a['img_caption']=''; a['img_credit']='Illustration: The Vermilion Times'
+    elif a.get('image'):
         if not os.path.exists(R+a['image'].lstrip('/')): raise SystemExit(f'{a["slug"]}: image {a["image"]} not found')
         for need in ('image_alt','image_credit'):
             if not a.get(need): raise SystemExit(f'{a["slug"]}: a photo needs {need}')
@@ -132,9 +137,10 @@ for a in ARTICLES:
         a['img_caption']=smart(a.get('image_caption',''))
         cred=html.escape(a['image_credit'])
         a['img_credit']=f'<a href="{html.escape(a["image_source"])}" rel="noopener">{cred}</a>' if a.get('image_source') else cred
-    elif POOL.get(a.get('illustration') or a['section']) or POOL.get('local'):
-        # a real file photo from the section's pool, picked steadily by slug
-        pool=POOL.get(a.get('illustration') or a['section']) or POOL['local']
+    elif POOL.get(a.get('illustration') or a['section']):
+        # a real file photo of that exact topic, picked steadily by slug; never a
+        # photo from another topic (an unrelated photo is worse than the engraving)
+        pool=POOL[a.get('illustration') or a['section']]
         ph=pool[sum(map(ord,a['slug']))%len(pool)]
         a['img']=ph['image']; a['img_share']=ph['image']; a['img_alt']=ph['alt']
         a['img_caption']='File photo: '+smart(ph['caption'])

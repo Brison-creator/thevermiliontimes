@@ -95,15 +95,6 @@
    "source": "https://commons.wikimedia.org/wiki/File:Suire's_Cajun_Grocery_and_Restaurant.jpg"
   }
  ],
- "government": [
-  {
-   "image": "/img/photos/local-vermilion-river.jpg",
-   "alt": "The wide Vermilion River at Abbeville, tree-lined banks under a cloudy sky.",
-   "caption": "The Vermilion River at Abbeville.",
-   "credit": "Tim Boyd / Wikimedia Commons, CC BY 2.0",
-   "source": "https://commons.wikimedia.org/wiki/File:Vermilion_River_Abbeville_Louisiana.jpg"
-  }
- ],
  "sports": [
   {
    "image": "/img/photos/sports-cajun-field.jpg",
@@ -111,6 +102,15 @@
    "caption": "Fans at Cajun Field in Lafayette on game day.",
    "credit": "Jcarriere / Wikimedia Commons, CC BY-SA 3.0",
    "source": "https://commons.wikimedia.org/wiki/File:Cajun_field_gameday.jpg"
+  }
+ ],
+ "elections": [
+  {
+   "image": "/img/photos/elections-i-voted.jpg",
+   "alt": "An oval \"I Voted\" sticker with an American flag.",
+   "caption": "An \"I Voted\" sticker.",
+   "credit": "Dwight Burdette / Wikimedia Commons, CC BY 3.0",
+   "source": "https://commons.wikimedia.org/wiki/File:I_Voted_Sticker.JPG"
   }
  ]
 }

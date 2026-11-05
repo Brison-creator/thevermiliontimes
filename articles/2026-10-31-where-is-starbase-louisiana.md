@@ -5,6 +5,7 @@ section: starbase
 date: 2026-10-31
 time: 12:35
 map: 29.6466076,-92.4531922
+image: cut
 sources:
 - The Center Square, "Former chief of staff for Landry registers as SpaceX lobbyist," Oct. 28, 2026 | https://www.thecentersquare.com/louisiana/article_0944c3b3-ea0c-4204-ab51-ccd7e633d2fb.html
 - Acadiana News First, "SpaceX deal reportedly in the works for land owned by Vermilion Parish schools," Oct. 28, 2026 | https://www.acadiananewsfirst.com/2026/10/28/spacex-deal-reportedly-works-land-owned-by-vermilion-parish-schools/

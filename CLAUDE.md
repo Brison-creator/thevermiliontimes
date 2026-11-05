@@ -192,3 +192,9 @@ slow day; zero if nothing can be verified).
 - Post only after the story is live on thevermiliontimes.com (so Facebook shows the preview), and only once: check `data/facebook_posted.txt` first, then append the URL and commit it with the story.
 - Updates to an existing story are not reposted, except a major development (for example, a race called or a death toll confirmed), posted as a new message with the same link.
 - Never post to Rocket Farm, NOHM or Jet Heat and Air pages from the newsroom.
+
+## Photos must make sense (publisher's rule)
+- A story's picture must show its actual subject: the right agency's vehicle, the right kind of event, the right place. Never borrow a photo from another topic (a river for a Police Jury story, a college stadium for high school scores, Texas for a Louisiana site story).
+- Order of choice: (1) Brison's own photo of the scene; (2) a free-license or public-domain photo of that exact subject, captioned "File photo:" with credit; (3) the section engraving (`image: cut`, with `illustration:` to pick courthouse, ballot box, badge, football field, rocket, etc.).
+- `img/photos/pool.json` holds photos per topic and is only used for that exact topic. Add to it only photos that fit every story of that topic.
+- Wanted from Brison: the Vermilion Parish Courthouse, Abbeville City Hall, LA 82 and the marsh near Pecan Island and White Lake, a parish high school field on a Friday night, a Vermilion Parish Sheriff's unit, the parish solid waste plant.

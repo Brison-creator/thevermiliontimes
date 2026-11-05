@@ -4,6 +4,7 @@ deck: The land near White Lake brings Vermilion Parish schools $20,000 to $30,00
 section: starbase
 date: 2026-10-31
 time: 15:45
+image: cut
 sources:
 - The Advocate, "Vermilion Parish School Board approves land appraisals as SpaceX amasses property in the area," by Joanna Brown, Oct. 30, 2026 | https://www.theadvocate.com/acadiana/news/vpsb-appraises-school-property-by-spacex/article_5a64c29b-4777-4074-b3ca-a2d74cb856e6.html
 ---

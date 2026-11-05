@@ -4,6 +4,7 @@ deck: Investigators seized suspected methamphetamine, marijuana, prescription pi
 section: safety
 date: 2026-10-31
 time: 05:48
+image: cut
 sources:
 - KLFY, "Kaplan man faces multiple drug and firearm charges," Oct. 29, 2026 | https://www.klfy.com/local/vermilion-parish/kaplan-man-drug-firearm-charges/
 ---
