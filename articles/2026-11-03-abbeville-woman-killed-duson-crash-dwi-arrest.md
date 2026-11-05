@@ -4,8 +4,11 @@ deck: State Police say a Buick failed to slow on LA 343 and hit the back of her 
 section: safety
 date: 2026-11-03
 time: 15:59
-illustration: roads
-image: cut
+image: /img/photos/lsp-trooper-rural-highway.jpg
+image_alt: A Louisiana State Police SUV with its blue lights on, stopped on a rural two-lane highway as a small alligator crosses the road
+image_caption: "File photo: A Louisiana State Police unit on a rural Louisiana highway."
+image_credit: Photo: Louisiana State Police
+image_source: https://www.facebook.com/LouisianaStatePolice
 sources:
 - Louisiana State Police, Troop I news release, "Rayne Woman Arrested for Vehicular Homicide in Lafayette Parish Crash," Nov. 1, 2026 | https://lsp.org/community-outreach/news/rayne-woman-arrested-for-vehicular-homicide-in-lafayette-parish-crash/
 ---

@@ -4,8 +4,11 @@ deck: She was a passenger and was thrown from the car early Tuesday, State Polic
 section: safety
 date: 2026-11-05
 time: 05:44
-illustration: roads
-image: cut
+image: /img/photos/lsp-trooper-rural-highway.jpg
+image_alt: A Louisiana State Police SUV with its blue lights on, stopped on a rural two-lane highway as a small alligator crosses the road
+image_caption: "File photo: A Louisiana State Police unit on a rural Louisiana highway."
+image_credit: Photo: Louisiana State Police
+image_source: https://www.facebook.com/LouisianaStatePolice
 sources:
 - Louisiana State Police, Troop I news release, "Unrestrained Passenger Killed in Iberia Parish Crash," Nov. 4, 2026 | https://lsp.org/community-outreach/news/unrestrained-passenger-killed-in-iberia-parish-crash/
 - Louisiana State Police, Troop I news release, "Rayne Woman Arrested for Vehicular Homicide in Lafayette Parish Crash," Nov. 1, 2026 | https://lsp.org/community-outreach/news/rayne-woman-arrested-for-vehicular-homicide-in-lafayette-parish-crash/
