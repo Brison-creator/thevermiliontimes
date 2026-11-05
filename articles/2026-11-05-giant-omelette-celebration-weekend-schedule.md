@@ -4,8 +4,10 @@ deck: The Confrérie d'Abbeville's festival fills downtown Nov. 7-8 with music, 
 section: local
 date: 2026-11-05
 time: 15:55
-illustration: local
-image: cut
+image: /img/photos/giant-omelette-crawfish-illustration.jpg
+image_alt: "Illustration: two chefs in tall white hats stir a giant omelette in a huge skillet over a brick fire on an Abbeville street lined with storefronts and bunting, with a church steeple, a basket of eggs, a crowd and a tray of boiled crawfish"
+image_caption: Sunday's main event, as imagined by our illustrator. The omelette is cooked from about 1:30 to 4:30 p.m.
+image_credit: "Illustration: The Vermilion Times"
 sources:
 - The Confrérie d'Abbeville, Giant Omelette Celebration "Schedule of Events" | https://www.giantomelette.org/events-schedule
 - National Weather Service Lake Charles, forecast for Abbeville, issued Nov. 5, 2026 | https://forecast.weather.gov/MapClick.php?lat=29.9747&lon=-92.1343
