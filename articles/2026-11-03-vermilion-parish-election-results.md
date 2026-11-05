@@ -2,7 +2,6 @@
 title: "Vermilion Parish Election Results: Landry Wins DA Race, Broussard Wins Erath Mayor, Gueydan Heads to Runoff"
 deck: Unofficial final returns: Don Landry is the 15th Judicial District's next district attorney, Stephanie Broussard will lead Erath, and Gueydan picks its mayor in a Dec. 12 runoff. Both parish tax renewals passed.
 section: government
-featured: yes
 illustration: elections
 date: 2026-11-03
 time: 20:41
