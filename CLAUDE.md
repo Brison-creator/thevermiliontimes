@@ -186,3 +186,9 @@ slow day; zero if nothing can be verified).
 ## Election nights
 - `python3 tools/results.py YYYYMMDD` prints Vermilion Parish results (every race on parish ballots, plus all-parish totals for district and statewide races) as Markdown from the Secretary of State's live feed. Vermilion is parish 57 in that feed (58 is Vernon).
 - Publish one results story (`section: government`, `featured: yes`) and update it as precincts report; say "unofficial" until the state certifies. Name a winner only when all precincts are in, and note runoffs.
+
+## Facebook (automatic, every new story)
+- Every story you publish also goes to The Vermilion Times Facebook Page through the Windsor.ai connector: `execute_action` with connector `facebook_organic`, account `1453168794545861` (The Vermilion Times), action `create_post`, params `{"message": "<headline>\n\n<deck>", "link": "<story URL>"}`.
+- Post only after the story is live on thevermiliontimes.com (so Facebook shows the preview), and only once: check `data/facebook_posted.txt` first, then append the URL and commit it with the story.
+- Updates to an existing story are not reposted, except a major development (for example, a race called or a death toll confirmed), posted as a new message with the same link.
+- Never post to Rocket Farm, NOHM or Jet Heat and Air pages from the newsroom.
