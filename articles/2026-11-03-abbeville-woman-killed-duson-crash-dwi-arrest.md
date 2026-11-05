@@ -4,6 +4,8 @@ deck: State Police say a Buick failed to slow on LA 343 and hit the back of her 
 section: safety
 date: 2026-11-03
 time: 15:59
+illustration: roads
+image: cut
 sources:
 - Louisiana State Police, Troop I news release, "Rayne Woman Arrested for Vehicular Homicide in Lafayette Parish Crash," Nov. 1, 2026 | https://lsp.org/community-outreach/news/rayne-woman-arrested-for-vehicular-homicide-in-lafayette-parish-crash/
 ---

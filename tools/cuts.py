@@ -193,8 +193,28 @@ def ballot():
     b += f'<rect x="266" y="250" width="108" height="50" fill="{P}" stroke="{I}" stroke-width="3"/><text x="320" y="284" font-family="Georgia,serif" font-size="26" font-weight="bold" text-anchor="middle" fill="{I}">VOTE</text>'
     return frame(b, 'Engraving of a ballot dropping into a ballot box')
 
+def highway():
+    # a two-lane country highway at night, a curve sign and a patrol car's light bar
+    hz = 250
+    b = sky(hz, night=True) + treeline(hz, seed=11) + f'<rect y="{hz+12}" width="{W}" height="{H-hz-12}" fill="{I}"/>'
+    # road narrowing to the horizon, edge lines and dashed center line
+    b += f'<path d="M300 {hz+12} L340 {hz+12} L600 {H} L40 {H}Z" fill="{P}" opacity=".16"/>'
+    b += f'<g stroke="{P}" fill="none"><path d="M302 {hz+12} L52 {H}" stroke-width="3"/><path d="M338 {hz+12} L588 {H}" stroke-width="3"/></g>'
+    b += ''.join(f'<path d="M{320-(y-hz)*0.02:.1f} {y} L{320-(y+12-hz)*0.02:.1f} {y+12}" stroke="{P}" stroke-width="{2+(y-hz)/40:.1f}"/>' for y in range(hz+20, H, 26))
+    # curve-ahead sign on a post
+    b += f'<rect x="512" y="246" width="6" height="96" fill="{P}"/><path d="M515 196 L555 236 L515 276 L475 236Z" fill="{P}" stroke="{I}" stroke-width="3"/>'
+    b += f'<path d="M508 256 V236 Q508 222 522 222 V214 L534 226 L522 238 V230 Q516 230 516 236 V256Z" fill="{I}"/>'
+    # patrol car on the shoulder with light bar and beams
+    cx, cy = 150, 330
+    b += f'<path d="M{cx-70} {cy} L{cx-62} {cy-22} L{cx-34} {cy-26} L{cx-18} {cy-44} L{cx+34} {cy-44} L{cx+52} {cy-26} L{cx+76} {cy-20} L{cx+80} {cy} Z" fill="{P}"/>'
+    b += f'<path d="M{cx-12} {cy-40} L{cx+30} {cy-40} L{cx+44} {cy-27} L{cx-24} {cy-27}Z" fill="{I}"/>'
+    b += f'<circle cx="{cx-40}" cy="{cy+2}" r="13" fill="{I}" stroke="{P}" stroke-width="3"/><circle cx="{cx+52}" cy="{cy+2}" r="13" fill="{I}" stroke="{P}" stroke-width="3"/>'
+    b += f'<rect x="{cx-2}" y="{cy-54}" width="26" height="9" rx="3" fill="{P}"/>'
+    b += f'<path d="M{cx+11} {cy-50} L{cx-150} {cy-130} L{cx-150} {cy-100}Z M{cx+11} {cy-50} L{cx+170} {cy-140} L{cx+170} {cy-108}Z" fill="{P}" opacity=".22"/>'
+    return frame(b, 'Engraving of a two-lane country highway at night with a curve sign and a patrol car')
+
 CUTS = {'government': courthouse, 'starbase': rocket, 'safety': badge, 'schools': schoolhouse, 'sports': stadium,
-        'business': mainstreet, 'land-water': shrimpboat, 'faith': church, 'opinion': quill, 'obituaries': candle, 'elections': ballot}
+        'business': mainstreet, 'land-water': shrimpboat, 'faith': church, 'opinion': quill, 'obituaries': candle, 'elections': ballot, 'roads': highway}
 if __name__ == '__main__':
     os.makedirs(OUT, exist_ok=True)
     for name, fn in CUTS.items():
