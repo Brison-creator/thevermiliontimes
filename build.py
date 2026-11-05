@@ -202,6 +202,7 @@ def article_body(a):
 {map_embed(a, a["body_html"])}
   </div>
   {disc}
+  <a class="fb-follow" href="{FACEBOOK}" rel="noopener"><svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path fill="currentColor" d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/></svg><span><b>Follow The Vermilion Times on Facebook</b><br>Breaking news, election results and Starbase Louisiana updates the minute they post.</span></a>
   <aside class="sources" aria-labelledby="src-h"><h2 id="src-h">Sources</h2><p>This report was compiled from the public sources below.</p><ul>{src}</ul></aside>
   {BRIEF}
   <p class="corrections">See an error? Email <a href="mailto:{EMAIL}?subject=Correction:%20{html.escape(a["slug"])}">{EMAIL}</a> and we will correct it.</p>

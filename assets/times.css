@@ -296,3 +296,7 @@ picture{display:block}
 .lv-skylist .lv-date{display:block}
 .lv-hl{color:var(--red);font-weight:700}
 @media (min-width:760px){.lv-cols{columns:2;column-gap:2rem}.lv-cols li{break-inside:avoid}}
+.fb-follow{display:flex;align-items:center;gap:.85rem;margin:1.5rem 0;padding:1rem 1.1rem;background:#1877f2;color:#fff;text-decoration:none;font-family:var(--f-ui);font-size:.92rem;line-height:1.35;border-radius:4px}
+.fb-follow:hover{background:#0f63d1;color:#fff}
+.fb-follow svg{flex:0 0 auto}
+.fb-follow b{font-size:1rem}
