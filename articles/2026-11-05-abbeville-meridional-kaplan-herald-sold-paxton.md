@@ -4,8 +4,11 @@ deck: The parish's two longtime weeklies are among 14 Acadiana-area papers, plus
 section: business
 date: 2026-11-05
 time: 17:40
-illustration: business
-image: cut
+image: /img/photos/paxton-media-group-logo.jpg
+image_alt: The Paxton Media Group logo, the letters PMG in maroon with the company name on a black bar beneath
+image_caption: Paxton Media Group, based in Paducah, Ky., now owns the Abbeville Meridional and the Kaplan Herald.
+image_credit: "Logo: Paxton Media Group"
+image_source: https://www.vermiliontoday.com/news/paxton-media-group-acquires-louisiana-state-newspapers
 disclosure: "Disclosure: The Vermilion Times is an independent online newspaper that covers the same communities as the Meridional and the Herald and competes with them for readers."
 sources:
 - Paxton Media Group announcement, Nov. 2, 2026, as published by Vermilion Today (the Abbeville Meridional and Kaplan Herald), "Paxton Media Group acquires Louisiana State Newspapers" | https://www.vermiliontoday.com/news/paxton-media-group-acquires-louisiana-state-newspapers
