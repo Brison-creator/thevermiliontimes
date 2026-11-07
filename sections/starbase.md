@@ -11,7 +11,7 @@ A running record of SpaceX's planned Starbase Louisiana launch site near Pecan I
 - **$25 million a year** in payments to the parish to start, rising 2% a year for 25 years, about $800 million in all by the Gulf States Newsroom's calculation, [according to WWNO](https://www.wwno.org/politics/2026-10-26/behind-closed-doors-the-secret-spacex-deal-and-the-lawsuit-challenging-it).
 - **Nearly $23.8 billion** in property tax exemptions over 25 years, per the Gulf States Newsroom; The Center Square puts the full state and local incentive package at about $27.5 billion.
 - **Up to $600,000 a year** in administrative fees to the parish Industrial Development Board, according to Acadiana News First.
-- **7 SpaceX job openings** listed at Pecan Island on the company's job board as of Nov. 5, 2026 (two listings came down this week, one of them a duplicate communications posting), all senior engineering, construction, safety and community roles. [See the list.](/news/spacex-louisiana-jobs-pecan-island/) [The newest one.](/news/spacex-ninth-pecan-island-job-communications/)
+- **9 SpaceX job openings** listed at Pecan Island on the company's job board as of Nov. 7, 2026, including two environmental permit jobs (wetlands and air) added Nov. 6, all senior engineering, construction, safety and community roles. [See the list.](/news/spacex-louisiana-jobs-pecan-island/) [The newest one.](/news/spacex-ninth-pecan-island-job-communications/)
 - **2027** construction expected to begin; **2029** first launch targeted, according to The Center Square.
 
 ## Timeline
