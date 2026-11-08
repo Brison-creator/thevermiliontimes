@@ -4,6 +4,7 @@ deck: The 2025 Kaplan High graduate beat Harry "Gregg" Meaux 902 to 688 on Elect
 section: schools
 date: 2026-11-08
 time: 09:30
+updated: 2026-11-08
 image: /img/photos/coeyn-wise.jpg
 image_alt: Coeyn Wise, in a dark suit and blue striped tie, smiles in front of a brick wall
 image_caption: Coeyn Wise was elected to represent District C on the Vermilion Parish School Board on Nov. 3.
@@ -16,7 +17,7 @@ Vermilion Parish has a School Board member who was sitting in its classrooms not
 
 Coeyn Wise won the **District C** seat on the Vermilion Parish School Board on Nov. 3, defeating Harry "Gregg" Meaux **902 votes to 688**, or 56.7% to 43.3%, with all eight of the district's precincts counted, according to the Louisiana Secretary of State's results. Both candidates ran without a party label.
 
-Wise is 20 and a 2025 graduate of Kaplan High School. KLFY reported that he is the youngest person ever elected to the board.
+Wise is 20, a 2025 graduate of Kaplan High School and now a student at LSU, according to his Facebook page. KLFY reported that he is the youngest person ever elected to the board.
 
 ## "A product of the school system"
 
