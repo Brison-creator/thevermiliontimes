@@ -4,8 +4,11 @@ deck: Democrats won the Texas governor's race and a U.S. Senate seat after Elon 
 section: starbase
 date: 2026-11-08
 time: 13:30
-illustration: starbase
-image: cut
+image: /img/photos/spacex-starbase-texas-aerial-noaa-2026.jpg
+image_alt: Aerial view of SpaceX's Starbase launch site in South Texas, with two launch towers, rows of white propellant tanks and the highway to Boca Chica Beach running past it through the sand flats
+image_caption: SpaceX's Starbase launch site near Boca Chica Beach, Texas, photographed from the air in January 2026.
+image_credit: "Photo: NOAA"
+image_source: https://commons.wikimedia.org/wiki/File:SpaceX_Starbase_Launch_Site_Early_2026.jpg
 sources:
 - Associated Press via PBS NewsHour, "Democrat James Talarico wins election to U.S. Senate from Texas," Nov. 4, 2026 | https://www.pbs.org/newshour/politics/democrat-james-talarico-wins-election-to-u-s-senate-from-texas
 - Houston Public Media, "Democrat James Talarico wins U.S. Senate seat, ending GOP's 32-year Texas statewide winning streak," Nov. 3, 2026 | https://www.houstonpublicmedia.org/articles/news/politics/election-2026/2026/11/03/565938/talarico-paxton-senate-race-texas-results/
