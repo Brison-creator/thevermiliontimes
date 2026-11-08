@@ -4,8 +4,11 @@ deck: The new openings show what the company needs before it can build at Pecan 
 section: starbase
 date: 2026-11-07
 time: 16:10
-illustration: starbase
-image: cut
+image: /img/photos/pecan-island-aerial-usgs.jpg
+image_alt: Aerial view of Pecan Island, Louisiana, with homes and trees strung along LA 82 on a narrow ridge, farm fields and marsh to the north, and open water and marsh islands to the south
+image_caption: Pecan Island and the surrounding marsh from the air, in government aerial imagery. Homes and camps line LA 82 along the ridge.
+image_credit: "Image: USDA / USGS The National Map"
+image_source: https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer
 sources:
 - SpaceX job board (Greenhouse), "Sr. Environmental Engineer, Wetlands & Regulatory Compliance," Pecan Island, La., first published Nov. 6, 2026 | https://boards.greenhouse.io/spacex/jobs/8933851002?gh_jid=8933851002
 - SpaceX job board (Greenhouse), "Sr. Environmental Regulatory Engineer, Air Permitting," Pecan Island, La., first published Nov. 6, 2026 | https://boards.greenhouse.io/spacex/jobs/8932782002?gh_jid=8932782002

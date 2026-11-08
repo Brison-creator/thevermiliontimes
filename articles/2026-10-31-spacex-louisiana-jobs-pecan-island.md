@@ -6,6 +6,11 @@ date: 2026-10-31
 time: 12:30
 updated: 2026-11-07
 featured: yes
+image: /img/photos/pecan-island-aerial-usgs.jpg
+image_alt: Aerial view of Pecan Island, Louisiana, with homes and trees strung along LA 82 on a narrow ridge, farm fields and marsh to the north, and open water and marsh islands to the south
+image_caption: Pecan Island and the surrounding marsh from the air, in government aerial imagery. Homes and camps line LA 82 along the ridge.
+image_credit: "Image: USDA / USGS The National Map"
+image_source: https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer
 sources:
 - SpaceX careers job board (Greenhouse), listings for Pecan Island, La., checked Oct. 31, 2026 | https://boards.greenhouse.io/spacex
 - The Center Square, "Former chief of staff for Landry registers as SpaceX lobbyist," Oct. 28, 2026 | https://www.thecentersquare.com/louisiana/article_0944c3b3-ea0c-4204-ab51-ccd7e633d2fb.html

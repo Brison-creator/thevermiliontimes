@@ -4,8 +4,11 @@ deck: Three proposals on file with the Federal Register would change when a rock
 section: starbase
 date: 2026-11-06
 time: 06:40
-illustration: starbase
-image: cut
+image: /img/photos/starship-ift5-liftoff-2024.jpg
+image_alt: SpaceX's Starship rocket lifts off beside its launch tower in a huge cloud of orange-lit exhaust, seen across the water at sunrise
+image_caption: "File photo: Starship lifts off on its fifth test flight from Starbase, Texas, in October 2024. Commercial launches like this fly under FAA licenses."
+image_credit: "Photo: Steve Jurvetson, CC BY 2.0"
+image_source: https://commons.wikimedia.org/w/index.php?curid=153891213
 sources:
 - Federal Register, public inspection, "Flight Abort Burden Reducing Clarification on End of Flight Safety Limits," FAA proposed rule, doc. 2026-22782, docket FAA-2026-9943, to be published Nov. 9, 2026 | https://www.federalregister.gov/public-inspection/2026-22782/flight-abort-burden-reducing-clarification-on-end-of-flight-safety-limits
 - Federal Register, public inspection, "Flight Safety Limits Objectives Burden Reducing Clarification," FAA proposed rule, doc. 2026-22783, docket FAA-2026-9937 | https://www.federalregister.gov/public-inspection/2026-22783/flight-safety-limits-objectives-burden-reducing-clarification
