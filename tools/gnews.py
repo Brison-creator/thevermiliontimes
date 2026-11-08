@@ -11,7 +11,7 @@ import html, json, re, sys, urllib.parse, urllib.request
 
 UA = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36'}
 QUERIES = ['Vermilion Parish', 'Starbase Louisiana', 'SpaceX Pecan Island', 'Vermilion Parish Sheriff', 'Abbeville Louisiana',
-           'Kaplan Louisiana', 'Erath Louisiana', 'Gueydan', 'Delcambre', 'Maurice Louisiana', 'Intracoastal City']
+           'Kaplan Louisiana', 'Erath Louisiana', 'Gueydan', 'Gueydan Louisiana', 'Delcambre', 'Maurice Louisiana', 'Intracoastal City']
 
 def get(url, data=None, headers=None):
     req = urllib.request.Request(url, data=data, headers={**UA, **(headers or {})})

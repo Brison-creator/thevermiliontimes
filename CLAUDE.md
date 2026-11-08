@@ -132,6 +132,7 @@ Brison wants the Times to do its own research, not rewrite other outlets.
 - **Primary sources to work every run:**
   - Police Jury: agendas, minutes and notices at vppj.org (`PDFforms/Agendas/Agendas <year>/`, `PDFforms/minutes/`, `PDFforms/Notices/`). Read the PDFs with `pdftotext -layout`.
   - School Board (vpsb.net), City of Abbeville, towns of Kaplan, Erath, Gueydan, Delcambre, Maurice.
+  - **Gueydan (every run; the town has no newspaper anymore, so the Times is its paper):** council agendas and minutes at https://gueydan.org/resource-center/agendas/ (PDFs under `gueydan.org/wp-content/uploads/<year>/<month>/`) and notices at https://gueydan.org/public-notices/. Read new PDFs with `pdftotext -layout`. Town Hall: 600 Main St., 337-536-9415. Cover the council, the Dec. 12, 2026 mayor's runoff (Jason Suire vs. Efrem "Zim" Livingston), schools, sports, the Duck Festival and the people.
   - Election results and candidate lists: voterportal.sos.la.gov.
   - Federal Register API (FAA, Army Corps notices for Pecan Island / Starbase Louisiana), FAA commercial space pages.
   - Legislative Auditor reports (app.lla.state.la.us) for parish bodies.
@@ -170,7 +171,7 @@ slow day; zero if nothing can be verified).
    Run at least these queries: `Vermilion+Parish`, `Starbase+Louisiana`,
    `SpaceX+Pecan+Island`, `Vermilion+Parish+Sheriff`, `Abbeville+Louisiana`,
    `Kaplan+Louisiana`, `Erath+Louisiana`, `Gueydan`, `Delcambre`,
-   `Maurice+Louisiana`, `Intracoastal+City`. Then check primary sources
+   `Maurice+Louisiana`, `Intracoastal+City`, `Gueydan+Louisiana`. Then check primary sources
    directly: vppj.org (agendas, minutes, notices), voterportal.sos.la.gov,
    the School Board, City of Abbeville, Town of Kaplan, DOTD, LDWF, NWS Lake
    Charles, FAA (Starbase Louisiana environmental review), Louisiana Economic
