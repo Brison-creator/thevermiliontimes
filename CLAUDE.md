@@ -140,6 +140,19 @@ Brison wants the Times to do its own research, not rewrite other outlets.
 - In each story say what records we read ("according to the agenda the parish posted"). List those documents in `sources:`.
 - What we cannot do from records (interviews, photos at meetings, phone calls) goes to Brison as a short "go get this" note in the run summary.
 
+## Real photos on every story (publisher's rule, Nov. 8, 2026)
+- Every story gets a real photo of its actual subject whenever a properly licensed one exists. Engravings (`image: cut`) are the fallback only when no real, fitting, licensed photo can be found.
+- Where to look, in order:
+  1. Photos Brison sends.
+  2. U.S. government images, which are public domain: NOAA, NASA, FAA, U.S. Army Corps of Engineers, USGS, U.S. Fish & Wildlife, USDA, National Weather Service, the military. Credit the agency ("Photo: NOAA").
+  3. SpaceX's own Flickr photos, which SpaceX releases to the public domain. Credit "Photo: SpaceX".
+  4. Wikimedia Commons, only Public domain, CC0, CC BY or CC BY-SA. Credit the photographer and the license ("Photo: Jane Doe, CC BY 2.0") and link the file page in `image_source`.
+  5. An organization's own photo of its own event, used to promote that event (for example the Giant Omelette Celebration's photo). Credit the organization.
+- Check the license on the file's own page before using it. Never use AP, Getty, Reuters, TV station or newspaper photos, and never pull a random image from a Google search.
+- The photo must show the story's real subject: the right place, agency, event or person. A Texas photo never goes on a Pecan Island story. Name the place and year in the caption, and say "file photo" or "a past year" when it is not from the news event itself.
+- Commons rate-limits its API: wait a few seconds between calls and download from upload.wikimedia.org thumbnails (`/thumb/<a>/<ab>/<File>/<width>px-<File>`, where `ab` is the first two hex characters of md5(filename)).
+- Save photos to `img/photos/<slug>.jpg` (1600 wide) plus `-1280.webp` and `-640.webp`, and set `image`, `image_alt`, `image_caption`, `image_credit` and `image_source` in the front matter.
+
 ## Daily story routine
 
 The goal is to be the paper of record for Vermilion Parish: fast, complete and
