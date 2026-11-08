@@ -536,8 +536,13 @@ def section_body(k):
 </article>'''
 
 def pick_featured():
-    pinned=[a for a in ARTICLES if a.get('featured','').lower() in ('yes','true','1')]
-    return pinned[0] if pinned else ARTICLES[0]
+    # The newest story leads the front page. A pinned (featured: yes) story only
+    # takes the lead while it is fresh (under 24 hours old), so a pin can never
+    # leave an old story sitting on top.
+    newest=ARTICLES[0]
+    now=datetime.datetime.now(newest['pub'].tzinfo) if newest['pub'].tzinfo else datetime.datetime.now()
+    pinned=[a for a in ARTICLES if a.get('featured','').lower() in ('yes','true','1') and (now-a['pub']).total_seconds()<86400]
+    return pinned[0] if pinned else newest
 def rail_item(a):
     return f'''<li><p class="kicker">{SECTION_NAME[a["section"]]}<span class="new-tag" data-pub="{a["pub"].isoformat()}" hidden>New</span></p>
       <h3 class="rail-head"><a href="{a["url"]}">{html.escape(a["title"])}</a></h3><p class="meta">{stamp(a)}</p></li>'''
@@ -549,12 +554,12 @@ def home_body_html():
     if not ARTICLES:
         return '<p class="empty">The first stories are on their way.</p>'
     feat=pick_featured(); rest=[a for a in ARTICLES if a is not feat]
-    rail=rest[:3]; top=rest[3:6]
-    TOPS=(f'<section class="top-stories" aria-labelledby="top-h"><h2 id="top-h" class="label">More Top Stories</h2><div class="ts-grid">'+''.join(top_item(a) for a in top)+'</div></section>') if top else ''
+    rail=rest[:5]; top=rest[5:11]
+    TOPS=(f'<section class="top-stories" aria-labelledby="top-h"><h2 id="top-h" class="label">More Stories</h2><div class="ts-grid">'+''.join(top_item(a) for a in top)+'</div></section>') if top else ''
     return f'''<div class="front">
   <section class="featured" aria-labelledby="feat-h">
     <div class="feat-text">
-      <p class="label">Featured</p>
+      <p class="label">Latest</p>
       <h2 id="feat-h" class="h-lead"><a href="{feat["url"]}">{html.escape(feat["title"])}</a></h2>
       <p class="deck">{inline(feat["deck"])}</p>
       <p class="byline">Published by Brison McPhail <span class="sep">|</span> {stamp(feat,True)}</p>
@@ -568,6 +573,12 @@ def home_body_html():
     <a class="more-link" href="/news/">More Stories <span aria-hidden="true">&rarr;</span></a>
   </aside>
 </div>
+<section class="fb-band" aria-label="Follow us on Facebook">
+  <a class="fb-band-in" href="{FACEBOOK}" rel="noopener"><svg viewBox="0 0 24 24" width="40" height="40" aria-hidden="true"><path fill="currentColor" d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/></svg>
+    <span class="fb-band-txt"><b>Follow The Vermilion Times on Facebook</b><span>Every story, breaking news and Starbase Louisiana updates in your feed the minute they post.</span></span>
+    <span class="fb-band-btn">Follow</span>
+  </a>
+</section>
 {TOPS}
 <section class="watch-band" aria-labelledby="watch-h">
   <div>
