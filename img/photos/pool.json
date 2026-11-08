@@ -103,5 +103,28 @@
    "credit": "Dwight Burdette / Wikimedia Commons, CC BY 3.0",
    "source": "https://commons.wikimedia.org/wiki/File:I_Voted_Sticker.JPG"
   }
+ ],
+ "starbase-texas-construction": [
+  {
+   "image": "/img/photos/starbase-texas-tower-construction-2021.jpg",
+   "alt": "SpaceX's launch tower under construction at Starbase, Texas, surrounded by cranes, with ground support tanks in the middle of the site",
+   "caption": "File photo: SpaceX's launch tower going up at Starbase, Texas, in June 2021.",
+   "credit": "Photo: Alexander Hatley, CC BY 2.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Starship_launch_site_in_construction.jpg"
+  },
+  {
+   "image": "/img/photos/starbase-texas-tower-arms-construction-2021.jpg",
+   "alt": "Workers stand beside the huge black steel arms of SpaceX's launch tower as they are assembled on the ground at Starbase, Texas, with cranes behind",
+   "caption": "File photo: Crews assemble the launch tower's catch arms at Starbase, Texas, in September 2021.",
+   "credit": "Photo: Lars Plougmann, CC BY-SA 2.0",
+   "source": "https://www.flickr.com/photos/75062596@N00/51440134145"
+  },
+  {
+   "image": "/img/photos/starbase-texas-launch-mount-construction-2021.jpg",
+   "alt": "SpaceX's orbital launch mount, a steel table on thick legs, under construction beside the launch tower at Starbase, Texas, with a crane alongside",
+   "caption": "File photo: SpaceX's orbital launch mount under construction at Starbase, Texas, in August 2021.",
+   "credit": "Photo: Jenny Hautmann, CC BY-SA 4.0",
+   "source": "https://commons.wikimedia.org/wiki/File:Starbase_OLM_construction_08-2021.jpg"
+  }
  ]
 }
