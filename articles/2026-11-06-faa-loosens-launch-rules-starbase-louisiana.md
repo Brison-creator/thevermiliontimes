@@ -4,13 +4,14 @@ deck: Three proposals on file with the Federal Register would change when a rock
 section: starbase
 date: 2026-11-06
 time: 06:40
+updated: 2026-11-09
 image: /img/photos/starship-ift5-liftoff-2024.jpg
 image_alt: SpaceX's Starship rocket lifts off beside its launch tower in a huge cloud of orange-lit exhaust, seen across the water at sunrise
 image_caption: "File photo: Starship lifts off on its fifth test flight from Starbase, Texas, in October 2024. Commercial launches like this fly under FAA licenses."
 image_credit: "Photo: Steve Jurvetson, CC BY 2.0"
 image_source: https://commons.wikimedia.org/w/index.php?curid=153891213
 sources:
-- Federal Register, public inspection, "Flight Abort Burden Reducing Clarification on End of Flight Safety Limits," FAA proposed rule, doc. 2026-22782, docket FAA-2026-9943, to be published Nov. 9, 2026 | https://www.federalregister.gov/public-inspection/2026-22782/flight-abort-burden-reducing-clarification-on-end-of-flight-safety-limits
+- Federal Register, "Flight Abort Burden Reducing Clarification on End of Flight Safety Limits," FAA proposed rule, 91 FR 70817, Nov. 9, 2026, docket FAA-2026-9943, comments due Dec. 9, 2026 | https://www.federalregister.gov/documents/2026/11/09/2026-22782/flight-abort-burden-reducing-clarification-on-end-of-flight-safety-limits
 - Federal Register, public inspection, "Flight Safety Limits Objectives Burden Reducing Clarification," FAA proposed rule, doc. 2026-22783, docket FAA-2026-9937 | https://www.federalregister.gov/public-inspection/2026-22783/flight-safety-limits-objectives-burden-reducing-clarification
 - Federal Register, public inspection, "Conditional Expected Casualty Exception for Failures Resulting in an Uncontrolled Atmospheric Return," FAA proposed rule, doc. 2026-22784, docket FAA-2026-9942 | https://www.federalregister.gov/public-inspection/2026-22784/conditional-expected-casualty-exception-for-failures-resulting-in-an-uncontrolled-atmospheric-return
 - Federal Register, public inspection, "Commercial Space Transportation Regulations; Technical Corrections," FAA final rule, doc. 2026-22781 | https://www.federalregister.gov/public-inspection/2026-22781/commercial-space-transportation-regulations-technical-corrections
@@ -38,6 +39,8 @@ In the same announcement, the FAA said it has also issued a proposed rule that w
 The agency also said it is asking the public and the industry where new spaceports should be built and how to set aside "priority airspace" for launch routes. It said it expects as many as 1,000 launches a year by 2030 and 10,000 licensed launches and reentries a year by 2035, up from 217 U.S. commercial launches in 2025. A full overhaul of the licensing rules is planned for 2027.
 
 Transportation Secretary Sean P. Duffy said the changes are about "getting rid of the outdated rules that hold innovators back" while "never compromising on safety."
+
+**Update, Nov. 9:** The three proposals were formally published in the Federal Register on Monday (91 FR 70813, 70817 and 70821). **Comments are due Wednesday, Dec. 9, 2026.**
 
 ## How to comment
 
