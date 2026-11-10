@@ -5,7 +5,6 @@ section: starbase
 date: 2026-10-31
 time: 12:30
 updated: 2026-11-09
-featured: yes
 image: /img/photos/pecan-island-aerial-usgs.jpg
 image_alt: Aerial view of Pecan Island, Louisiana, with homes and trees strung along LA 82 on a narrow ridge, farm fields and marsh to the north, and open water and marsh islands to the south
 image_caption: Pecan Island and the surrounding marsh from the air, in government aerial imagery. Homes and camps line LA 82 along the ridge.
