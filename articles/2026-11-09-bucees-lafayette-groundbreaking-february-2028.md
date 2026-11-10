@@ -2,7 +2,7 @@
 title: "Buc-ee's Breaks Ground in Lafayette, Its Closest Store to Vermilion Parish, With a February 2028 Target"
 deck: The $82 million travel center at I-10 and Louisiana Avenue will have 120 gas pumps, about 700 parking spaces and boudin on the menu. Lafayette's economic development agency says it will support more than 300 jobs.
 section: business
-date: 2026-11-10
+date: 2026-11-09
 time: 19:52
 image: /img/photos/bucees-travel-center-sevierville-2023.jpg
 image_alt: A long Buc-ee's fuel canopy with rows of gas pumps stretching toward the store's tan stone building and beaver logo sign under a blue evening sky
