@@ -210,6 +210,14 @@ slow day; zero if nothing can be verified).
 - Updates to an existing story are not reposted, except a major development (for example, a race called or a death toll confirmed), posted as a new message with the same link.
 - Never post to Rocket Farm, NOHM or Jet Heat and Air pages from the newsroom.
 
+## Emailing sources for quotes and updates (publisher's permission, Nov. 9, 2026)
+- Brison gave standing permission to email anyone for quotes, confirmations and updates on stories. Use the Gmail connector (`send_message`); it sends from Brison's Gmail, so always CC news@thevermiliontimes.com and ask for replies to news@thevermiliontimes.com.
+- Send only to official or published work addresses (agency press offices, public officials' office emails, a company's media contact, an attorney's firm address). Never guess an address, and never email a private person's personal address unless Brison supplied it.
+- Identify the paper plainly: "I'm writing for The Vermilion Times, a local news site in Vermilion Parish." Say what we reported, ask specific numbered questions, give a reply-by date, and ask how to attribute the answer. Sign "Brison McPhail, Publisher, The Vermilion Times, https://thevermiliontimes.com, news@thevermiliontimes.com".
+- Polite and neutral: no threats, no promises of coverage, no sharing unpublished details about other sources, and no more than one follow-up per source per story.
+- Each run, check Gmail for replies (search `newer_than:3d` for the sources you wrote to), use on-the-record answers in an update with attribution ("FAA spokesperson X said in an email"), and note "did not respond by deadline" only after the stated date passes.
+- Log each inquiry in `data/inquiries.txt` as `date | organization | topic | story URL` (no email addresses in the repo) and commit it.
+
 ## Photos must make sense (publisher's rule)
 - A story's picture must show its actual subject: the right agency's vehicle, the right kind of event, the right place. Never borrow a photo from another topic (a river for a Police Jury story, a college stadium for high school scores, Texas for a Louisiana site story).
 - Order of choice: (1) Brison's own photo of the scene; (2) a free-license or public-domain photo of that exact subject, captioned "File photo:" with credit; (3) the section engraving (`image: cut`, with `illustration:` to pick courthouse, ballot box, badge, football field, rocket, etc.).
