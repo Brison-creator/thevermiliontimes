@@ -352,7 +352,7 @@ BRIEF_ACTION=''
 # Forms (The Edge of X, tips, contact) post through FormSubmit to the
 # publisher's inbox. After FormSubmit is activated, FORM_TO can be swapped for
 # the random alias it emails back, so no address appears in the page source.
-FORM_TO='brison@jetheatandair.com'
+FORM_TO='news@thevermiliontimes.com'
 FORM_URL=f'https://formsubmit.co/{FORM_TO}'
 def form_hidden(subject):
     return (f'<input type="hidden" name="_subject" value="{subject}"><input type="hidden" name="_template" value="table">'
