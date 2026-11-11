@@ -5,7 +5,7 @@ section: local
 date: 2026-11-10
 time: 15:51
 updated: 2026-11-11
-image: /img/photos/abbey-players-joseph-cast-dress-rehearsal-2026.jpg
+image: /img/photos/abbey-players-joseph-cast-rehearsal-clean.jpg
 image_alt: The cast of Joseph and the Amazing Technicolor Dreamcoat in colorful costumes poses on the Abbey Players stage in front of a rainbow backdrop, with the Narrator smiling in the foreground of a selfie
 image_caption: "The cast of 'Joseph and the Amazing Technicolor Dreamcoat' at a dress rehearsal on the Abbey Players stage in Abbeville. Stacy Cueva, who plays the Narrator, took the photo."
 image_credit: "Photo: Stacy Cueva / Abbey Players"
