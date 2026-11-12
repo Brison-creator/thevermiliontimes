@@ -4,6 +4,7 @@ deck: The FAA moved all five public meetings on SpaceX's Texas expansion online 
 section: starbase
 date: 2026-11-09
 time: 16:05
+updated: 2026-11-12
 image: /img/photos/starbase-full-stack.jpg
 image_alt: A stainless-steel SpaceX Starship rocket stacked on its booster beside the launch tower at Starbase, Texas, under a blue sky
 image_caption: "File photo: A Starship stacked on its launch tower at Starbase, Texas, in 2022. The FAA is reviewing a plan to launch from this site up to 456 times a year."
@@ -55,5 +56,7 @@ This review is about the Texas site. Pecan Island is not in it, and nothing in t
 But it is the clearest look yet at the pace SpaceX has in mind for Starship, and Texas is where the company is testing the cadence it may one day want in Vermilion Parish. It is also the second FAA action on commercial launches in a week. The agency proposed easing several launch safety rules on Nov. 6, with comments due Dec. 9. [Read that story.](/news/faa-loosens-launch-rules-starbase-louisiana/)
 
 A draft environmental study, with another round of public comment, will come later, the FAA says.
+
+**Update, Nov. 12:** The FAA told the Times these meetings cover the Texas site only and that "SpaceX has not submitted an application for the FAA to evaluate proposed Starship operations in Louisiana." [Read more.](/news/faa-spacex-no-application-starship-louisiana/)
 
 Follow every development on the Times' [Starbase Watch page](/starbase/).
