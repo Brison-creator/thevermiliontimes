@@ -139,7 +139,7 @@ Brison wants the Times to do its own research, not rewrite other outlets.
   - DOTD lettings, LDWF notices, NWS Lake Charles, Louisiana Ethics campaign finance.
   - SpaceX's own job board and the live data on Starbase Watch.
 - In each story say what records we read ("according to the agenda the parish posted"). List those documents in `sources:`.
-- What we cannot do from records (interviews, photos at meetings, phone calls) goes to Brison as a short "go get this" note in the run summary.
+- What we cannot do from records (interviews, photos at meetings, phone calls) becomes an emailed media request to the source; Brison is not local, so do not hand it to him.
 
 ## Real photos on every story (publisher's rule, Nov. 8, 2026)
 - Every story gets a real photo of its actual subject whenever a properly licensed one exists. Engravings (`image: cut`) are the fallback only when no real, fitting, licensed photo can be found.
@@ -218,7 +218,7 @@ slow day; zero if nothing can be verified).
 - Polite and neutral: no threats, no promises of coverage, no sharing unpublished details about other sources, and no more than one follow-up per source per story.
 - Each run, check Gmail for replies (search `newer_than:3d` for the sources you wrote to), use on-the-record answers in an update with attribution ("FAA spokesperson X said in an email"), and note "did not respond by deadline" only after the stated date passes.
 - **Full media request format (Brison, Nov. 12, 2026):** every inquiry is a complete, polite media request, not a quick note. Use these parts: who we are (Brison McPhail, publisher of The Vermilion Times, a local news site covering Vermilion Parish); ABOUT THE STORY (what we are reporting and why it matters to parish readers); OUR QUESTIONS (numbered, specific); FORMAT (short phone interview or written answers, plus a photo we may publish with credit if useful); TIMING (publish date and a reply-by date); ATTRIBUTION (how they want to be quoted); reply to news@thevermiliontimes.com; full signature. Subject line starts "Media request:".
-- **Email first, then ask Brison:** when a "go get this" item has a published work email (press office, official, company, publicist or management listed on their own site), send the full media request yourself instead of asking Brison to call. Only list items for Brison that truly need him in person (photos, events, phone-only contacts).
+- **Brison is not in Vermilion Parish (Nov. 12, 2026): never give him in-person "go get this" jobs** (photos, events, interviews, calls, meetings). Instead: email a full media request to the organization or office, and ask them for photos they own and can let us publish with credit (event photos, rehearsal shots, official photos). Event photos from the organization itself are the first choice for local events. Tips from readers and a future Gueydan/parish correspondent fill the rest. In run summaries, list what was requested by email, not errands for Brison.
 - Log each inquiry in `data/inquiries.txt` as `date | organization | topic | story URL` (no email addresses in the repo) and commit it.
 
 ## Photos must make sense (publisher's rule)
