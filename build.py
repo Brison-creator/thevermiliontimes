@@ -188,6 +188,16 @@ def map_embed(a, body):
          f'<figcaption>The marker shows the Pecan Island community. Map: <a href="https://www.openstreetmap.org/?mlat={lat}&amp;mlon={lon}#map=10/{lat}/{lon}" rel="noopener">&copy; OpenStreetMap contributors</a></figcaption></figure>')
     return body.replace('<p>[[map]]</p>',fig).replace('<p class="dropcap">[[map]]</p>',fig)
 
+def inline_figures(body):
+    # [[img: /img/photos/file.jpg | alt text | caption]] in a story becomes a full-width figure
+    import re as _re
+    def rep(m):
+        parts=[x.strip() for x in m.group(1).split('|')]
+        src,alt,cap=(parts+['',''])[:3]
+        return (f'<figure class="map-embed"><img src="{html.escape(src)}" alt="{html.escape(alt)}" loading="lazy" decoding="async" style="width:100%;height:auto;display:block;border:1px solid var(--rule)">'
+                f'<figcaption>{html.escape(cap)}</figcaption></figure>')
+    return _re.sub(r'<p(?: class="dropcap")?>\[\[img:(.*?)\]\]</p>',rep,body)
+
 def article_body(a):
     def src_item(n,u):
         if not u: return f'<li>{html.escape(n)}</li>'
@@ -205,7 +215,7 @@ def article_body(a):
   <p class="byline with-photo"><img class="pub-photo" src="/img/publisher.png" width="44" height="44" alt=""><span>{("By "+html.escape(a["byline"])) if a.get("byline") else "By The Vermilion Times"} &middot; Published by <a class="pub-name" href="/about/#publisher">Brison McPhail</a><br>{stamp(a,True)}{upd}</span></p>
   {figure(a,lazy=False)}
   <div class="article-body">
-{map_embed(a, a["body_html"])}
+{inline_figures(map_embed(a, a["body_html"]))}
   </div>
   {disc}
   <a class="fb-follow" href="{FACEBOOK}" rel="noopener"><svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path fill="currentColor" d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/></svg><span><b>Follow The Vermilion Times on Facebook</b><br>Breaking news, election results and Starbase Louisiana updates the minute they post.</span></a>

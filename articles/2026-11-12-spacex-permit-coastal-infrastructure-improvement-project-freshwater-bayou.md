@@ -4,6 +4,7 @@ deck: State records show SpaceX applied in September to build a Gulf wharf at Fr
 section: starbase
 date: 2026-11-12
 time: 13:28
+updated: 2026-11-12
 image: /img/photos/la-3147-freshwater-city-road-sign.jpg
 image_alt: A bullet-pocked Louisiana state highway sign for LA 3147 stands in front of coastal brush and dry marsh grass under a gray sky
 image_caption: LA 3147, Freshwater City Road, near Pecan Island. SpaceX's proposed Gulf wharf would sit at the end of this road.
@@ -20,6 +21,8 @@ State records reviewed by The Vermilion Times show Space Exploration Technologie
 The application describes a cargo operation: a Gulf wharf, barge docks, a heavy-haul road and canal dredging, all at the southern tip of the parish near Pecan Island. In its 12 pages, the only "launch" is the existing **Freshwater City Boat Launch**, which the plan says it will avoid. "Rocket" appears only in SpaceX's own mailing address, 1 Rocket Road in Starbase, Texas.
 
 The FAA told the Times on Thursday that SpaceX has not yet applied for the federal review needed to launch Starship from Louisiana. [Read that story.](/news/faa-spacex-no-application-starship-louisiana/)
+
+[[img: /img/photos/spacex-pecan-island-road-map.jpg | Map of southern Vermilion Parish showing the northern end of SpaceX's proposed heavy-haul road near LA 82 and its southern end at a Gulf wharf site beside the Freshwater Bayou Canal near the coast | The end points of SpaceX's proposed heavy-haul road, from its coastal permit application. The dashed line shows general direction only; the 15.75-mile route and its 8,110-foot bridge have not been made public. Map: The Vermilion Times; imagery: USGS The National Map.]]
 
 ## What SpaceX wants to build
 
