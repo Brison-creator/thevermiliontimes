@@ -138,6 +138,7 @@ Brison wants the Times to do its own research, not rewrite other outlets.
   - Legislative Auditor reports (app.lla.state.la.us) for parish bodies.
   - DOTD lettings, LDWF notices, NWS Lake Charles, Louisiana Ethics campaign finance.
   - SpaceX's own job board and the live data on Starbase Watch.
+  - LED's official SpaceX project page and FAQ, https://www.opportunitylouisiana.gov/spacex (jobs, PILOT payments, buildout, roads, utilities, permits). Check it for changes when covering the project, and quote it as LED's public statement.
 - In each story say what records we read ("according to the agenda the parish posted"). List those documents in `sources:`.
 - What we cannot do from records (interviews, photos at meetings, phone calls) becomes an emailed media request to the source; Brison is not local, so do not hand it to him.
 
