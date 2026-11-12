@@ -4,6 +4,7 @@ deck: A March briefing by Louisiana Economic Development, code-named Project Osp
 section: starbase
 date: 2026-11-12
 time: 04:44
+updated: 2026-11-12
 image: /img/photos/pecan-island-aerial-usgs.jpg
 image_alt: Aerial view of Pecan Island, Louisiana, with homes and trees strung along LA 82 on a narrow ridge, farm fields and marsh to the north, and open water and marsh islands to the south
 image_caption: Pecan Island and the surrounding marsh from the air, in government aerial imagery. SpaceX plans its Louisiana launch site nearby.
@@ -12,6 +13,7 @@ image_source: https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOn
 sources:
 - WWNO / Gulf States Newsroom, Drew Hawkins, report on the Project Osprey records, Nov. 11, 2026 | https://www.wwno.org/economy/2026-11-11/a-new-city-for-spacex-in-louisiana-records-reveal-the-scale-of-officials-plans
 - State records published by the Gulf States Newsroom (DocumentCloud), "cpra-records1" | https://www.documentcloud.org/documents/28880366-cpra-records1/
+- Louisiana Economic Development, "SpaceX in Vermilion Parish, Louisiana" project page and FAQ, accessed Nov. 12, 2026 | https://www.opportunitylouisiana.gov/spacex
 ---
 Months before SpaceX's Aug. 25 announcement in downtown Abbeville, the state's economic development agency listed something bigger than a launch site among its needs to land the company: a new city in Vermilion Parish.
 
@@ -37,6 +39,10 @@ LED, SpaceX and Gov. Jeff Landry's office did not answer the newsroom's question
 A new city would change who governs land near the launch site and who sets the rules there. In Texas, Starbase became its own city with a SpaceX vice president as mayor.
 
 Nothing in the records published so far shows that a city is being formed in Vermilion Parish, and the April briefing dropped the idea from its list without explanation.
+
+## What the state says publicly
+
+Louisiana Economic Development's own public page on the project does not mention a city. It does say that at full buildout, the site is expected to include **employee housing**, along with five launch complexes with two pads each, propellant storage and a plant to make rocket propellant. LED's page says construction should begin by the end of 2027, with the first launch targeted as soon as 2029.
 
 The records add to questions already being raised at home. Parish residents and a nonprofit have sued the Police Jury and the parish's industrial development board, saying the SpaceX tax deal was approved in violation of the Open Meetings Law. [Read our coverage of the lawsuit.](/news/residents-sue-to-void-spacex-tax-deal/)
 
