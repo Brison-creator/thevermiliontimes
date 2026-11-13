@@ -4,7 +4,7 @@ deck: SpaceX's own job board lists eight positions at its planned Starbase Louis
 section: starbase
 date: 2026-10-31
 time: 12:30
-updated: 2026-11-11
+updated: 2026-11-13
 image: /img/photos/pecan-island-aerial-usgs.jpg
 image_alt: Aerial view of Pecan Island, Louisiana, with homes and trees strung along LA 82 on a narrow ridge, farm fields and marsh to the north, and open water and marsh islands to the south
 image_caption: Pecan Island and the surrounding marsh from the air, in government aerial imagery. Homes and camps line LA 82 along the ridge.
@@ -53,6 +53,8 @@ Whether those jobs go to Vermilion Parish residents is an open question. The par
 **Update, Nov. 9:** The Sr. Government Affairs Manager listing for Pecan Island, first posted Oct. 6, is no longer on SpaceX's job board as of Monday afternoon. It was the job meant to build SpaceX's "relationship with the local community." SpaceX does not say why listings come down; a role may have been filled or paused. That leaves **eight** Pecan Island listings.
 
 **Update, Nov. 11:** SpaceX posted two more Pecan Island jobs Tuesday night: a Director of Materials Management, whose listing describes "Starship production" at the Louisiana site and relocation to Louisiana in early 2027, and a Sr. Regulatory Counsel for data center power and utilities. That brings the count to **10**. [Read about them.](/news/spacex-pecan-island-jobs-starship-production-data-center-power/)
+
+**Update, Nov. 13:** SpaceX posted a Manager, Environmental Health & Safety for Pecan Island on Friday, a second safety job alongside the senior manager listed above. Its duties include serving as the launch site's main contact for local response agencies. That brings the count to **11**. [Read about it.](/news/spacex-pecan-island-ehs-manager-local-responders/)
 
 ## How to apply
 
