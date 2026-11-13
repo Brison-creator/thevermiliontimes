@@ -4,6 +4,7 @@ deck: Liftoff from Texas is set for 4:45 p.m. Central. Minutes later SpaceX will
 section: starbase
 date: 2026-11-13
 time: 16:15
+updated: 2026-11-13
 featured: yes
 image: /img/photos/starship-ift5-liftoff-2024.jpg
 image_alt: SpaceX's Starship rocket lifts off beside its launch tower in a huge cloud of orange-lit exhaust, seen across the water at sunrise
@@ -15,6 +16,8 @@ sources:
 - FAA Air Traffic Control System Command Center, Operations Plan advisory, Nov. 13, 2026 | https://www.fly.faa.gov/adv/adv_spt
 - Space.com, Starship Flight 15 live updates, Nov. 13, 2026 | https://www.space.com/news/live/spacex-starship-flight-15-live-updates-nov-13-2026-starship-first-double-landing-attempt
 ---
+**Update, 5:25 p.m. Friday:** Starship lifted off at about **4:47 p.m. Central**. The booster did not get caught: SpaceX called off the tower catch during the booster's flight back, and it came down in the Gulf instead, according to SpaceX's live webcast as reported by Space.com. "We'll dig in to what caused that abort during its flight back to the tower," SpaceX's Dan Huot said on the webcast. The ship finished its climb with all six engines and reached space, and SpaceX said it was "go for orbit," with the 26 Starlink satellites to be released next. If the ship stays healthy overnight, SpaceX will try the first-ever ship catch on **Saturday**, in a window the FAA lists from 2:56 to 6:14 p.m. Central.
+
 Within the hour, the biggest rocket ever built will light 33 engines on the Texas coast and try something no one has done before.
 
 SpaceX's **Starship Flight 15** is set to lift off from Starbase, Texas, in a 75-minute window that opens at **4:45 p.m. Central** today. Space.com reported Friday afternoon that the Federal Aviation Administration had approved the flight, clearing the last hurdle. The Times has not yet seen the license on the FAA's website.
