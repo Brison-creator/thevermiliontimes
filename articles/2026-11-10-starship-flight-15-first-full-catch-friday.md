@@ -4,6 +4,7 @@ deck: Starship Flight 15 could launch from Texas as soon as Friday at 4:45 p.m. 
 section: starbase
 date: 2026-11-10
 time: 05:46
+updated: 2026-11-13
 image: /img/photos/starship-booster-return-tower-2024.jpg
 image_alt: A Super Heavy booster fires its engines as it descends beside the tall steel launch tower at Starbase, Texas, under a pink evening sky, with marsh and water in the foreground
 image_caption: "File photo: A Super Heavy booster comes back to the tower at Starbase, Texas, on Oct. 13, 2024, the first time SpaceX caught one. On Friday it hopes to catch the ship too."
@@ -11,8 +12,11 @@ image_credit: "Photo: Steve Jurvetson, CC BY 2.0"
 image_source: https://commons.wikimedia.org/wiki/File:Starship_Booster_Return_on_Final_Approach_(54063904149).jpg
 sources:
 - SpaceX, "Starship Flight 15" mission page, accessed Nov. 10, 2026 | https://www.spacex.com/launches/starship-flight-15
+- FAA Air Traffic Control System Command Center, Operations Plan advisory 035, Nov. 13, 2026 | https://www.fly.faa.gov/adv/adv_spt
 - Federal Register, FAA notice on Starship operations at Boca Chica, doc. 2026-22898, docket FAA-2026-12808 | https://www.federalregister.gov/public-inspection/2026-22898/environmental-impact-statements-availability-etc-spacex-starship-super-heavy-launch-and-landing
 ---
+**Update, Friday morning:** The FAA's national air traffic plan for Friday lists Starship Flight 15 with a launch window of **4:45 to 6:40 p.m. Central** today and a backup window at the same time Saturday. It also lists a separate reentry window for the ship on **Saturday, from 2:56 to 6:14 p.m. Central**, with the same window Sunday as a backup. As of Friday morning, the Times could not find a published FAA license for this flight, and SpaceX still lists it as pending regulatory approval.
+
 The rocket SpaceX wants to launch from Pecan Island faces its biggest test yet this week.
 
 SpaceX says Starship's 15th flight could lift off from Starbase, Texas, as soon as **Friday, Nov. 13**, in a 75-minute window opening at **4:45 p.m. Central**. The launch still needs regulatory approval, and the company warns the date is likely to move.
