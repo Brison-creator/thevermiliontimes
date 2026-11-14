@@ -4,7 +4,12 @@ deck: The Federal Highway Administration named the city's downtown revival the n
 section: government
 date: 2026-11-13
 time: 13:30
-illustration: roads
+updated: 2026-11-14
+image: /img/photos/downtown-abbeville-state-street-1995.jpg
+image_alt: Black-and-white photo of a row of two-story brick storefronts in downtown Abbeville, with pickup trucks and cars parked along the street, a pedestrian on the sidewalk and oak branches overhead
+image_caption: "File photo: Downtown Abbeville's historic district in 1995, when it was added to the National Register of Historic Places. The award-winning street project remade this district's streets and crossings."
+image_credit: "Photo: Donna Fricker, National Register of Historic Places (public domain)"
+image_source: https://npgallery.nps.gov/AssetDetail/NRIS/95001261
 sources:
 - Federal Highway Administration, Center for Local Aid Support, 2026 Build a Better Mousetrap winners | https://www.fhwa.dot.gov/clas/babm/babm_winners_2026.aspx
 - City of Abbeville, "Abbeville Makes History with National FHWA Innovation Award" | https://cityofabbeville.net/abbeville-fhwa-award-2026/
