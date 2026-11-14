@@ -144,5 +144,14 @@
    "credit": "Photo: Brison McPhail / The Vermilion Times",
    "source": "https://thevermiliontimes.com/"
   }
+ ],
+ "starship-catch": [
+  {
+   "image": "/img/photos/starship-flight-15-reentry-spacex-webcast.jpg",
+   "alt": "View from a camera on SpaceX's Starship as it reenters the atmosphere, its flap glowing orange and pink with plasma above clouds and blue ocean",
+   "caption": "Starship's flap glows with plasma as Ship 42 reenters the atmosphere on Nov. 14, 2026, during Flight 15.",
+   "credit": "Image: SpaceX webcast",
+   "source": "https://www.spacex.com/launches/starship-flight-15"
+  }
  ]
 }
