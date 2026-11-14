@@ -4,8 +4,11 @@ deck: The 25th-seeded Delcambre won by a single point on the road. Erath, North 
 section: sports
 date: 2026-11-13
 time: 23:20
-illustration: sports
-image: cut
+image: /img/photos/delcambre-aerial-harbor-2012.jpg
+image_alt: Aerial view of Delcambre, Louisiana, with shrimp boats docked along the bayou, a blue-roofed building on the waterfront, a parking lot and green fields stretching to a line of trees
+image_caption: "File photo: Delcambre and its shrimp boat harbor from the air. The town's team is still alive in the playoffs."
+image_credit: "Photo: Louisiana Sea Grant, CC BY 2.0"
+image_source: https://commons.wikimedia.org/wiki/File:Delcambre_Aerials_11-21-13_-_057.jpg
 sources:
 - Louisiana High School Athletic Association, 2026 football playoff brackets, Division IV Non-Select | https://www.lhsaaonline.org/MainBracket32.aspx?s=1&y=2026&d=IV&select=0
 - LHSAA, 2026 football playoff brackets, Division IV Select | https://www.lhsaaonline.org/MainBracket32.aspx?s=1&y=2026&d=IV&select=1

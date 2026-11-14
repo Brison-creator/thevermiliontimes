@@ -5,7 +5,7 @@
         --headline "..." --deck "..." --photo img/photos/x.jpg --credit "Photo: ..." 
 
 Writes img/social/<slug>.png (served at https://thevermiliontimes.com/img/social/<slug>.png).
---photo may be a section engraving (img/cuts/<name>.png). Uses Playwright's Chromium via node.
+--photo must be a real licensed photo; engravings are refused. Uses Playwright's Chromium via node.
 """
 import argparse, datetime, html, os, subprocess, tempfile, json
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -15,6 +15,8 @@ for a in ('slug', 'kicker', 'headline', 'deck', 'photo'): ap.add_argument('--' +
 ap.add_argument('--credit', default='')
 ap.add_argument('--date', default='')
 a = ap.parse_args()
+if '/img/cuts/' in a.photo or a.photo.startswith('img/cuts'):
+    raise SystemExit('No engravings on Facebook cards (Brison, Nov. 14). Find a real licensed photo first.')
 e = lambda s: html.escape(s, quote=True)
 date = a.date or datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=-6))).strftime('%A, %B %-d, %Y')
 photo = 'file://' + os.path.abspath(os.path.join(ROOT, a.photo.lstrip('/')))
