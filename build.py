@@ -707,7 +707,7 @@ files={
 for k,_ in SECTIONS:
     head,txt=SEC_TEXT.get(k,('',''))
     files[f'{k}/index.html']=page(f'/{k}/',f'{SEC_TITLE.get(k,re.sub("&amp;","&",SECTION_NAME[k])+" News")} | The Vermilion Times'.replace('&','&amp;').replace('&amp;amp;','&amp;'),
-        re.sub('<[^>]+>','',txt)[:158],section_body(k),False,None,'/img/cuts/'+(k if os.path.exists(os.path.join(R,'img','cuts',k+'.png')) else 'local')+'.png')
+        re.sub('<[^>]+>','',txt)[:158],section_body(k),False,None,next((x['img_share'] for x in ARTICLES if x['section']==k and '/img/cuts/' not in x['img_share']),'/img/photos/downtown-abbeville-state-street-1995.jpg'))
 # search: a small JSON index the search page filters in the browser
 io.open(R+'search.json','w',encoding='utf-8').write(json.dumps([{'t':re.sub('<[^>]+>','',html.unescape(x['title'])),'d':re.sub('<[^>]+>','',inline(x['deck'])),
     's':re.sub('&amp;','&',SECTION_NAME[x['section']]),'u':x['url'],'p':ap_date(x['d']),'b':re.sub('<[^>]+>',' ',x['body_html'])[:4000]} for x in ARTICLES],ensure_ascii=False))
