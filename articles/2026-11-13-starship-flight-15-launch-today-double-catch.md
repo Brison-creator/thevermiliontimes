@@ -5,7 +5,6 @@ section: starbase
 date: 2026-11-13
 time: 16:15
 updated: 2026-11-13
-featured: yes
 image: /img/photos/starship-ift5-liftoff-2024.jpg
 image_alt: SpaceX's Starship rocket lifts off beside its launch tower in a huge cloud of orange-lit exhaust, seen across the water at sunrise
 image_caption: "File photo: Starship lifts off on its fifth test flight from Starbase, Texas, in October 2024. Tonight's Flight 15 aims to bring both of its stages home."
