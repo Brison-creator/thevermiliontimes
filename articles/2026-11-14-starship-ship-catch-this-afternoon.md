@@ -4,7 +4,7 @@ deck: After 14 trips around Earth, Ship 42 is healthy and headed back to Texas, 
 section: starbase
 date: 2026-11-14
 time: 12:20
-featured: yes
+updated: 2026-11-14
 image: /img/photos/starship-booster-return-tower-2024.jpg
 image_alt: A Super Heavy booster fires its engines as it descends beside the tall steel launch tower at Starbase, Texas, under a pink evening sky, with marsh and water in the foreground
 image_caption: "File photo: A Super Heavy booster comes back to the tower at Starbase, Texas, in October 2024. Today SpaceX tries the same move with the ship."
@@ -14,6 +14,8 @@ sources:
 - SpaceX webcast statements by spokesperson Dan Huot, Nov. 14, 2026, as reported by Space.com | https://www.space.com/news/live/spacex-starship-flight-15-live-updates-nov-13-2026-starship-first-double-landing-attempt
 - FAA Air Traffic Control System Command Center, Operations Plan advisory, Nov. 13, 2026 | https://www.fly.faa.gov/adv/adv_spt
 ---
+**Update, 3:50 p.m.: SpaceX caught it.** Ship 42 landed in the tower's arms at about 3:20 p.m. Central, a first. [Read the story.](/news/spacex-catches-starship-first-time/)
+
 The second half of SpaceX's big test comes this afternoon.
 
 Starship's upper stage, **Ship 42**, has spent the night circling Earth and is in good health, SpaceX said Saturday morning. If flight controllers give the final go, it will fall back through the atmosphere and try to land in the arms of the launch tower at Starbase, Texas, at about **3:16 to 3:20 p.m. Central**, according to SpaceX's updates on its webcast, as reported by Space.com.
