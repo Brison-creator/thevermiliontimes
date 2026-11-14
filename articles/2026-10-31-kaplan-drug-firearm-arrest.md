@@ -4,7 +4,11 @@ deck: Investigators seized suspected methamphetamine, marijuana, prescription pi
 section: safety
 date: 2026-10-31
 time: 05:48
-image: cut
+image: /img/photos/kaplan-museum-2018.jpg
+image_alt: Le Musee de la Ville de Kaplan, a blue-gray building with a painted mural and a pink sign, with pickup trucks and cars parked out front
+image_caption: "File photo: Le Musée de la Ville de Kaplan, the town museum, in 2018."
+image_credit: "Photo: Sonia Regina Bordin Aykroyd, CC BY-SA 4.0"
+image_source: https://commons.wikimedia.org/wiki/File:Le_Musee_de_La_Ville_de_Kaplan.jpg
 sources:
 - KLFY, "Kaplan man faces multiple drug and firearm charges," Oct. 29, 2026 | https://www.klfy.com/local/vermilion-parish/kaplan-man-drug-firearm-charges/
 ---

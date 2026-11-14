@@ -5,7 +5,6 @@ section: sports
 date: 2026-11-08
 time: 16:00
 illustration: sports
-image: cut
 sources:
 - Louisiana High School Athletic Association, 2026 football playoff brackets, Divisions II Non-Select, III Non-Select, IV Non-Select and IV Select, released Nov. 8, 2026 | https://www.lhsaaonline.org/MainBracket32.aspx?s=1&y=2026&d=III&select=0
 ---

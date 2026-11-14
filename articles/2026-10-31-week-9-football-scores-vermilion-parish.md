@@ -4,7 +4,6 @@ deck: Final scores for every Vermilion Parish high school football team from Thu
 section: sports
 date: 2026-10-31
 time: 08:45
-image: cut
 sources:
 - Acadiana News First / KATC, "FNL: 2026 Acadiana Area High School Football Scores - Week 9," Oct. 30, 2026 | https://www.acadiananewsfirst.com/2026/10/30/fnl-2026-acadiana-area-high-school-football-scores-week-9/
 - The Advocate, "Kaplan survives scare from old rival Abbeville to win Russo Trophy," Oct. 30, 2026 | https://www.theadvocate.com/acadiana/sports/high_schools/kaplan-survives-scare-from-old-rival-abbeville-to-win-russo-trophy/article_0dbc9d1c-b8e5-4638-bf1a-f1dd5e2d8641.html

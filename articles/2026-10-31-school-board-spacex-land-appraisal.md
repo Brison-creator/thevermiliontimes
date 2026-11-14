@@ -4,7 +4,11 @@ deck: The land near White Lake brings Vermilion Parish schools $20,000 to $30,00
 section: starbase
 date: 2026-10-31
 time: 15:45
-image: cut
+image: /img/photos/pecan-island-aerial-usgs.jpg
+image_alt: Aerial view of Pecan Island, Louisiana, with homes and trees strung along LA 82 on a narrow ridge, farm fields and marsh to the north, and open water and marsh islands to the south
+image_caption: "Pecan Island and the surrounding marsh from the air, in government aerial imagery. Homes and camps line LA 82 along the ridge."
+image_credit: "Image: USDA / USGS The National Map"
+image_source: https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer
 sources:
 - The Advocate, "Vermilion Parish School Board approves land appraisals as SpaceX amasses property in the area," by Joanna Brown, Oct. 30, 2026 | https://www.theadvocate.com/acadiana/news/vpsb-appraises-school-property-by-spacex/article_5a64c29b-4777-4074-b3ca-a2d74cb856e6.html
 ---

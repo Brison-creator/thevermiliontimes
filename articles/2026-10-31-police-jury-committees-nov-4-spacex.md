@@ -4,6 +4,11 @@ deck: The Vermilion Parish Police Jury's committees meet Wednesday, the day afte
 section: government
 date: 2026-10-31
 time: 22:15
+image: /img/photos/downtown-abbeville-storefronts-1995.jpg
+image_alt: Black-and-white photo of brick storefronts on a corner in downtown Abbeville, with a pickup truck and cars parked along the street
+image_caption: "File photo: Downtown Abbeville, the parish seat, in 1995."
+image_credit: "Photo: Donna Fricker, National Register of Historic Places (public domain)"
+image_source: https://npgallery.nps.gov/AssetDetail/NRIS/95001261
 sources:
 - Vermilion Parish Police Jury, committee agendas for Nov. 4, 2026 (Coastal Protection & Restoration, Courthouse/General Needs, Public Works, Public Road, Finance) | https://www.vppj.org/PDFforms/Agendas/Agendas%202026/11.Nov2026/CR%20CH%20PR%20PW%20FC%20Agendas%20Website%2011-04-26.pdf
 - Vermilion Parish Police Jury, committee meeting notice from Parish Administrator Keith Roy, dated Oct. 30, 2026 | https://www.vppj.org/PDFforms/Agendas/Agendas%202026/11.Nov2026/CR%20911%20All%20Committee%20Meeting%20Notice%2011-04-26.pdf

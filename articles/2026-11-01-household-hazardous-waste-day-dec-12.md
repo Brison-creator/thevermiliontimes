@@ -4,8 +4,6 @@ deck: Vermilion Parish residents can drop off chemicals, tires and recyclables f
 section: local
 date: 2026-11-01
 time: 05:45
-illustration: government
-image: cut
 sources:
 - Vermilion Parish Police Jury, Household Hazardous Waste Collection Day flyer | https://www.vppj.org/PDFforms/Notices/12-12-26%20-%20Household%20Hazardous%20Waste%20Collection%20Day%20Flyer.pdf
 ---

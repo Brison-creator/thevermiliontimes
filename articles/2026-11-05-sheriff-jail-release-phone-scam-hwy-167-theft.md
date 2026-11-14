@@ -4,8 +4,11 @@ deck: The callers know the inmate's name and charge from public arrest records. 
 section: safety
 date: 2026-11-05
 time: 17:20
-illustration: safety
-image: cut
+image: /img/photos/downtown-abbeville-towered-building-1995.jpg
+image_alt: Black-and-white photo of a two-story brick building with two pointed corner towers and a stone arched entrance in downtown Abbeville
+image_caption: "File photo: A landmark building in downtown Abbeville, the parish seat, in 1995."
+image_credit: "Photo: Donna Fricker, National Register of Historic Places (public domain)"
+image_source: https://npgallery.nps.gov/AssetDetail/NRIS/95001261
 sources:
 - Vermilion Parish Sheriff's Office statement, Nov. 2, 2026, as published by KLFY, "Vermilion Parish Sheriff warns of scam involving bogus jail releases," Nov. 3, 2026 | https://www.klfy.com/local/vermilion-parish/vermilion-parish-sheriff-warns-of-scam-involving-bogus-jail-releases/
 - Vermilion Parish Sheriff's Office, as reported by KLFY, "Search for thief at Sunshine Quality Solutions," Nov. 4, 2026 | https://www.klfy.com/local/vermilion-parish/search-for-thief-at-sunshine-quality-solutions/

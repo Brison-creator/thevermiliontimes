@@ -4,6 +4,11 @@ deck: Draft minutes of the Oct. 21 meeting, posted on the parish website, show e
 section: government
 date: 2026-11-01
 time: 05:45
+image: /img/photos/downtown-abbeville-storefronts-1995.jpg
+image_alt: Black-and-white photo of brick storefronts on a corner in downtown Abbeville, with a pickup truck and cars parked along the street
+image_caption: "File photo: Downtown Abbeville, the parish seat, in 1995."
+image_credit: "Photo: Donna Fricker, National Register of Historic Places (public domain)"
+image_source: https://npgallery.nps.gov/AssetDetail/NRIS/95001261
 disclosure: "Disclosure: Brison McPhail, publisher of the Times, owns Rocket Farm, an RV park in Kaplan. This story reports on the parish's RV ordinance."
 sources:
 - Vermilion Parish Police Jury, minutes of the regular meeting of Oct. 21, 2026 (posted unsigned) | https://www.vppj.org/PDFforms/minutes/2026/PJ%20Minutes%2010-21-26%20-%20NOT%20SIGNED.pdf
