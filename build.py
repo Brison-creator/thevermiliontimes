@@ -16,7 +16,7 @@ FONTS='https://fonts.googleapis.com/css2?family=Tinos:wght@700&family=Source+Ser
 ICON=("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23f3e9d4'/%3E"
       "%3Ctext x='32' y='47' font-family='UnifrakturMaguntia,serif' font-size='44' text-anchor='middle' fill='%237c1f1a'%3EV%3C/text%3E%3C/svg%3E")
 
-SECTIONS=[('local','Local'),('government','Parish Government'),('safety','Public Safety'),('world','Nation &amp; World'),('schools','Schools'),('sports','Sports'),('business','Business'),
+SECTIONS=[('local','Local'),('government','Parish Government'),('safety','Public Safety'),('louisiana','Louisiana'),('world','Nation &amp; World'),('schools','Schools'),('sports','Sports'),('business','Business'),
           ('starbase','Starbase Louisiana'),('land-water','Land &amp; Water'),('faith','Faith &amp; Family'),('opinion','Opinion'),('obituaries','Obituaries')]
 
 # ---------------------------------------------------------------- articles
