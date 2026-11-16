@@ -4,6 +4,7 @@ deck: A routine change-out of network gear at a remote FAA radio site in El Dora
 section: world
 date: 2026-11-15
 time: 21:30
+updated: 2026-11-16
 image: /img/photos/faa-ground-stop-sites-map.jpg
 image_alt: Map of Texas, Arkansas and Louisiana marking the FAA radio site at El Dorado, Ark., the FAA radar site at Amarillo, Texas, and a dashed 225-mile line from El Dorado to Vermilion Parish
 image_caption: "The two FAA sites named in the investigation into Friday's nationwide ground stop. El Dorado sits about 225 miles north of Abbeville, roughly a five-hour drive."
@@ -45,5 +46,9 @@ Duffy called the system a 1980s network running on copper wire. He is asking Con
 The FAA hasn't said where those 60 routers are, or whether any of them serve south Louisiana, where Houston Center handles most of the high-altitude traffic and Lafayette's controllers handle the approaches.
 
 So The Vermilion Times asked. On Sunday we sent questions to the **FAA press office** and to **L3Harris**, the contractor that runs the network. We asked whether any Louisiana radio or radar sites have the same kind of router, whether shutting off that function is a permanent fix, and whether this kind of work has been paused or moved to overnight hours. We'll report what they tell us, and when they don't answer.
+
+**Update, Nov. 16:** L3Harris answered Monday with a written statement attributed to a company spokesperson. The company said it, its telephone partners and the FAA have finished **more than 70%** of the planned switch of airspace communications from old copper lines to fiber, and that it is "supporting the FAA in its investigation to understand the conditions that led to the Nov. 13 ground stop." L3Harris "takes the nationwide ground stop and its impact on travelers, airlines and air traffic operations seriously," the statement said.
+
+The statement did not say whether any sites serving Louisiana have the same router, or whether the company has changed when it does this kind of work. The FAA has not yet answered; we asked for a reply by Tuesday afternoon.
 
 Were you stuck at an airport this weekend? Tell us your story in the comments.
