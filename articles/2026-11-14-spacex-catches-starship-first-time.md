@@ -4,7 +4,6 @@ deck: After 22 and a half hours and 14 trips around Earth, Ship 42 dropped back 
 section: starbase
 date: 2026-11-14
 time: 15:50
-featured: yes
 image: /img/photos/starship-flight-15-reentry-spacex-webcast.jpg
 image_alt: View from a camera on SpaceX's Starship as it reenters the atmosphere, its flap glowing orange and pink with plasma above clouds and blue ocean
 image_caption: "Ship 42's flap glows with plasma as it plunges back through the atmosphere Saturday, minutes before the tower caught it."
