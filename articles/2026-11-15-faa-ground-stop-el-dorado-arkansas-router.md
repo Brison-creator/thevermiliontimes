@@ -4,11 +4,11 @@ deck: A routine change-out of network gear at a remote FAA radio site in El Dora
 section: world
 date: 2026-11-15
 time: 21:30
-image: /img/photos/faa-air-route-traffic-controllers.jpg
-image_alt: Air traffic controllers wearing headsets work at rows of radar screens in a dim FAA air route traffic control center
-image_caption: "File photo: Controllers at an FAA air route traffic control center. On Friday, 17 of the country's 22 centers like this one lost their footing at once."
-image_credit: "Photo: Federal Aviation Administration (public domain)"
-image_source: https://commons.wikimedia.org/wiki/File:Air_traffic_controllers_at_the_Washington_ARTCC.jpg
+image: /img/photos/faa-ground-stop-sites-map.jpg
+image_alt: Map of Texas, Arkansas and Louisiana marking the FAA radio site at El Dorado, Ark., the FAA radar site at Amarillo, Texas, and a dashed 225-mile line from El Dorado to Vermilion Parish
+image_caption: "The two FAA sites named in the investigation into Friday's nationwide ground stop. El Dorado sits about 225 miles north of Abbeville, roughly a five-hour drive."
+image_credit: "Map: The Vermilion Times. State boundaries: U.S. Census Bureau"
+image_source: https://www.faa.gov/newsroom/nationwide-ground-stop-questions-and-answers
 sources:
 - Federal Aviation Administration, "Nationwide Ground Stop: Questions and Answers," Nov. 15, 2026 | https://www.faa.gov/newsroom/nationwide-ground-stop-questions-and-answers
 - CBS News, transcript of Transportation Secretary Sean Duffy on "Face the Nation," Nov. 15, 2026 | https://www.cbsnews.com/news/sean-duffy-transportation-secretary-face-the-nation-transcript-11-15-2026/
@@ -39,5 +39,11 @@ Duffy said the same kind of switch has been made "thousands of times" without tr
 The FAA says there is **no evidence of a cyberattack**. As a precaution, it shut off the same function on about **60 similar routers** across the country. The FAA and L3Harris are still hunting for the root cause, and Duffy said the FBI is helping.
 
 Duffy called the system a 1980s network running on copper wire. He is asking Congress for **$50 billion** to rebuild it.
+
+## Are south Louisiana's sites safe now? We asked.
+
+The FAA hasn't said where those 60 routers are, or whether any of them serve south Louisiana, where Houston Center handles most of the high-altitude traffic and Lafayette's controllers handle the approaches.
+
+So The Vermilion Times asked. On Sunday we sent questions to the **FAA press office** and to **L3Harris**, the contractor that runs the network. We asked whether any Louisiana radio or radar sites have the same kind of router, whether shutting off that function is a permanent fix, and whether this kind of work has been paused or moved to overnight hours. We'll report what they tell us, and when they don't answer.
 
 Were you stuck at an airport this weekend? Tell us your story in the comments.
