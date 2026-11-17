@@ -12,11 +12,13 @@ image_caption: "File photo: Apple Park, Apple's headquarters in Cupertino, Calif
 image_credit: "Photo: Gregory Varnum / Wikimedia Commons, CC BY-SA 4.0"
 image_source: https://commons.wikimedia.org/wiki/File:Apple_Park_-_October_2018_-_8777.jpg
 sources:
-- Apple, System Status (consumer services), checked Nov. 17, 2026, 3:50 p.m. Central | https://www.apple.com/support/systemstatus/
+- Apple, System Status (consumer services), checked Nov. 17, 2026, 4:47 p.m. Central | https://www.apple.com/support/systemstatus/
 - MacRumors, "Apple is Down Today," with Apple's statement to Bloomberg's Mark Gurman (update at 11:14 a.m. Pacific), Nov. 17, 2026 | https://www.macrumors.com/2026/11/17/apple-is-down-in-a-big-way-today/
-- Apple Developer, System Status, checked Nov. 17, 2026, 3:50 p.m. Central | https://developer.apple.com/system-status/
+- Apple Developer, System Status, checked Nov. 17, 2026, 4:47 p.m. Central | https://developer.apple.com/system-status/
 ---
 If the App Store wouldn't load on your iPhone this morning, or Apple Music stopped playing, it isn't your phone.
+
+**Update, 4:50 p.m. Central:** Most of Apple's services are back. Its status pages now list **iCloud.com** as fixed at 3:15 p.m., **Apple School Manager, Schoolwork and Apple Business** at 4 p.m., and **Xcode Cloud** at 4:30 p.m.; News Publisher and the Volume Purchase Program are also marked resolved. Still listed as down: **iCloud sign-in**, and for developers **App Store Connect** with its analytics and sales reports, the Developer ID Notary Service and Apple's music tools for artists.
 
 **Update, 3:55 p.m. Central:** Little has changed in the past half hour. Apple's status pages still list problems with **iCloud sign-in and iCloud.com**, Apple School Manager and Apple Business, and on the developer side with **App Store Connect** and its analytics and sales reports, Xcode Cloud, the Developer ID Notary Service, Apple's music tools for artists and News Publisher. The Volume Purchase Program, which came back at 2 p.m., has had on-and-off trouble again since 3:11 p.m. The App Store and Apple Music are still listed as working.
 
