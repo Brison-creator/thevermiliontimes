@@ -4,6 +4,7 @@ deck: Apple's own status pages show trouble starting about 10:45 a.m. Central Tu
 section: world
 date: 2026-11-17
 time: 13:00
+updated: 2026-11-17
 featured: yes
 image: /img/photos/apple-park-sign-2018.jpg
 image_alt: The Apple Park sign at Apple's headquarters in Cupertino, California
@@ -15,6 +16,8 @@ sources:
 - Apple Developer, System Status, checked Nov. 17, 2026, 12:52 p.m. Central | https://developer.apple.com/system-status/
 ---
 If the App Store wouldn't load on your iPhone this morning, or Apple Music stopped playing, it isn't your phone.
+
+**Update, 12:55 p.m. Central:** Apple's status page no longer lists a problem with the App Store or Apple Music. But new outages appeared at **12:40 p.m. Central** for **Apple School Manager** and **Schoolwork**, the tools many schools use to manage student iPads and assignments, and for **Apple Business**. iCloud sign-in, AppleCare purchases, App Store Connect and Xcode Cloud are still listed as having problems.
 
 Apple's own system status page lists an **ongoing outage of the App Store and Apple Music** starting at **10:45 a.m. Central Tuesday**, along with an issue with **iCloud account sign-in** that began at the same time. Apple says those services "may be slow or unavailable." Buying AppleCare on a device has been down since 10:15 a.m., according to the page.
 
