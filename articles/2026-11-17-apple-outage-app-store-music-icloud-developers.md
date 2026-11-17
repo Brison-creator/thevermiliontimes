@@ -1,6 +1,6 @@
 ---
 title: "Apple Outage Hits the App Store, Apple Music and iCloud Sign-In, and Knocks Out App Store Connect for Every Developer"
-deck: Apple's own status pages show trouble starting about 10:45 a.m. Central Tuesday. The company says it is working on a fix but hasn't said what went wrong.
+deck: Apple's own status pages show trouble starting about 10:45 a.m. Central Tuesday. Apple says an internal update caused it and that it wasn't a cyberattack.
 section: world
 date: 2026-11-17
 time: 13:00
@@ -13,9 +13,12 @@ image_credit: "Photo: Gregory Varnum / Wikimedia Commons, CC BY-SA 4.0"
 image_source: https://commons.wikimedia.org/wiki/File:Apple_Park_-_October_2018_-_8777.jpg
 sources:
 - Apple, System Status (consumer services), checked Nov. 17, 2026, 12:52 p.m. Central | https://www.apple.com/support/systemstatus/
+- MacRumors, "Apple is Down Today," with Apple's statement to Bloomberg's Mark Gurman (update at 11:14 a.m. Pacific), Nov. 17, 2026 | https://www.macrumors.com/2026/11/17/apple-is-down-in-a-big-way-today/
 - Apple Developer, System Status, checked Nov. 17, 2026, 12:52 p.m. Central | https://developer.apple.com/system-status/
 ---
 If the App Store wouldn't load on your iPhone this morning, or Apple Music stopped playing, it isn't your phone.
+
+**Update, 3:25 p.m. Central: Apple says an internal update caused it.** In a statement shared with Bloomberg's Mark Gurman and reported by MacRumors at 1:14 p.m. Central, Apple said "many of our systems are back up and running after an internal update caused some outages this morning," that it is "working to get the remaining systems online as soon as possible," and that it was not a cyberattack.
 
 **Update, 3:10 p.m. Central:** Apple now lists **Schoolwork** as fixed. Xcode Cloud's first outage was marked resolved at 3 p.m. Central, but Apple opened a new Xcode Cloud outage at the same minute, and it added the **Developer ID Notary Service**, which Mac developers use to clear their apps for release, as having problems since 10:25 a.m. Still down: iCloud sign-in and iCloud.com, Apple School Manager, Apple Business, and App Store Connect with its analytics and sales reports.
 
@@ -41,6 +44,6 @@ Earlier in the morning, in-app purchases also had trouble for some users from 4:
 - If iCloud won't let you sign in, it's a known problem: Apple lists it on its status page.
 - App developers can't publish updates or check their stores until App Store Connect comes back.
 
-Apple hasn't said what caused the problems or when they'll be fixed. The Times will update this story when Apple's status page changes.
+Apple has blamed an internal update and ruled out a cyberattack, but it hasn't said when every service will be back. The Times will update this story when Apple's status page changes.
 
 Is the App Store working for you right now? Tell us in the comments.
