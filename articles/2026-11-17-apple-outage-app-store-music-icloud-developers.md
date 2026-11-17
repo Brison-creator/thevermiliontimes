@@ -17,6 +17,8 @@ sources:
 ---
 If the App Store wouldn't load on your iPhone this morning, or Apple Music stopped playing, it isn't your phone.
 
+**Update, 3:10 p.m. Central:** Apple now lists **Schoolwork** as fixed. Xcode Cloud's first outage was marked resolved at 3 p.m. Central, but Apple opened a new Xcode Cloud outage at the same minute, and it added the **Developer ID Notary Service**, which Mac developers use to clear their apps for release, as having problems since 10:25 a.m. Still down: iCloud sign-in and iCloud.com, Apple School Manager, Apple Business, and App Store Connect with its analytics and sales reports.
+
 **Update, 2:57 p.m. Central:** The App Store is back. Apple's status page now lists the App Store outage as resolved at **2 p.m. Central**, after about three hours and 15 minutes; the Volume Purchase Program came back at the same time, and AppleCare purchases on devices were restored at 2:39 p.m. Still listed as down: **iCloud sign-in and iCloud.com**, Apple School Manager, Schoolwork and Apple Business, and on the developer side **App Store Connect** (including its analytics and sales reports), Xcode Cloud, Apple's music tools for artists and News Publisher.
 
 **Update, 1:42 p.m. Central:** The outage is spreading. Apple's status page now lists the **App Store** as down again, starting at **1:27 p.m. Central**, along with the Volume Purchase Program that businesses and schools use to buy apps in bulk. **iCloud.com** web apps and iCloud sign-in are still having problems; Apple lists iCloud Mail as fixed. On the developer side, App Store Connect's analytics and sales reports went down at 1:09 p.m., and so did Apple Music's tools for artists. Apple School Manager, Schoolwork and Apple Business remain down.
