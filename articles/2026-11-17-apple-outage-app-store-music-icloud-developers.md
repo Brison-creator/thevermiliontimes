@@ -12,11 +12,13 @@ image_caption: "File photo: Apple Park, Apple's headquarters in Cupertino, Calif
 image_credit: "Photo: Gregory Varnum / Wikimedia Commons, CC BY-SA 4.0"
 image_source: https://commons.wikimedia.org/wiki/File:Apple_Park_-_October_2018_-_8777.jpg
 sources:
-- Apple, System Status (consumer services), checked Nov. 17, 2026, 4:47 p.m. Central | https://www.apple.com/support/systemstatus/
+- Apple, System Status (consumer services), checked Nov. 17, 2026, 5:48 p.m. Central | https://www.apple.com/support/systemstatus/
 - MacRumors, "Apple is Down Today," with Apple's statement to Bloomberg's Mark Gurman (update at 11:14 a.m. Pacific), Nov. 17, 2026 | https://www.macrumors.com/2026/11/17/apple-is-down-in-a-big-way-today/
-- Apple Developer, System Status, checked Nov. 17, 2026, 4:47 p.m. Central | https://developer.apple.com/system-status/
+- Apple Developer, System Status, checked Nov. 17, 2026, 5:48 p.m. Central | https://developer.apple.com/system-status/
 ---
 If the App Store wouldn't load on your iPhone this morning, or Apple Music stopped playing, it isn't your phone.
+
+**Update, 5:50 p.m. Central: Everything is back for regular users.** Apple's status page now lists **iCloud sign-in** as resolved, which clears the last problem on its page for consumer services. Developers are still waiting: **App Store Connect** and its analytics and sales reports, the Developer ID Notary Service and Apple's music tools for artists are all still marked as down.
 
 **Update, 4:50 p.m. Central:** Most of Apple's services are back. Its status pages now list **iCloud.com** as fixed at 3:15 p.m., **Apple School Manager, Schoolwork and Apple Business** at 4 p.m., and **Xcode Cloud** at 4:30 p.m.; News Publisher and the Volume Purchase Program are also marked resolved. Still listed as down: **iCloud sign-in**, and for developers **App Store Connect** with its analytics and sales reports, the Developer ID Notary Service and Apple's music tools for artists.
 
