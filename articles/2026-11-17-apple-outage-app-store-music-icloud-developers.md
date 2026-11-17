@@ -17,6 +17,8 @@ sources:
 ---
 If the App Store wouldn't load on your iPhone this morning, or Apple Music stopped playing, it isn't your phone.
 
+**Update, 1:42 p.m. Central:** The outage is spreading. Apple's status page now lists the **App Store** as down again, starting at **1:27 p.m. Central**, along with the Volume Purchase Program that businesses and schools use to buy apps in bulk. **iCloud.com** web apps and iCloud sign-in are still having problems; Apple lists iCloud Mail as fixed. On the developer side, App Store Connect's analytics and sales reports went down at 1:09 p.m., and so did Apple Music's tools for artists. Apple School Manager, Schoolwork and Apple Business remain down.
+
 **Update, 12:55 p.m. Central:** Apple's status page no longer lists a problem with the App Store or Apple Music. But new outages appeared at **12:40 p.m. Central** for **Apple School Manager** and **Schoolwork**, the tools many schools use to manage student iPads and assignments, and for **Apple Business**. iCloud sign-in, AppleCare purchases, App Store Connect and Xcode Cloud are still listed as having problems.
 
 Apple's own system status page lists an **ongoing outage of the App Store and Apple Music** starting at **10:45 a.m. Central Tuesday**, along with an issue with **iCloud account sign-in** that began at the same time. Apple says those services "may be slow or unavailable." Buying AppleCare on a device has been down since 10:15 a.m., according to the page.
