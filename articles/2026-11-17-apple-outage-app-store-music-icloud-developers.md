@@ -4,19 +4,20 @@ deck: Apple's own status pages show trouble starting about 10:45 a.m. Central Tu
 section: world
 date: 2026-11-17
 time: 13:00
-updated: 2026-11-17
-featured: yes
+updated: 2026-11-18
 image: /img/photos/apple-park-sign-2018.jpg
 image_alt: The Apple Park sign at Apple's headquarters in Cupertino, California
 image_caption: "File photo: Apple Park, Apple's headquarters in Cupertino, California."
 image_credit: "Photo: Gregory Varnum / Wikimedia Commons, CC BY-SA 4.0"
 image_source: https://commons.wikimedia.org/wiki/File:Apple_Park_-_October_2018_-_8777.jpg
 sources:
-- Apple, System Status (consumer services), checked Nov. 17, 2026, 5:48 p.m. Central | https://www.apple.com/support/systemstatus/
+- Apple, System Status (consumer services), checked Nov. 18, 2026, 5:45 a.m. Central | https://www.apple.com/support/systemstatus/
 - MacRumors, "Apple is Down Today," with Apple's statement to Bloomberg's Mark Gurman (update at 11:14 a.m. Pacific), Nov. 17, 2026 | https://www.macrumors.com/2026/11/17/apple-is-down-in-a-big-way-today/
-- Apple Developer, System Status, checked Nov. 17, 2026, 5:48 p.m. Central | https://developer.apple.com/system-status/
+- Apple Developer, System Status, checked Nov. 18, 2026, 5:45 a.m. Central | https://developer.apple.com/system-status/
 ---
 If the App Store wouldn't load on your iPhone this morning, or Apple Music stopped playing, it isn't your phone.
+
+**Update, Wednesday, 5:50 a.m. Central:** Nearly all of it is over. Apple's developer status page now lists App Store Connect's analytics and sales reports and its music tools for artists as fixed at 6 p.m. Tuesday, and the Developer ID Notary Service at 6:10 p.m. **App Store Connect** itself was still listed as down early Wednesday. Nothing is listed as down on Apple's page for consumer services.
 
 **Update, 5:50 p.m. Central: Everything is back for regular users.** Apple's status page now lists **iCloud sign-in** as resolved, which clears the last problem on its page for consumer services. Developers are still waiting: **App Store Connect** and its analytics and sales reports, the Developer ID Notary Service and Apple's music tools for artists are all still marked as down.
 
