@@ -5,11 +5,10 @@ section: sports
 date: 2026-11-21
 time: 06:05
 updated: 2026-11-21
-image: /img/photos/delcambre-aerial-harbor-2012.jpg
-image_alt: Aerial view of Delcambre, Louisiana, with shrimp boats docked along the bayou, a blue-roofed building on the waterfront, a parking lot and green fields stretching to a line of trees
-image_caption: "File photo: Delcambre and its shrimp boat harbor from the air. The town's team has now won two playoff games on the road."
-image_credit: "Photo: Louisiana Sea Grant, CC BY 2.0"
-image_source: https://commons.wikimedia.org/wiki/File:Delcambre_Aerials_11-21-13_-_057.jpg
+image: /img/photos/delcambre-players-on-field-submitted.jpg
+image_alt: Delcambre football players in white and orange uniforms stand in a row on the field at night holding their striped helmets, with a goal post behind them
+image_caption: "Delcambre players pose on the field. The Panthers have won two playoff games on the road."
+image_credit: "Submitted photo"
 sources:
 - Louisiana High School Athletic Association, 2026 football playoff brackets, Division III Non-Select, checked Nov. 21, 2026 | https://www.lhsaaonline.org/MainBracket32.aspx?s=1&y=2026&d=III&select=0
 - LHSAA, 2026 football playoff brackets, Division IV Non-Select, checked Nov. 21, 2026 | https://www.lhsaaonline.org/MainBracket32.aspx?s=1&y=2026&d=IV&select=0

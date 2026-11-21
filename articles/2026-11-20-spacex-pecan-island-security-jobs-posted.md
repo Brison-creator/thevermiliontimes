@@ -4,11 +4,10 @@ deck: Two listings went up this week, one to install cameras and access systems 
 section: starbase
 date: 2026-11-20
 time: 16:05
-image: /img/photos/starbase-texas-sign-wall.jpg
-image_alt: The word STARBASE in large white letters on a long black wall beside the highway at SpaceX's site in Texas, with Starship rockets and two tall assembly buildings behind it under a clear blue sky
-image_caption: "File photo: The Starbase sign outside SpaceX's rocket factory in South Texas in March 2023. SpaceX has not started building at Pecan Island."
-image_credit: "Photo: Jenny Hautmann / Wikimedia Commons, CC BY-SA 4.0"
-image_source: https://commons.wikimedia.org/wiki/File:Starbase.jpg
+image: /img/photos/spacex-gate-sign-starship-submitted.jpg
+image_alt: A white pickup truck drives through a black gate topped with large white SpaceX letters, with a Starship rocket standing on its launch tower in the background
+image_caption: "File photo: A gate at an existing SpaceX launch site, with a Starship on the tower behind it. This is not Pecan Island, where SpaceX has not started building."
+image_credit: "Submitted photo"
 sources:
 - SpaceX careers board, "Sr. Physical Security Hardware Specialist," Pecan Island, LA, first published Nov. 17, 2026, checked Nov. 20, 2026 | https://boards.greenhouse.io/spacex/jobs/8943802002?gh_jid=8943802002
 - SpaceX careers board, "Sr. Physical Security Specialist," Pecan Island, LA, first published Nov. 18, 2026, checked Nov. 20, 2026 | https://boards.greenhouse.io/spacex/jobs/8950926002?gh_jid=8950926002
