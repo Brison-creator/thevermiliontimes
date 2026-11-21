@@ -4,6 +4,7 @@ deck: Kaplan routed Vidalia at home. Delcambre, the No. 25 seed, beat No. 9 Gran
 section: sports
 date: 2026-11-21
 time: 06:05
+updated: 2026-11-21
 image: /img/photos/delcambre-aerial-harbor-2012.jpg
 image_alt: Aerial view of Delcambre, Louisiana, with shrimp boats docked along the bayou, a blue-roofed building on the waterfront, a parking lot and green fields stretching to a line of trees
 image_caption: "File photo: Delcambre and its shrimp boat harbor from the air. The town's team has now won two playoff games on the road."
@@ -19,7 +20,7 @@ Vermilion Parish went 2-for-2 on Friday night, and neither game was close.
 
 **No. 4 Kaplan** opened its playoff run by burying **No. 13 Vidalia 56-6** at home in the regional round of Division III Non-Select, according to the Louisiana High School Athletic Association's bracket. Kaplan had a first-round bye, so this was its first game of the postseason.
 
-**Next:** Kaplan plays **No. 12 Green Oaks** in the quarterfinals. Green Oaks got there by edging No. 5 Marksville 30-26.
+**Next:** Kaplan hosts **No. 12 Green Oaks** in the quarterfinals on **Friday, Nov. 27, at 7 p.m.**, according to the LHSAA bracket. Green Oaks got there by edging No. 5 Marksville 30-26.
 
 ## Delcambre 41, Grand Lake 15
 
@@ -31,6 +32,6 @@ That's two straight road wins over top-10 seeds for the No. 25 seed.
 
 ## When they play
 
-The quarterfinals are next weekend. The LHSAA bracket had not posted dates, times or sites for either parish team's game as of Saturday morning. We'll post them when it does.
+The quarterfinals are next weekend. As of Saturday afternoon, the LHSAA bracket listed Kaplan's game for Friday at 7 p.m. in Kaplan. It had not posted a date, time or site for Delcambre's game against East Feliciana. We'll post it when it does.
 
 Were you at one of the games? Send your photos to news@thevermiliontimes.com and tell us who took them.
