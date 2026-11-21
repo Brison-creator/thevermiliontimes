@@ -6,9 +6,9 @@ date: 2026-11-21
 time: 06:05
 updated: 2026-11-21
 image: /img/photos/delcambre-players-on-field-submitted.jpg
-image_alt: Delcambre football players in white and orange uniforms stand in a row on the field at night holding their striped helmets, with a goal post behind them
-image_caption: "Delcambre players pose on the field. The Panthers have won two playoff games on the road."
-image_credit: "Submitted photo"
+image_alt: Delcambre High School senior football players in white and orange uniforms stand in a row on the field at night holding their striped helmets, with a coach in the middle and a goal post behind them
+image_caption: "Delcambre High School's seniors and a coach pose on the field, in a photo a reader shared on the Times' Facebook page. The Panthers have won two playoff games on the road."
+image_credit: "Reader-submitted photo"
 sources:
 - Louisiana High School Athletic Association, 2026 football playoff brackets, Division III Non-Select, checked Nov. 21, 2026 | https://www.lhsaaonline.org/MainBracket32.aspx?s=1&y=2026&d=III&select=0
 - LHSAA, 2026 football playoff brackets, Division IV Non-Select, checked Nov. 21, 2026 | https://www.lhsaaonline.org/MainBracket32.aspx?s=1&y=2026&d=IV&select=0
