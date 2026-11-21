@@ -4,11 +4,11 @@ deck: Two listings went up this week, one to install cameras and access systems 
 section: starbase
 date: 2026-11-20
 time: 16:05
-image: /img/photos/pecan-island-aerial-usgs.jpg
-image_alt: Aerial view of Pecan Island, Louisiana, with homes and trees strung along LA 82 on a narrow ridge, farm fields and marsh to the north, and open water and marsh islands to the south
-image_caption: "File image: Pecan Island and the surrounding marsh in coastal Vermilion Parish, in government aerial imagery."
-image_credit: "Image: USDA / USGS The National Map"
-image_source: https://basemap.nationalmap.gov/arcgis/rest/services/USGSImageryOnly/MapServer
+image: /img/photos/starbase-texas-sign-wall.jpg
+image_alt: The word STARBASE in large white letters on a long black wall beside the highway at SpaceX's site in Texas, with Starship rockets and two tall assembly buildings behind it under a clear blue sky
+image_caption: "File photo: The Starbase sign outside SpaceX's rocket factory in South Texas in March 2023. SpaceX has not started building at Pecan Island."
+image_credit: "Photo: Jenny Hautmann / Wikimedia Commons, CC BY-SA 4.0"
+image_source: https://commons.wikimedia.org/wiki/File:Starbase.jpg
 sources:
 - SpaceX careers board, "Sr. Physical Security Hardware Specialist," Pecan Island, LA, first published Nov. 17, 2026, checked Nov. 20, 2026 | https://boards.greenhouse.io/spacex/jobs/8943802002?gh_jid=8943802002
 - SpaceX careers board, "Sr. Physical Security Specialist," Pecan Island, LA, first published Nov. 18, 2026, checked Nov. 20, 2026 | https://boards.greenhouse.io/spacex/jobs/8950926002?gh_jid=8950926002
