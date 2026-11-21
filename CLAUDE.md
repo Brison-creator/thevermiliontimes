@@ -168,6 +168,7 @@ Brison, Nov. 21, 2026: "people are loving the job posts got 20k views on the spa
 - **Format that works:** job title in bold, what it requires in one or two plain lines, an [Apply] link to the employer. Lead with jobs ordinary people can get (diploma, trade, CDL) before the degree jobs. Kicker on the card: "JOBS" or "STARBASE LOUISIANA JOBS".
 - **Reader call-out:** end jobs stories by inviting local employers to send openings through `/send-news/`. Check anything sent the same way as any tip before running it.
 - **National stories:** the daily Nation & World story should be one that touches work, wages, energy, construction, SpaceX or the Gulf Coast when one exists. Generic consumer news with no local stake is the weakest choice.
+- **State jobs feeler (works, checked Nov. 21, 2026):** `curl -sL -H "X-Requested-With: XMLHttpRequest" "https://www.governmentjobs.com/careers/home/index?agency=louisiana&sort=PostingDate&isDescendingSort=true&keyword=<word>"` returns the state civil service listings as HTML. Try keywords abbeville, kaplan, vermilion, lafayette, highway, DOTD. On Nov. 21 there were no state jobs in Vermilion Parish and seven social-service jobs in Lafayette (no construction).
 - 2026-11-21 status: Venture Global's Greenhouse boards returned no jobs and Acadian Contractors' careers page blocked automated reading (do not work around it). No verified non-SpaceX construction postings yet; keep looking for employer boards that can be read directly.
 
 ## Daily story routine
