@@ -4,7 +4,6 @@ deck: Two need only a high school diploma. Four start in Texas and move here in 
 section: starbase
 date: 2026-11-21
 time: 18:30
-featured: true
 image: /img/photos/starbase-texas-tower-arms-construction-2021.jpg
 image_alt: Workers in hard hats stand beside the huge black steel arms of SpaceX's launch tower as they are assembled on the ground at Starbase, Texas, with cranes behind
 image_caption: "File photo: Crews assemble the launch tower's catch arms at Starbase, Texas, in September 2021. SpaceX has not started building at Pecan Island."
