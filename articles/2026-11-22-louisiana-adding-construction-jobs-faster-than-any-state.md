@@ -4,7 +4,6 @@ deck: Federal numbers for October show construction work here up 13% from a year
 section: louisiana
 date: 2026-11-22
 time: 06:40
-featured: true
 image: /img/photos/worker-grinding-17th-street-canal-usace-2024.jpg
 image_alt: A construction worker in a yellow hard hat, face shield and safety vest uses a metal grinder that throws a shower of sparks inside a large steel pipe
 image_caption: "File photo: A worker grinds steel during repairs at the 17th Street Canal pump station in New Orleans in March 2024."

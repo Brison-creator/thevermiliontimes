@@ -4,6 +4,7 @@ deck: Two need only a high school diploma. Four start in Texas and move here in 
 section: starbase
 date: 2026-11-21
 time: 18:30
+updated: 2026-11-23
 image: /img/photos/starbase-texas-tower-arms-construction-2021.jpg
 image_alt: Workers in hard hats stand beside the huge black steel arms of SpaceX's launch tower as they are assembled on the ground at Starbase, Texas, with cranes behind
 image_caption: "File photo: Crews assemble the launch tower's catch arms at Starbase, Texas, in September 2021. SpaceX has not started building at Pecan Island."
@@ -14,6 +15,8 @@ sources:
 - SpaceX job postings data (Greenhouse), checked Nov. 21, 2026 | https://boards-api.greenhouse.io/v1/boards/spacex/jobs
 ---
 SpaceX has 12 jobs posted for Pecan Island as of Saturday. Here is every one, what it asks for and where to apply.
+
+**Update, Nov. 23:** The list is unchanged at 12 jobs. SpaceX's Starbase, LA page also takes resumes by email at starbaselajobs@spacex.com, whether or not a job below fits you. [Details here.](/news/spacex-taking-resumes-starbase-louisiana-email-supplier-signup/)
 
 Three things to know first:
 
