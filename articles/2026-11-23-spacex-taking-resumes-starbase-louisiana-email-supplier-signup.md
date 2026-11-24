@@ -4,7 +4,6 @@ deck: The company says it will hire "heavily from nearby communities." Its Louis
 section: starbase
 date: 2026-11-23
 time: 07:10
-featured: true
 image: /img/photos/starbase-texas-sign-wall.jpg
 image_alt: The word STARBASE in large white letters on a long black wall beside the highway at SpaceX's site in Texas, with Starship rockets and two tall assembly buildings behind it under a clear blue sky
 image_caption: "File photo: The Starbase sign outside SpaceX's rocket factory in South Texas in March 2023. SpaceX says construction at Pecan Island starts in 2027."
