@@ -4,6 +4,7 @@ deck: The company says it will hire "heavily from nearby communities." Its Louis
 section: starbase
 date: 2026-11-23
 time: 07:10
+updated: 2026-11-24
 image: /img/photos/starbase-texas-sign-wall.jpg
 image_alt: The word STARBASE in large white letters on a long black wall beside the highway at SpaceX's site in Texas, with Starship rockets and two tall assembly buildings behind it under a clear blue sky
 image_caption: "File photo: The Starbase sign outside SpaceX's rocket factory in South Texas in March 2023. SpaceX says construction at Pecan Island starts in 2027."
@@ -30,7 +31,7 @@ On the same page, SpaceX says it is committed to "creating more than 3,000 new j
 
 What the page does not say: which jobs the resumes are for, what they pay, or when hiring will start. SpaceX lists construction as starting in 2027 and the first Starship launch in 2029.
 
-Jobs with full descriptions are posted on a separate careers board. There were 12 for Pecan Island as of this morning, the same 12 as Saturday. [Here is every one and how to apply.](/news/every-spacex-job-open-pecan-island-12-positions-how-to-apply/)
+Jobs with full descriptions are posted on a separate careers board. There were 12 for Pecan Island when this story ran; 11 remained as of Nov. 24. [Here is every one and how to apply.](/news/every-spacex-job-open-pecan-island-12-positions-how-to-apply/)
 
 ## If you own a business
 

@@ -1,10 +1,10 @@
 ---
-title: "Every SpaceX Job Open at Pecan Island Right Now: 12 Positions, What Each One Requires and How to Apply"
-deck: Two need only a high school diploma. Four start in Texas and move here in early 2027. None lists pay, and no welder, electrician, operator or laborer jobs are posted yet.
+title: "Every SpaceX Job Open at Pecan Island Right Now: What Each One Requires and How to Apply"
+deck: Eleven jobs as of Nov. 24. One needs only a high school diploma. Four start in Texas and move here in early 2027. None lists pay, and no welder, electrician, operator or laborer jobs are posted yet.
 section: starbase
 date: 2026-11-21
 time: 18:30
-updated: 2026-11-23
+updated: 2026-11-24
 image: /img/photos/starbase-texas-tower-arms-construction-2021.jpg
 image_alt: Workers in hard hats stand beside the huge black steel arms of SpaceX's launch tower as they are assembled on the ground at Starbase, Texas, with cranes behind
 image_caption: "File photo: Crews assemble the launch tower's catch arms at Starbase, Texas, in September 2021. SpaceX has not started building at Pecan Island."
@@ -14,23 +14,25 @@ sources:
 - SpaceX careers board, jobs listed at Pecan Island, LA, checked Nov. 21, 2026 | https://www.spacex.com/careers/jobs?location=pecan%2520island
 - SpaceX job postings data (Greenhouse), checked Nov. 21, 2026 | https://boards-api.greenhouse.io/v1/boards/spacex/jobs
 ---
-SpaceX has 12 jobs posted for Pecan Island as of Saturday. Here is every one, what it asks for and where to apply.
+SpaceX had 12 jobs posted for Pecan Island when we first ran this list on Saturday, Nov. 21. Eleven remain. Here is every one, what it asks for and where to apply.
 
-**Update, Nov. 23:** The list is unchanged at 12 jobs. SpaceX's Starbase, LA page also takes resumes by email at starbaselajobs@spacex.com, whether or not a job below fits you. [Details here.](/news/spacex-taking-resumes-starbase-louisiana-email-supplier-signup/)
+**Update, Nov. 24:** SpaceX has taken the Sr. Physical Security Specialist job off its board. It had been posted on Nov. 18. The company did not say why; a listing can come down because the job was filled or because it was withdrawn.
+
+**Update, Nov. 23:** SpaceX's Starbase, LA page also takes resumes by email at starbaselajobs@spacex.com, whether or not a job below fits you. [Details here.](/news/spacex-taking-resumes-starbase-louisiana-email-supplier-signup/)
 
 Three things to know first:
 
-- **No pay is listed** on any of the 12 postings.
+- **No pay is listed** on any of the postings.
 - **No craft jobs are posted yet.** There are no openings for welders, electricians, equipment operators, pipefitters or laborers at Pecan Island on SpaceX's board. The jobs so far are for the managers, engineers and security staff who come before construction.
 - **We check the board every day** and will report new postings as they appear.
 
-## Jobs that need a high school diploma
+## A job that needs a high school diploma
 
 **Sr. Physical Security Hardware Specialist** (posted Nov. 17)
 High school diploma or equivalent, plus 5 or more years working with security systems such as cameras, door access, alarms or fire systems. Needs a driver's license and comfort working at heights up to 300 feet with safety gear. [Apply](https://boards.greenhouse.io/spacex/jobs/8943802002?gh_jid=8943802002)
 
-**Sr. Physical Security Specialist** (posted Nov. 18)
-High school diploma or equivalent, plus 8 or more years in the military, law enforcement, overseas security contracting or corporate security, and 2 or more years in executive protection or emergency response. Travel up to 30% of the time. [Apply](https://boards.greenhouse.io/spacex/jobs/8950926002?gh_jid=8950926002)
+**Sr. Physical Security Specialist** (posted Nov. 18, removed by Nov. 24)
+No longer listed. It asked for a high school diploma or equivalent plus 8 or more years in the military, law enforcement, overseas security contracting or corporate security.
 
 ## Construction and site jobs
 
