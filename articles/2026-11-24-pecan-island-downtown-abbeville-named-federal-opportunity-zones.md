@@ -4,7 +4,6 @@ deck: Two Vermilion Parish areas made the state's new list. One covers the whole
 section: louisiana
 date: 2026-11-24
 time: 06:50
-featured: true
 image: /img/photos/la-3147-freshwater-city-road-sign.jpg
 image_alt: A black and white Louisiana highway marker for LA 3147 on a post beside a field of dry marsh grass and scrub trees under a gray sky
 image_caption: "LA 3147, Freshwater City Road, in southern Vermilion Parish near Pecan Island. The area is inside one of the parish's two new Opportunity Zones."
