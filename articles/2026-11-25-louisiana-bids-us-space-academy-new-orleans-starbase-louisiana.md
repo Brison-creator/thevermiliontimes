@@ -4,7 +4,6 @@ deck: The state has asked NASA to put the U.S. Space Academy at LSU's New Orlean
 section: louisiana
 date: 2026-11-25
 time: 06:55
-featured: true
 image: /img/photos/artemis-iii-core-stage-michoud-april-2026.jpg
 image_alt: A huge orange rocket stage with a green cover and the NASA Artemis logo on its end rides a yellow transporter across a field, with workers in safety vests walking beside it
 image_caption: "The core stage of NASA's Artemis III moon rocket leaves the Michoud Assembly Facility in New Orleans on April 20, 2026. The state says the proposed academy would be about nine miles away."

@@ -4,6 +4,7 @@ deck: Louisiana's coastal permit office marked the application complete this wee
 section: starbase
 date: 2026-11-20
 time: 06:20
+updated: 2026-11-26
 image: /img/photos/la-3147-freshwater-city-road-sign.jpg
 image_alt: A bullet-pocked Louisiana state highway sign for LA 3147 stands in front of coastal brush and dry marsh grass under a gray sky
 image_caption: LA 3147, Freshwater City Road, near Pecan Island. SpaceX's proposed Gulf wharf would sit at the end of this road.
@@ -13,6 +14,8 @@ sources:
 - Louisiana Department of Conservation and Energy, Joint Permit Application Tracker, coastal use permit application P20260831, "Southwest Louisiana Coastal Infrastructure Improvement Project," checked Nov. 20, 2026 | https://sonlite.dnr.state.la.us/ords/f?p=129:301:::::P301_CUP_NUM:P20260831
 - The Advocate, "Public gets chance to weigh in on SpaceX's massive wharf, road plans in Vermilion Parish," by Claire Taylor, Nov. 19, 2026 (terms of the public notice) | https://www.theadvocate.com/acadiana/news/public-comment-on-spacex-coastal-use-permit-to-open-soon/article_ce3e95c5-bf5a-4cf6-a1a3-71d7d32092ef.html
 ---
+**Update, Nov. 26:** The state put this application on hold on Nov. 23 and asked SpaceX's engineers for more information. [Read the latest.](/news/state-puts-spacex-coastal-permit-on-hold-asks-missing-information/)
+
 The first big state permit for SpaceX's Vermilion Parish project is now in front of the public.
 
 Louisiana's coastal permit office has put SpaceX's application for a Gulf wharf, barge docks and a heavy-haul road near Pecan Island "on notice," according to the state's online permit tracker. That starts the clock on public comment.
