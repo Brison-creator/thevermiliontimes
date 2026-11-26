@@ -4,11 +4,11 @@ deck: The Police Jury planned to spend $11.4 million more in 2026 than in 2025, 
 section: government
 date: 2026-11-26
 time: 13:30
-image: /img/photos/local-vermilion-river.jpg
-image_alt: The Vermilion River at Abbeville, a wide stretch of water lined with trees under a sky full of clouds
-image_caption: "The Vermilion River at Abbeville, the parish seat, where the Police Jury meets."
-image_credit: "Photo: Tim Boyd / Wikimedia Commons, CC BY 2.0"
-image_source: https://commons.wikimedia.org/wiki/File:Vermilion_River_Abbeville_Louisiana.jpg
+image: /img/photos/us-hundred-dollar-bills-cc0.jpg
+image_alt: Banded stacks of hundred-dollar bills fill an open metal case, with more bills spread on the table around it
+image_caption: "File photo."
+image_credit: "Photo: Maklay62 / Wikimedia Commons, CC0"
+image_source: https://commons.wikimedia.org/wiki/File:Money-1428594_1920.jpg
 sources:
 - Vermilion Parish Police Jury, minutes of Dec. 17, 2025 (2026 budget message and ordinance) | https://www.vppj.org/PDFforms/minutes/2025/PJ%20Minutes%2012-17-25%20-%20SIGNED.pdf
 - Vermilion Parish Police Jury, minutes of Dec. 18, 2024 (2025 budget message and ordinance) | https://www.vppj.org/PDFforms/minutes/2024/PJ%20Minutes%2012-18-24%20-%20SIGNED.pdf
