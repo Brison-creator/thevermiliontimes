@@ -4,11 +4,10 @@ deck: The Police Jury planned to spend $11.4 million more in 2026 than in 2025, 
 section: government
 date: 2026-11-26
 time: 13:30
-image: /img/photos/us-hundred-dollar-bills-cc0.jpg
-image_alt: Banded stacks of hundred-dollar bills fill an open metal case, with more bills spread on the table around it
-image_caption: "File photo."
-image_credit: "Photo: Maklay62 / Wikimedia Commons, CC0"
-image_source: https://commons.wikimedia.org/wiki/File:Money-1428594_1920.jpg
+image: /img/photos/budget-title-graphic.jpg
+image_alt: A title graphic reading Vermilion Parish Budget: Revenue, Expenses, Priorities, over an evening street scene with a white columned building, and a calculator, pen and charts in the foreground
+image_caption: "Illustration."
+image_credit: "Illustration: The Vermilion Times"
 sources:
 - Vermilion Parish Police Jury, minutes of Dec. 17, 2025 (2026 budget message and ordinance) | https://www.vppj.org/PDFforms/minutes/2025/PJ%20Minutes%2012-17-25%20-%20SIGNED.pdf
 - Vermilion Parish Police Jury, minutes of Dec. 18, 2024 (2025 budget message and ordinance) | https://www.vppj.org/PDFforms/minutes/2024/PJ%20Minutes%2012-18-24%20-%20SIGNED.pdf

@@ -16,6 +16,7 @@ for a in ('slug', 'kicker', 'headline', 'deck', 'photo'): ap.add_argument('--' +
 ap.add_argument('--credit', default='')
 ap.add_argument('--date', default='')
 ap.add_argument('--pos', default='center 40%', help='CSS background-position for the photo crop, e.g. "center 20%"')
+ap.add_argument('--fit', default='cover', choices=['cover', 'whole'], help="'whole' shows the entire image uncropped across the top (for title graphics); 'cover' crops to fill")
 a = ap.parse_args()
 if '/img/cuts/' in a.photo or a.photo.startswith('img/cuts'):
     raise SystemExit('No engravings on Facebook cards (Brison, Nov. 14). Find a real licensed photo first.')
@@ -24,13 +25,18 @@ if 'aerial' in a.photo.lower():
 e = lambda s: html.escape(s, quote=True)
 date = a.date or datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=-6))).strftime('%A, %B %-d, %Y')
 photo = 'file://' + os.path.abspath(os.path.join(ROOT, a.photo.lstrip('/')))
+photo_html = f'<img class="whole" src="{photo}">' if a.fit == 'whole' else '<div class="photo"></div>'
 hlen = len(a.headline)
 hsize = 78 if hlen < 45 else 68 if hlen < 70 else 60 if hlen < 95 else 52 if hlen < 125 else 46
+if a.fit == 'whole': hsize = int(hsize * 1.2)
+extra_css = '.text{flex:1;display:flex;flex-direction:column;justify-content:center;padding-top:0}.deck{font-size:34px}' if a.fit == 'whole' else ''
 page = f"""<!doctype html><html><head><meta charset="utf-8"><style>
 *{{margin:0;padding:0;box-sizing:border-box}}
 body{{width:1080px;height:1350px;background:#fff;font-family:Georgia,'Times New Roman',serif;color:#111;position:relative;overflow:hidden}}
 .wrap{{position:absolute;inset:0 0 96px;display:flex;flex-direction:column}}
 .photo{{flex:1;min-height:560px;background:#ddd url('{photo}') {e(a.pos)}/cover no-repeat}}
+.whole{{display:block;width:100%;height:auto}}
+{extra_css}
 .cred{{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;color:#666;padding:8px 56px 0;text-align:right;min-height:26px}}
 .text{{padding:14px 56px 34px}}
 .kick{{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:24px;font-weight:bold;letter-spacing:5px;text-transform:uppercase;color:#b5121b;margin:0 0 14px}}
@@ -40,7 +46,7 @@ body{{width:1080px;height:1350px;background:#fff;font-family:Georgia,'Times New 
 .foot b{{font-family:Georgia,'Times New Roman',serif;font-size:44px;letter-spacing:-0.5px}}.foot b span{{color:#ff5b62}}
 .foot i{{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-style:normal;font-size:22px;color:#ddd;letter-spacing:1px}}
 </style></head><body><div class="wrap">
-<div class="photo"></div>
+{photo_html}
 <div class="cred">{e(a.credit)}</div>
 <div class="text">
 <div class="kick">&#9679; {e(a.kicker)}</div>

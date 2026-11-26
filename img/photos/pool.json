@@ -153,5 +153,14 @@
    "credit": "Image: SpaceX webcast",
    "source": "https://www.spacex.com/launches/starship-flight-15"
   }
+ ],
+ "budget": [
+  {
+   "image": "/img/photos/budget-title-graphic.jpg",
+   "alt": "A title graphic reading Vermilion Parish Budget: Revenue, Expenses, Priorities, over an evening street scene with a white columned building, and a calculator, pen and charts in the foreground",
+   "caption": "Illustration.",
+   "credit": "Illustration: The Vermilion Times",
+   "source": "https://thevermiliontimes.com/"
+  }
  ]
 }
