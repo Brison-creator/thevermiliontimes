@@ -4,7 +4,6 @@ deck: The coastal permit for the wharf, canal and haul road went on hold Monday,
 section: starbase
 date: 2026-11-26
 time: 07:05
-featured: true
 image: /img/photos/la-3147-freshwater-city-road-sign.jpg
 image_alt: A black and white Louisiana highway marker for LA 3147 on a post beside a field of dry marsh grass and scrub trees under a gray sky
 image_caption: "LA 3147, Freshwater City Road, in southern Vermilion Parish near Pecan Island, the area covered by the permit application."
