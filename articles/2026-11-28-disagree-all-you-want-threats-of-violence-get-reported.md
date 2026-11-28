@@ -3,7 +3,7 @@ title: "Disagree All You Want. Threats of Violence Get Reported"
 deck: "A note from the publisher on the SpaceX fight, the comments on our page, and the line nobody gets to cross."
 section: opinion
 date: 2026-11-28
-time: 07:15
+time: 00:15
 image: /img/photos/brison-mcphail-publisher-submitted.jpg
 image_alt: A man in a brimmed hat, sunglasses and a red bandana stands on red sandstone wearing a backpack, with a natural rock arch behind him
 image_caption: "Brison McPhail, publisher of The Vermilion Times."
